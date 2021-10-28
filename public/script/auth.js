@@ -14,15 +14,17 @@ form.addEventListener('submit',e=>{
     password.value);
 
     auth.createUserWithEmailAndPassword(email.value,password.value).then(cred=>{
-    log(cred)
+    log(cred.user._delegate.uid)
 })
     form.reset()
 })
 
-auth.onAuthStateChanged(e=>{
-    if(e){
+auth.onAuthStateChanged(user=>{
+    if(user){
         log('sign in very good')
+
         window.location='index.html'
+        log(user)
     }
     else {
         log('sign out')

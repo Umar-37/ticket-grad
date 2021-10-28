@@ -10,8 +10,8 @@ db.collection('user').doc('3711').get().then(snapshot => {
   log(snapshot.data())
 })
 
-auth.onAuthStateChanged(e=>{
-    if(e){
+auth.onAuthStateChanged(user=>{
+    if(user){
         log('sign in very good im in the index page')
       //  window.location='index.html'
     }
@@ -19,3 +19,4 @@ auth.onAuthStateChanged(e=>{
         log('sign out i am in the index page')
     }
 })
+//function signOut()
