@@ -29276,6 +29276,18 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.effect:hover{
+  width:300px;
+}
+
+.width-0{
+  width: 0px;
+}
+
+.font-size{
+  font-size: 28px;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

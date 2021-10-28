@@ -5,3 +5,13 @@
 .pro{
    @apply bg-white shadow-2xl;
 }
+.effect:hover{
+    width:300px;
+}
+
+.width-0{
+    width: 0px;
+}
+.font-size{
+    font-size: 28px;
+}
