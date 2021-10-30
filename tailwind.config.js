@@ -1,5 +1,9 @@
 module.exports = {
-  purge: [],
+  mode:'jit',
+  purge: [
+  './public/**/*.html',
+  './src/**/*.{js,jsx,ts,tsx,vue}',  './public/**/*.html',
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
       fill: theme => ({
@@ -30,6 +34,12 @@ module.exports = {
 
       }),
     extend: {
+       zIndex: {
+
+         '-1': '-1',
+         '-2': '-2',
+         '-99': '99',
+        },
       backgroundImage:{
         'img-for-banner':"url('../images/Banner.png')",
         'img-for-salh':"url('../images/salh.png')"

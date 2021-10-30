@@ -15,3 +15,22 @@
 .font-size{
     font-size: 28px;
 }
+.myOb{
+ background: rgb(212,213,180);
+background: linear-gradient(90deg, rgba(212,213,180,1) 0%, rgba(255,255,255,0) 48%); 
+z-index: -99;
+}
+
+.omar::before{
+content: "";
+position: absolute;
+top: 0px;
+right: 0px;
+bottom: 0px;
+left:0px;
+background-image: url("../images/blue.jpeg");
+background-size: cover;
+background-position: top center;
+background-attachment: fixed;
+opacity: 0.7;
+}
