@@ -1,5 +1,5 @@
 module.exports = {
-  mode:'jit',
+  mode:'',
   purge: [
   './public/**/*.html',
   './src/**/*.{js,jsx,ts,tsx,vue}',  './public/**/*.html',
@@ -46,8 +46,17 @@ module.exports = {
         ,'img-for-backg':"url('../images/sun.png')"
         ,'img-for-blue':"url('../images/blue.jpeg')"
         
+      } , gridTemplateColumns: {
+        // Simple 16 column grid
+
+       '16': 'repeat(16, minmax(0, 1fr))',
+
+        // Complex site-specific column configuration
+
+       'footer': '200px minmax(900px, 1fr) 100px',
       }
     },
+   
   },
   variants: {
     extend: {},
