@@ -2,18 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-.pro{
-   @apply bg-white shadow-2xl  w-full h-full max-w-xs max-h-96 mx-auto ;
+.cardSp{
+   @apply bg-black hightOmar w-80 lg:w-96 max-w-lg flex flex-none flex-col mx-auto ;
+   @apply rounded-lg overflow-hidden  shadow-2xl hover:border-indigo-500 border ;
+}
+.color-gray-me{
+    background-color: #f1f1f1;
+}
+.hightOmar{
+    height:450px;
 }
 .effect:hover{
     width:300px;
 }
-
+.proColor{
+    background-color: #111827;
+}
 .width-0{
     width: 0px;
 }
 .font-size{
     font-size: 28px;
+}
+.priceColor{
+    font-family: 'Montserrat';
+    color: #2D2E30;
+} 
+.pTag{
+    font-family: 'Roboto',sans-serif;
 }
 .myOb{
  background: rgb(212,213,180);

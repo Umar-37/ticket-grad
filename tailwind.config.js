@@ -6,6 +6,7 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    
       fill: theme => ({
 
        'red': theme('colors.red.500'),
@@ -32,6 +33,9 @@ module.exports = {
        'from2':'#005AA7',
        'to2':'#FFFDE4',
 
+       'ob':'#bdc3c7',
+       'lb':'#2c3e50',
+       'white':'#FFFFFF'
       }),
     extend: {
        zIndex: {
