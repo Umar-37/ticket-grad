@@ -26,9 +26,9 @@
 ```sh
 sudo apt  update && sudo apt upgrade
 ```
-2- clone this repo to a folder 
+2- clone this repo into a folder 
 ```sh
-
+git clone https://github.com/Umar-37/ticket-grad.git
 ```
 3- cd to your folder
 ```sh
