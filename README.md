@@ -39,7 +39,7 @@ cd <folder name>
 ```sh
 npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
 ```
-5- genrate css file by this command and you ready to go .(note that this command should be constantly running in the background) .
+5- genrate css file by this command and you ready to go .(note that this command must be constantly running in the background) .
 
 ```sh
 npm run dev
