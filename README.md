@@ -32,6 +32,7 @@ git clone https://github.com/Umar-37/ticket-grad.git
 ```
 3- cd to your folder
 ```sh
+cd <folder name>
 ```
 4- Install the dependencies from npm by this command.
 
