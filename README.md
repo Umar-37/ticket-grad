@@ -49,6 +49,6 @@ npm run dev
 
 ## License
 
-MIT
+[MIT](https://choosealicense.com/licenses/mit/)
 
 **Free Software!**
