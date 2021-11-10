@@ -27,6 +27,9 @@
 sudo apt  update && sudo apt upgrade
 ```
 2- clone this repo to a folder 
+```sh
+
+```
 3- cd to your folder
 4- Install the dependencies from npm by this command.
 
