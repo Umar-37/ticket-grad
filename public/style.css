@@ -6,6 +6,10 @@
    @apply bg-black hightOmar w-80 lg:w-96 max-w-lg flex flex-none flex-col mx-auto ;
    @apply rounded-lg overflow-hidden  shadow-2xl hover:border-indigo-500 border ;
 }
+.cardHW{
+    height: 400px;
+    width: 400px;
+}
 .color-gray-me{
     background-color: #f1f1f1;
 }
