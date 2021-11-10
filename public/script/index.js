@@ -1,6 +1,6 @@
 
 let log = console.log
- let db = firebase.firestore();
+let db = firebase.firestore();
 let auth=firebase.auth()
 //export default db;
 

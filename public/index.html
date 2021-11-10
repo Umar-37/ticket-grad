@@ -68,7 +68,8 @@
           <a class=" py-10 px-3" href="#">Logo</a>
 
   <div class="bg-gradient-to-r from-ob  to-white relative overflow-hidden">
-    <div class="flex flex-row justify-around items-end h-44 w-full colorHead">
+    <div class="flex flex-row justify-around items-end h-44 w-full bg-gradient-to-r from-from2 via-danger to-lb">
+    
       <ul class="flex justify-around font-extralight text-md text-white mb-3">
         <li class="mr-2 md:mr-6 lg:mr-12">
           <a class=" hover:text-blue-800" href="#">home</a>
@@ -144,14 +145,15 @@
 
 
     <div class="w-full lg:mt-0 lg:mx-auto lg:w-1/2 h-14 bg-gray-400 flex justify-around items-center rounded-b-xl ">
-      <div class="relative inline-flex">
-        <svg class="w-4 h-3 absolute -top-2 right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 412 232">
+      <div  data-svg-div class="relative inline-flex ">
+        <svg data-svg-rotate
+          class="w-4 h-3 absolute -top-2 right-0 m-4 transform ease-in-out duration-300  pointer-events-none"
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232">
           <path
             d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z"
             fill="#648299" fill-rule="nonzero" />
         </svg>
-        <select
+        <select id="omar"
           class="border border-gray-300 rounded-xl text-gray-600 h-6 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none">
           <option hidden>Location </option>
           <option>Dammam</option>
@@ -191,10 +193,9 @@
             d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z"
             fill="#648299" fill-rule="nonzero" />
         </svg>
-        <input type="date" value="date" 
-
+        <input type="date" value="date"
           class="border border-gray-300 rounded-xl text-gray-600 h-6 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none">
-         
+
       </div>
       <button type="submit" value="submit"
         class="px-4 py-3 bg-blue-600 rounded-md text-white outline-none focus:ring-4 shadow-lg transform active:scale-75 transition-transform">
@@ -207,16 +208,25 @@
 
     </div>
     <!-- product section-->
+<<<<<<< Updated upstream
 
     <div class="">
     <div class="grid gap-1 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 mt-6">
 =======
     <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
+=======
+    <div data-event-div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
+>>>>>>> Stashed changes
 
 
       <div class="cardSp ">
+<<<<<<< Updated upstream
         <div class=" flex items-end justify-end h-52 w-full bg-cover bg-center -mb-2"
           style="background-image: url('https://images.unsplash.com/photo-1495856458515-0637185db551?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')">
+=======
+        <div class=" flex-none flex items-end justify-end h-52 w-full bg-cover bg-center -mb-2"
+          style="background-image: url('../public/images/blue.jpeg')">
+>>>>>>> Stashed changes
           <div class="mb-2 text-white"> <button
               class="p-2 rounded-full bg-indigo-600  mx-5  hover:bg-indigo-500 focus:outline-none focus:bg-blue-500">
               <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -263,8 +273,13 @@
             before the 24 hours before the 24 hours before the 24 hours before the </p>
           <h3
             class=" uppercase whitespace-nowrap col-start-1 col-end-3 border-2 rounded-lg px-2  pt-1 text-white bg-indigo-600 opacity-90 w-32 shadow-2xl">
+<<<<<<< Updated upstream
             <span class="drop-shadow-xl text-2xl">📍</span>Dammam</h3>
 
+=======
+            <span class="drop-shadow-xl text-2xl">📍</span>Dammam
+          </h3>
+>>>>>>> Stashed changes
           <span class="  priceColor col-start-5 lg:col-start-6 text-2xl"><span class="">$</span>123</span>
         </div>
       </div>
@@ -394,7 +409,7 @@
           <span class="text-gray-500 mt-2">$180</span>
         </div>
       </div>
-      <div id="fatherDiv" class=" hidden z-10 fixed inset-0 overflow-hidden" aria-labelledby="slide-over-title"
+      <div id="fatherDiv" class="hidden z-10 fixed inset-0 overflow-hidden" aria-labelledby="slide-over-title"
         role="dialog" aria-modal="true">
         <div id="cartFather" class=" absolute inset-0 overflow-hidden ease-in-out duration-500">
           <!--
@@ -445,9 +460,10 @@
                   <div class="mt-8">
                     <div class="flow-root">
                       <ul role="list" class="-my-6 divide-y divide-gray-200">
+
                         <li class="py-6 flex">
                           <div class="flex-shrink-0 w-24 h-24 border border-gray-200 rounded-md overflow-hidden">
-                            <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg"
+                            <img src="../public/images/Banner.png"
                               alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt."
                               class="w-full h-full object-center object-cover">
                           </div>
@@ -457,15 +473,15 @@
                               <div class="flex justify-between text-base font-medium text-gray-900">
                                 <h3>
                                   <a href="#">
-                                    Throwback Hip Bag
+                                   Event name 
                                   </a>
                                 </h3>
                                 <p class="ml-4">
-                                  $90.00
+                                  $211
                                 </p>
                               </div>
                               <p class="mt-1 text-sm text-gray-500">
-                                Salmon
+                              Jubail 
                               </p>
                             </div>
                             <div class="flex-1 flex items-end justify-between text-sm">
@@ -481,10 +497,11 @@
                           </div>
                         </li>
 
+
                         <li class="py-6 flex">
                           <div class="flex-shrink-0 w-24 h-24 border border-gray-200 rounded-md overflow-hidden">
-                            <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg"
-                              alt="Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch."
+                            <img src="../public/images/blue.jpeg"
+                              alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt."
                               class="w-full h-full object-center object-cover">
                           </div>
 
@@ -493,15 +510,15 @@
                               <div class="flex justify-between text-base font-medium text-gray-900">
                                 <h3>
                                   <a href="#">
-                                    Medium Stuff Satchel
+                                   Event name 
                                   </a>
                                 </h3>
                                 <p class="ml-4">
-                                  $32.00
+                                  $123
                                 </p>
                               </div>
                               <p class="mt-1 text-sm text-gray-500">
-                                Blue
+                               Dammam 
                               </p>
                             </div>
                             <div class="flex-1 flex items-end justify-between text-sm">
@@ -516,7 +533,6 @@
                             </div>
                           </div>
                         </li>
-
                         <!-- More products... -->
                       </ul>
                     </div>
@@ -528,7 +544,7 @@
                     <p>Subtotal</p>
                     <p>$262.00</p>
                   </div>
-                  <p class="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
+                  <p class="mt-0.5 text-sm text-gray-500">You will receive your ticket in your email</p>
                   <div class="mt-6">
                     <a href="#"
                       class="flex justify-center inlie items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">Checkout</a>
