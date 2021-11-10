@@ -31,6 +31,8 @@ sudo apt  update && sudo apt upgrade
 
 ```
 3- cd to your folder
+```sh
+```
 4- Install the dependencies from npm by this command.
 
 ```sh
