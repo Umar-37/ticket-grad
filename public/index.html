@@ -9,8 +9,8 @@
   <script defer src="/__/firebase/9.1.1/firebase-database-compat.js"></script>
   <script defer src="/__/firebase/9.1.1/firebase-firestore-compat.js"></script>
   <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
- <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <link rel="stylesheet" href="css/style.css">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -60,11 +60,54 @@
   <script type="module" src="script/index.js"></script>
 
   <!-- homepage -->
-  <nav class="colorHead ">
-    <div class=" max-w-screen-2xl mx-auto text-white items-center">
-      <div class="flex justify-between items-center py-8">
-        <div class=" font-bold text-xl items-center">
-          <a class=" py-10 px-3" href="#">Logo</a>
+  <div class="bg-gradient-to-r from-ob  to-white relative overflow-hidden">
+    <div class="flex flex-row justify-around items-end h-44 w-full bg-gradient-to-r from-from2 via-danger to-lb">
+    
+      <ul class="flex justify-around font-extralight text-md text-white mb-3">
+        <li class="mr-2 md:mr-6 lg:mr-12">
+          <a class=" hover:text-blue-800" href="#">home</a>
+        </li>
+        <li class="mr-2 md:mr-6 lg:mr-12">
+          <a class=" hover:text-blue-800" href="#">sign in</a>
+        </li>
+
+      </ul>
+
+
+      <ul class="flex justify-between font-extralight text-md text-white mb-3">
+        <li class="mr-2 md:mr-6 lg:mr-12">
+          <a class=" hover:text-blue-800" href="#">All</a>
+        </li>
+        <li class="mr-2 md:mr-6 lg:mr-12">
+          <a class=" hover:text-blue-800" href="#">consort</a>
+        </li>
+
+        <li class="mr-2 md:mr-6 lg:mr-12">
+          <a class=" hover:text-blue-800" href="#">Entertament</a>
+        </li>
+        <li class="mr-2 md:mr-6 lg:mr-12">
+          <a class=" hover:text-blue-800" href="#">Sport</a>
+        </li>
+
+        <li class="mr-2 md:mr-6 lg:mr-12">
+          <a class=" hover:text-blue-800" href="#">Thitor</a>
+        </li>
+
+      </ul>
+
+      <ul class="flex justify-between font-extralight text-md text-white mb-3">
+        <li class="mr-2 md:mr-6 lg:mr-12">
+          <a class=" hover:text-blue-800" href="#">Work with us</a>
+        </li>
+        <li class="mr-2 md:mr-6 lg:mr-12">
+          <a class=" hover:text-blue-800" href="#">About Us</a>
+        </li>
+
+      </ul>
+      <!-- <nav class="bg-black h-20 w-full flex justify-around" >
+        <div class="bg-white flex items-center">
+          <span class="">Home</span>
+          <span class=""> Sign in</span>
         </div>
         <div class=" font-bold text-xl items-center">
           <a class=" py-10" href="#">Login / Sign Up</a>
@@ -93,38 +136,113 @@
   </nav>
 
 
+    <div class="w-full lg:mt-0 lg:mx-auto lg:w-1/2 h-14 bg-gray-400 flex justify-around items-center rounded-b-xl ">
+      <div  data-svg-div class="relative inline-flex ">
+        <svg data-svg-rotate
+          class="w-4 h-3 absolute -top-2 right-0 m-4 transform ease-in-out duration-300  pointer-events-none"
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232">
+          <path
+            d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z"
+            fill="#648299" fill-rule="nonzero" />
+        </svg>
+        <select id="omar"
+          class="border border-gray-300 rounded-xl text-gray-600 h-6 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none">
+          <option hidden>Location </option>
+          <option>Dammam</option>
+          <option>Blue</option>
+          <option>Yellow</option>
+          <option>Black</option>
+          <option>Orange</option>
+          <option>Purple</option>
+          <option>Gray</option>
+          <option>White</option>
+        </select>
+      </div>
+      <div class="relative inline-flex">
+        <svg class="w-4 h-3 absolute -top-2 right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 412 232">
+          <path
+            d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z"
+            fill="#648299" fill-rule="nonzero" />
+        </svg>
+        <select
+          class="border border-gray-300 rounded-xl text-gray-600 h-6 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none">
+          <option hidden>Category</option>
+          <option>Football</option>
+          <option>Blue</option>
+          <option>Yellow</option>
+          <option>Black</option>
+          <option>Orange</option>
+          <option>Purple</option>
+          <option>Gray</option>
+          <option>White</option>
+        </select>
+      </div>
+      <div class="relative inline-flex">
+        <svg class="w-4 h-3 absolute -top-2 right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 412 232">
+          <path
+            d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z"
+            fill="#648299" fill-rule="nonzero" />
+        </svg>
+        <input type="date" value="date"
+          class="border border-gray-300 rounded-xl text-gray-600 h-6 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none">
+
+      </div>
+      <button type="submit" value="submit"
+        class="px-4 py-3 bg-blue-600 rounded-md text-white outline-none focus:ring-4 shadow-lg transform active:scale-75 transition-transform">
+        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" fill="white" clip-rule="evenodd">
+          <path
+            d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7zm-3-8c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zm3 0c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zm3 0c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1z" />
+        </svg>
+
+      </button>
+
+    </div>
     <!-- product section-->
-    <div class="">
-    <div class="grid gap-1 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 mt-6">
+    <div data-event-div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
+
       <div class="cardSp ">
-        <div class=" flex items-end justify-end h-52 w-full bg-cover bg-center -mb-2"
-          style="background-image: url('https://images.unsplash.com/photo-1495856458515-0637185db551?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')">
-         <div class="mb-2 text-white"> <button
-            class="p-2 rounded-full bg-indigo-600  mx-5  hover:bg-indigo-500 focus:outline-none focus:bg-blue-500">
-            <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              viewBox="0 0 24 24" stroke="currentColor">
-              <path
-                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
-              </path>
-            </svg>
-          </button>
-          <button
-            class="pt-0 px-2 text-3xl rounded-md bg-red-600  mx-5  hover:bg-red-500 focus:outline-none focus:bg-blue-500">
+        <div class=" flex-none flex items-end justify-end h-52 w-full bg-cover bg-center -mb-2"
+          style="background-image: url('../public/images/blue.jpeg')">
+          <div class="mb-2 text-white"> <button
+              class="p-2 rounded-full bg-indigo-600  mx-5  hover:bg-indigo-500 focus:outline-none focus:bg-blue-500">
+              <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+                </path>
+              </svg>
+            </button>
+            <button
+              class="pt-0 px-2 text-3xl rounded-md bg-red-600  mx-5  hover:bg-red-500 focus:outline-none focus:bg-blue-500">
 
-            x</button>
-          <button
-            class="pt-0 px-2 text-lg rounded-md bg-green-600 mx-5  hover:bg-green-500 focus:outline-none focus:bg-blue-500">
+              x</button>
+            <button
+              class="pt-0 px-2 text-lg rounded-md bg-green-600 mx-5  hover:bg-green-500 focus:outline-none focus:bg-blue-500">
 
-            edit</button> </div>
+              edit</button>
+          </div>
         </div>
-        <div class=" grid grid-cols-6 gap-2 px-5 py-3 h-1/6 rounded-t-2xl bg-white">
-          <h2 class="text-center text-white col-start-1 col-end-4 inline-block h-7 border-2 rounded-2xl pb-1 bg-blue-500 ">Event name</h2>
-          <span class="text-center font-extralight text-sm text-gray-700 col-start-4 col-span-7 inline-block h-5 w-44 lg:w-52 lg:text-base">Mon, 20 Feb To Tue,22b</span>
-          <p class="col-start-1 col-end-7 max-h-24  overflow-hidden pTag text-center ">All refunds or exchanges, if applicable, must be processed by DCA Box Office staff.
-             Refunds and/or exchanges must be requested  no later than  24 hours before tif applicable, must be processed by DCA Box Office staff.
-             Refunds and/or exchanges must be requested no later thanno later than  24 hours before tif applicable, must be processed by DCA Box Office staff.
-             Refunds and/or exchanges must be requested no later than  24 hours before truncate runcate the 24 hours before the  24 hours before the  24 hours before the  24 hours before the </p>
-          <h3 class=" uppercase whitespace-nowrap col-start-1 col-end-3 border-2 rounded-lg px-2  pt-1 text-white bg-indigo-600 opacity-90 w-32 shadow-2xl"><span class="drop-shadow-xl text-2xl">📍</span>Dammam</h3>
+        <div class="flex-1 grid grid-cols-6 gap-2 px-5 py-3 h-full rounded-t-2xl bg-white">
+          <h2
+            class="text-center text-white col-start-1 col-end-4 inline-block h-7 border-2 rounded-2xl pb-1 bg-blue-500 ">
+            Event name</h2>
+          <span
+            class="text-center font-extralight text-sm text-gray-700 col-start-4 col-span-7 inline-block h-5 w-44 lg:w-52 lg:text-base">Mon,
+            20 Feb To Tue,22b</span>
+          <p class="col-start-1 col-end-7 max-h-24  overflow-hidden pTag text-center ">All refunds or exchanges, if
+            applicable, must be processed by DCA Box Office staff.
+            Refunds and/or exchanges must be requested no later than 24 hours before tif applicable, must be processed
+            by DCA Box Office staff.
+            Refunds and/or exchanges must be requested no later thanno later than 24 hours before tif applicable, must
+            be processed by DCA Box Office staff.
+            Refunds and/or exchanges must be requested no later than 24 hours before truncate runcate the 24 hours
+            before the 24 hours before the 24 hours before the 24 hours before the </p>
+          <h3
+            class=" uppercase whitespace-nowrap col-start-1 col-end-3 border-2 rounded-lg px-2  pt-1 text-white bg-indigo-600 opacity-90 w-32 shadow-2xl">
+            <span class="drop-shadow-xl text-2xl">📍</span>Dammam
+          </h3>
           <span class="  priceColor col-start-5 lg:col-start-6 text-2xl"><span class="">$</span>123</span>
         </div>
       </div>
@@ -254,7 +372,8 @@
           <span class="text-gray-500 mt-2">$180</span>
         </div>
       </div>
-      <div id="fatherDiv" class=" hidden z-10 fixed inset-0 overflow-hidden" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+      <div id="fatherDiv" class="hidden z-10 fixed inset-0 overflow-hidden" aria-labelledby="slide-over-title"
+        role="dialog" aria-modal="true">
         <div id="cartFather" class=" absolute inset-0 overflow-hidden ease-in-out duration-500">
           <!--
             Background overlay, show/hide based on slide-over state.
@@ -267,8 +386,9 @@
               To: "opacity-0"
           -->
           <div class="absolute inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
-      
-          <div id="cartFather2" class=" fixed inset-y-0 right-0 pl-10 max-w-full flex transform transition ease-in-out duration-500 sm:duration-700">
+
+          <div id="cartFather2"
+            class=" fixed inset-y-0 right-0 pl-10 max-w-full flex transform transition ease-in-out duration-500 sm:duration-700">
             <!--
               Slide-over panel, show/hide based on slide-over state.
       
@@ -287,103 +407,115 @@
                       Shopping cart
                     </h2>
                     <div class="ml-3 h-7 flex items-center">
-                      <button type="button" onclick="cart()" id="close_open" class="-m-2 p-2 text-gray-400 hover:text-gray-500">
+                      <button type="button" onclick="cart()" id="close_open"
+                        class="-m-2 p-2 text-gray-400 hover:text-gray-500">
                         <span class="sr-only">Close panel</span>
                         <!-- Heroicon name: outline/x -->
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                          stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
                         </svg>
                       </button>
                     </div>
                   </div>
-      
+
                   <div class="mt-8">
                     <div class="flow-root">
                       <ul role="list" class="-my-6 divide-y divide-gray-200">
+
                         <li class="py-6 flex">
                           <div class="flex-shrink-0 w-24 h-24 border border-gray-200 rounded-md overflow-hidden">
-                            <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg" alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." class="w-full h-full object-center object-cover">
+                            <img src="../public/images/Banner.png"
+                              alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt."
+                              class="w-full h-full object-center object-cover">
                           </div>
-      
+
                           <div class="ml-4 flex-1 flex flex-col">
                             <div>
                               <div class="flex justify-between text-base font-medium text-gray-900">
                                 <h3>
                                   <a href="#">
-                                    Throwback Hip Bag
+                                   Event name 
                                   </a>
                                 </h3>
                                 <p class="ml-4">
-                                  $90.00
+                                  $211
                                 </p>
                               </div>
                               <p class="mt-1 text-sm text-gray-500">
-                                Salmon
+                              Jubail 
                               </p>
                             </div>
                             <div class="flex-1 flex items-end justify-between text-sm">
                               <p class="text-gray-500">
                                 Qty 1
                               </p>
-      
+
                               <div class="flex">
-                                <button type="button" class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                <button type="button"
+                                  class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
                               </div>
                             </div>
                           </div>
                         </li>
-      
+
+
                         <li class="py-6 flex">
                           <div class="flex-shrink-0 w-24 h-24 border border-gray-200 rounded-md overflow-hidden">
-                            <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg" alt="Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch." class="w-full h-full object-center object-cover">
+                            <img src="../public/images/blue.jpeg"
+                              alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt."
+                              class="w-full h-full object-center object-cover">
                           </div>
-      
+
                           <div class="ml-4 flex-1 flex flex-col">
                             <div>
                               <div class="flex justify-between text-base font-medium text-gray-900">
                                 <h3>
                                   <a href="#">
-                                    Medium Stuff Satchel
+                                   Event name 
                                   </a>
                                 </h3>
                                 <p class="ml-4">
-                                  $32.00
+                                  $123
                                 </p>
                               </div>
                               <p class="mt-1 text-sm text-gray-500">
-                                Blue
+                               Dammam 
                               </p>
                             </div>
                             <div class="flex-1 flex items-end justify-between text-sm">
                               <p class="text-gray-500">
                                 Qty 1
                               </p>
-      
+
                               <div class="flex">
-                                <button type="button" class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                <button type="button"
+                                  class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
                               </div>
                             </div>
                           </div>
                         </li>
-      
                         <!-- More products... -->
                       </ul>
                     </div>
                   </div>
                 </div>
-      
+
                 <div class="border-t border-gray-200 py-6 px-4 sm:px-6">
                   <div class="flex justify-between text-base font-medium text-gray-900">
                     <p>Subtotal</p>
                     <p>$262.00</p>
                   </div>
-                  <p class="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
+                  <p class="mt-0.5 text-sm text-gray-500">You will receive your ticket in your email</p>
                   <div class="mt-6">
-                    <a href="#" class="flex justify-center inlie items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">Checkout</a>
+                    <a href="#"
+                      class="flex justify-center inlie items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">Checkout</a>
                   </div>
                   <div class="mt-6 flex justify-center text-sm text-center text-gray-500">
                     <p>
-                      or <button type="button" class="text-indigo-600 font-medium hover:text-indigo-500">Continue Shopping<span aria-hidden="true"> &rarr;</span></button>
+                      or <button type="button" class="text-indigo-600 font-medium hover:text-indigo-500">Continue
+                        Shopping<span aria-hidden="true"> &rarr;</span></button>
                     </p>
                   </div>
                 </div>
@@ -392,24 +524,24 @@
           </div>
         </div>
       </div>
-      
+
     </div>
   </div>
 
-<!-- This example requires Tailwind CSS v2.0+ -->
+  <!-- This example requires Tailwind CSS v2.0+ -->
 
-<script>
-  let fathrDiv=document.querySelector('#fatherDiv')
-  let fathr=document.querySelector('#cartFather')
-  let fathr2=document.querySelector('#cartFather2')
-    function cart(){
-    fathr.classList.toggle('opacity-0')
-    fathr2.classList.toggle('translate-x-full')
-    //fathrDiv.classList.toggle('z-10')
-    fathrDiv.classList.toggle('relative')
+  <script>
+    let fathrDiv = document.querySelector('#fatherDiv')
+    let fathr = document.querySelector('#cartFather')
+    let fathr2 = document.querySelector('#cartFather2')
+    function cart() {
+      fathr.classList.toggle('opacity-0')
+      fathr2.classList.toggle('translate-x-full')
+      //fathrDiv.classList.toggle('z-10')
+      fathrDiv.classList.toggle('relative')
 
-  }
-</script>
+    }
+  </script>
 </body>
 
 </html>
