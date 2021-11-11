@@ -9,8 +9,8 @@
   <script defer src="/__/firebase/9.1.1/firebase-database-compat.js"></script>
   <script defer src="/__/firebase/9.1.1/firebase-firestore-compat.js"></script>
   <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
- <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <link rel="stylesheet" href="css/style.css">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -60,7 +60,7 @@
   <script type="module" src="script/index.js"></script>
 
   <!-- homepage -->
-  <nav class="colorHead ">
+  <nav class="colorHead w-full">
     <div class=" max-w-screen-2xl mx-auto text-white items-center">
       <div class="flex justify-between items-center py-8">
         <div class=" font-bold text-3xl items-center">
@@ -68,81 +68,362 @@
         </div>
         <div class=" font-bold text-xl items-center">
           <a class=" py-10" href="#">Login / Sign Up</a>
-         </div>
+        </div>
       </div>
       <div class="flex items-center justify-between">
-      <div class=" font-bold text-xl items-center space-x-16 text-center px-4 py-8">
-        <a class=" f py-10 " href="#">All</a>
-        <a class=" py-10 px-3" href="#">Concert</a>
-        <a class=" py-10 px-3" href="#">Sport</a>
-        <a class=" py-10 px-3" href="#">Entertainment</a>
-        <a class=" py-10 px-3" href="#">Theater</a>
-      </div>
-      <div>
-        <a href="#">
-          <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
-           </path>
-          </svg>
-        </a>
+        <div class=" font-bold text-xl items-center space-x-16 text-center px-4 py-8">
+          <a class=" " href="#">All</a>
+          <a class=" mt-10 mr-3" href="#">Concert</a>
+          <a class=" mt-10 mr-3" href="#">Sport</a>
+          <a class=" mt-10 mr-3" href="#">Entertainment</a>
+          <a class=" mt-10 mr-3" href="#">Theater</a>
         </div>
-    </div>
+        <div>
+          <a href="#">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+              </path>
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
   </nav>
 
 
-    <!-- product section-->
-
-  <div class=" bg-gray-200 max-w-screen-2xl mx-auto m-10">
-    <div class=" flex justify-between m-5">
-      <div>
-        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-      </div>
-      <div>
-       <label for="Location">Location <select name="Location" id="Location">
-        <option value="1"> </option>
-        <option value="1">Khobar</option>
-        <option value="1">Dammam</option>
-        <option value="1">Jubail</option>
-      </select></label> 
-      </div>
-      <div>
-        Category
-      </div>
-      <div>
-        Date
-      </div>
+  <!-- Start of Search Filter-->
+  <div class=" pt-2 flex mt-4 max-w-screen-2xl mx-auto border-t border-b border-gray-500">
+    <div class="">
+      <a href="#">
+        <svg class="w-14 h-14" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </a>
     </div>
+    <!-- <div class=" hidden focus:flex justify-around space-x-60 text-lg items-center ml-48">
+      <div class=" relative">
+       <button onclick="isOpen = !isOpen" id="locationBtn"  class=" bg-gray-200 font-semibold rounded-md block focus:bg-gray-800 focus:text-white">Location</button>
+      <div  class=" hidden absolute text-white w-40 colorHead rounded-md overflow-hidden">
+        <a class=" block px-4 py-1 hover:bg-gray-700  " href="#">1</a>
+        <a class=" block px-4 py-1 hover:bg-gray-700" href="#">2</a>
+        <a class=" block px-4 py-1 hover:bg-gray-700" href="#">3</a>
+      </div>
+      </div>
+      <div class="">
+        <button id="categoryBtn" class=" bg-gray-200 font-semibold rounded-md block focus:bg-gray-800 focus:text-white">Category</button>
+        <div  class=" hidden absolute text-white w-40 colorHead rounded-md overflow-hidden">
+          <a class=" block px-4 py-1 hover:bg-gray-700  " href="#">1</a>
+          <a class=" block px-4 py-1 hover:bg-gray-700" href="#">2</a>
+          <a class=" block px-4 py-1 hover:bg-gray-700" href="#">3</a>
+        </div>
+      </div>
+      <div>
+        <button id="dateBtn" class=" bg-gray-200 font-semibold rounded-md block focus:bg-gray-800 focus:text-white">Date</button>
+        <div  class=" hidden absolute text-white w-40 colorHead rounded-md overflow-hidden">
+          <a class=" block px-4 py-1 hover:bg-gray-700  " href="#">1</a>
+          <a class=" block px-4 py-1 hover:bg-gray-700" href="#">2</a>
+          <a class=" block px-4 py-1 hover:bg-gray-700" href="#">3</a>
+        </div>
+      </div>
+      </div> -->
+
+    <form class="items-center">
+      <div class=" flex justify-around space-x-60 ml-32">
+        <div class=" px-4 py-6 ">
+          <h3 class="-mx-2 -my-3 flow-root">
+            <!-- Expand/collapse section button -->
+            <button type="button"
+              class="px-2 py-3 bg-white w-full flex items-center justify-between text-gray-400 hover:text-gray-500"
+              aria-controls="filter-section-mobile-0" aria-expanded="false">
+              <span class="font-medium text-gray-900">
+                Location
+              </span>
+              <span class="ml-6 flex items-center">
+                <!--
+                Expand icon, show/hide based on section open state.
+
+                Heroicon name: solid/plus-sm
+              -->
+                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                    clip-rule="evenodd" />
+                </svg>
+                <!--
+                Collapse icon, show/hide based on section open state.
+
+                Heroicon name: solid/minus-sm
+              -->
+                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z" clip-rule="evenodd" />
+                </svg>
+              </span>
+            </button>
+          </h3>
+          <!-- Filter section, show/hide based on section state. -->
+          <div class="pt-6" id="filter-section-mobile-0">
+            <div class="space-y-6">
+              <div class="flex items-center">
+                <input id="filter-mobile-location-0" name="location[]" value="white" type="checkbox"
+                  class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500">
+                <label for="filter-mobile-location-0" class="ml-3 min-w-0 flex-1 text-gray-500">
+                  Eastren
+                </label>
+              </div>
+
+              <div class="flex items-center">
+                <input id="filter-mobile-location-1" name="location[]" value="beige" type="checkbox"
+                  class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500">
+                <label for="filter-mobile-location-1" class="ml-3 min-w-0 flex-1 text-gray-500">
+                  Beige
+                </label>
+              </div>
+
+              <div class="flex items-center">
+                <input id="filter-mobile-location-2" name="location[]" value="blue" type="checkbox"
+                  class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500">
+                <label for="filter-mobile-location-2" class="ml-3 min-w-0 flex-1 text-gray-500">
+                  Blue
+                </label>
+              </div>
+
+              <div class="flex items-center">
+                <input id="filter-mobile-location-3" name="location[]" value="brown" type="checkbox"
+                  class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500">
+                <label for="filter-mobile-location-3" class="ml-3 min-w-0 flex-1 text-gray-500">
+                  Brown
+                </label>
+              </div>
+
+              <div class="flex items-center">
+                <input id="filter-mobile-location-4" name="location[]" value="green" type="checkbox"
+                  class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500">
+                <label for="filter-mobile-location-4" class="ml-3 min-w-0 flex-1 text-gray-500">
+                  Green
+                </label>
+              </div>
+
+              <div class="flex items-center">
+                <input id="filter-mobile-location-5" name="location[]" value="purple" type="checkbox"
+                  class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500">
+                <label for="filter-mobile-location-5" class="ml-3 min-w-0 flex-1 text-gray-500">
+                  Purple
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class=" px-4 py-6">
+          <h3 class="-mx-2 -my-3 flow-root">
+            <!-- Expand/collapse section button -->
+            <button type="button"
+              class="px-2 py-3 bg-white w-full flex items-center justify-between text-gray-400 hover:text-gray-500"
+              aria-controls="filter-section-mobile-1" aria-expanded="false">
+              <span class="font-medium text-gray-900">
+                Category
+              </span>
+              <span class="ml-6 flex items-center">
+                <!--
+                Expand icon, show/hide based on section open state.
+
+                Heroicon name: solid/plus-sm
+              -->
+                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                    clip-rule="evenodd" />
+                </svg>
+                <!--
+                Collapse icon, show/hide based on section open state.
+
+                Heroicon name: solid/minus-sm
+              -->
+                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z" clip-rule="evenodd" />
+                </svg>
+              </span>
+            </button>
+          </h3>
+          <!-- Filter section, show/hide based on section state. -->
+          <div class="pt-6" id="filter-section-mobile-1">
+            <div class="space-y-6">
+              <div class="flex items-center">
+                <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox"
+                  class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500">
+                <label for="filter-mobile-category-0" class="ml-3 min-w-0 flex-1 text-gray-500">
+                  Entertainment
+                </label>
+              </div>
+
+              <div class="flex items-center">
+                <input id="filter-mobile-category-1" name="category[]" value="sale" type="checkbox"
+                  class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500">
+                <label for="filter-mobile-category-1" class="ml-3 min-w-0 flex-1 text-gray-500">
+                  Concert
+                </label>
+              </div>
+
+              <div class="flex items-center">
+                <input id="filter-mobile-category-2" name="category[]" value="travel" type="checkbox" 
+                  class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500">
+                <label for="filter-mobile-category-2" class="ml-3 min-w-0 flex-1 text-gray-500">
+                  Sport
+                </label>
+              </div>
+
+              <div class="flex items-center">
+                <input id="filter-mobile-category-3" name="category[]" value="organization" type="checkbox"
+                  class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500">
+                <label for="filter-mobile-category-3" class="ml-3 min-w-0 flex-1 text-gray-500">
+                  Theater
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class=" px-4 py-6">
+          <h3 class="-mx-2 -my-3 flow-root">
+            <!-- Expand/collapse section button -->
+            <button type="button"
+              class="px-2 py-3 bg-white w-full flex items-center justify-between text-gray-400 hover:text-gray-500"
+              aria-controls="filter-section-mobile-2" aria-expanded="false">
+              <span class="font-medium text-gray-900">
+                Date
+              </span>
+              <span class="ml-6 flex items-center">
+                <!--
+                Expand icon, show/hide based on section open state.
+
+                Heroicon name: solid/plus-sm
+              -->
+                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                    clip-rule="evenodd" />
+                </svg>
+                <!--
+                Collapse icon, show/hide based on section open state.
+
+                Heroicon name: solid/minus-sm
+              -->
+                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z" clip-rule="evenodd" />
+                </svg>
+              </span>
+            </button>
+          </h3>
+          <!-- Filter section, show/hide based on section state. -->
+          <div class="pt-6" id="filter-section-mobile-2">
+            <div class="space-y-6">
+              <div class="flex items-center">
+                <input id="filter-mobile-date-0" name="size[]" value="2l" type="checkbox"
+                  class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500">
+                <label for="filter-mobile-date-0" class="ml-3 min-w-0 flex-1 text-gray-500">
+                  Today
+                </label>
+              </div>
+
+              <div class="flex items-center">
+                <input id="filter-mobile-date-1" name="size[]" value="6l" type="checkbox"
+                  class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500">
+                <label for="filter-mobile-date-1" class="ml-3 min-w-0 flex-1 text-gray-500">
+                  This Week
+                </label>
+              </div>
+
+              <div class="flex items-center">
+                <input id="filter-mobile-date-2" name="size[]" value="12l" type="checkbox"
+                  class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500">
+                <label for="filter-mobile-date-2" class="ml-3 min-w-0 flex-1 text-gray-500">
+                  This Month
+                </label>
+              </div>
+
+              <div class="flex items-center">
+                <input id="filter-mobile-date-3" name="size[]" value="18l" type="checkbox"
+                  class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500">
+                <label for="filter-mobile-date-3" class="ml-3 min-w-0 flex-1 text-gray-500">
+                  This 3 Months
+                </label>
+              </div>
+
+              <div class="flex items-center">
+                <input id="filter-mobile-date-4" name="size[]" value="20l" type="checkbox"
+                  class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500">
+                <label for="filter-mobile-date-4" class="ml-3 min-w-0 flex-1 text-gray-500">
+                  This 6 Months
+                </label>
+              </div>
+
+              <div class="flex items-center">
+                <input id="filter-mobile-date-5" name="size[]" value="40l" type="checkbox"
+                  class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500">
+                <label for="filter-mobile-date-5" class="ml-3 min-w-0 flex-1 text-gray-500">
+                  This Year
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- End of Search Filter-->
+
+  <!-- Start of Event Cards-->
+  <div class=" bg-gray-200 max-w-screen-2xl mx-auto m-10">
     <div class=" ">
       <div class=" col-span-4 gap-2 flex flex-row m-5">
-        <div class=" cardHW bg-blue-700 border-2 border-red-700"><a href="#"></a></div>
-        <div class=" cardHW bg-blue-700 border-2 border-red-700"><a href="#"></a></div>
-        <div class=" cardHW bg-blue-700 border-2 border-red-700"><a href="#"></a></div>
-        <div class=" cardHW bg-blue-700 border-2 border-red-700"><a href="#"></a></div>
+        <div class=" cardHW bg-black border-2 border-red-700"><a href="#"></a></div>
+        <div class=" cardHW bg-black border-2 border-red-700"><a href="#"></a></div>
+        <div class=" cardHW bg-black border-2 border-red-700"><a href="#"></a></div>
+        <div class=" cardHW bg-black border-2 border-red-700"><a href="#"></a></div>
       </div>
       <div class=" col-span-4 gap-2 flex flex-row m-5">
-        <div class=" cardHW bg-blue-700 border-2 border-red-700"><a href="#"></a></div>
-        <div class=" cardHW bg-blue-700 border-2 border-red-700"><a href="#"></a></div>
-        <div class=" cardHW bg-blue-700 border-2 border-red-700"><a href="#"></a></div>
-        <div class=" cardHW bg-blue-700 border-2 border-red-700"><a href="#"></a></div>
+        <div class=" cardHW bg-black border-2 border-red-700"><a href="#"></a></div>
+        <div class=" cardHW bg-black border-2 border-red-700"><a href="#"></a></div>
+        <div class=" cardHW bg-black border-2 border-red-700"><a href="#"></a></div>
+        <div class=" cardHW bg-black border-2 border-red-700"><a href="#"></a></div>
       </div>
     </div>
   </div>
+  <!-- End of Event Cards-->
 
-<!-- This example requires Tailwind CSS v2.0+ -->
+  <!-- This example requires Tailwind CSS v2.0+ -->
 
-<script>
-  let fathrDiv=document.querySelector('#fatherDiv')
-  let fathr=document.querySelector('#cartFather')
-  let fathr2=document.querySelector('#cartFather2')
-    function cart(){
-    fathr.classList.toggle('opacity-0')
-    fathr2.classList.toggle('translate-x-full')
-    //fathrDiv.classList.toggle('z-10')
-    fathrDiv.classList.toggle('relative')
+  <script>
+    let fathrDiv = document.querySelector('#fatherDiv')
+    let fathr = document.querySelector('#cartFather')
+    let fathr2 = document.querySelector('#cartFather2')
+    function cart() {
+      fathr.classList.toggle('opacity-0')
+      fathr2.classList.toggle('translate-x-full')
+      //fathrDiv.classList.toggle('z-10')
+      fathrDiv.classList.toggle('relative')
 
-  }
-</script>
+    }
+  </script>
+
+  <script>
+    let isOpen = false
+    function openFun() {
+      if (isOpen == true) {
+
+      }
+    }
+  </script>
+
 </body>
 
 </html>
