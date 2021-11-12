@@ -29105,6 +29105,27 @@ video {
   width: 400px;
 }
 
+.searchIcon{
+}
+
+.dropdown-content{
+  display: none;
+  z-index: 1;
+}
+
+.dropbtn {
+  cursor: pointer;
+}
+
+.show{
+  display: block;
+}
+
+.searchIcon:focus {
+  width: 100px;
+  height: 100px;
+}
+
 .color-gray-me{
   background-color: #f1f1f1;
 }
