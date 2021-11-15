@@ -23,7 +23,7 @@ auth.onAuthStateChanged(user=>{
     if(user){
         log('sign in very good')
 
-        window.location='index.html'
+        window.location='indexHisham.html'
         log(user)
     }
     else {

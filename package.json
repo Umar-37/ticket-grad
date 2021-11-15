@@ -45,6 +45,7 @@
     "css-color-names": "^0.0.4",
     "css-unit-converter": "^1.1.2",
     "cssesc": "^3.0.0",
+    "daisyui": "^1.16.2",
     "defined": "^1.0.0",
     "dependency-graph": "^0.11.0",
     "detective": "^5.2.0",
