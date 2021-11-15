@@ -131,12 +131,12 @@
       </div> -->
 
     <form class="items-center">
-      <div class=" flex justify-around space-x-60 ml-32">
-        <div class=" px-4 py-6 ">
+      <div class=" flex justify-around space-x-4 md:space-x-16 xl:space-x-60 ml-32">
+        <div class=" px-4 py-6">
           <h3 class="-mx-2 -my-3 flow-root">
             <!-- Expand/collapse section button -->
             <button type="button"
-              class="px-2 py-3 bg-white w-full flex items-center justify-between text-gray-400 hover:text-gray-500"
+              class=" px-2 py-3 bg-white w-full flex items-center justify-between text-gray-400 hover:text-gray-500"
               aria-controls="filter-section-mobile-0" aria-expanded="false">
               <span class="font-medium text-gray-900">
                 Location
@@ -272,7 +272,7 @@
               </div>
 
               <div class="flex items-center">
-                <input id="filter-mobile-category-2" name="category[]" value="travel" type="checkbox" 
+                <input id="filter-mobile-category-2" name="category[]" value="travel" type="checkbox"
                   class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500">
                 <label for="filter-mobile-category-2" class="ml-3 min-w-0 flex-1 text-gray-500">
                   Sport
@@ -350,7 +350,7 @@
                 </label>
               </div>
 
-              <div class="flex items-center">
+              <div class=" flex items-center">
                 <input id="filter-mobile-date-3" name="size[]" value="18l" type="checkbox"
                   class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500">
                 <label for="filter-mobile-date-3" class="ml-3 min-w-0 flex-1 text-gray-500">
@@ -382,22 +382,90 @@
   <!-- End of Search Filter-->
 
   <!-- Start of Event Cards-->
-  <div class=" bg-gray-200 max-w-screen-2xl mx-auto m-10">
-    <div class=" ">
-      <div class=" col-span-4 gap-2 flex flex-row m-5">
-        <div class=" cardHW bg-black border-2 border-red-700"><a href="#"></a></div>
-        <div class=" cardHW bg-black border-2 border-red-700"><a href="#"></a></div>
-        <div class=" cardHW bg-black border-2 border-red-700"><a href="#"></a></div>
-        <div class=" cardHW bg-black border-2 border-red-700"><a href="#"></a></div>
-      </div>
-      <div class=" col-span-4 gap-2 flex flex-row m-5">
-        <div class=" cardHW bg-black border-2 border-red-700"><a href="#"></a></div>
-        <div class=" cardHW bg-black border-2 border-red-700"><a href="#"></a></div>
-        <div class=" cardHW bg-black border-2 border-red-700"><a href="#"></a></div>
-        <div class=" cardHW bg-black border-2 border-red-700"><a href="#"></a></div>
-      </div>
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
+    <div class="text-center pb-12">
     </div>
-  </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <a href="#">
+        <div class="w-full bg-gray-900 rounded-lg shadow-lg overflow-hidden flex flex-col justify-center items-center">
+          <div>
+            <img class="object-center object-cover h-auto w-full"
+              src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZXZlbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+              alt="photo">
+          </div>
+          <div class="text-center py-8 sm:py-6">
+            <p class="text-xl text-white font-bold mb-2">Event Name</p>
+            <p class="text-base text-gray-400 font-normal">Date</p>
+          </div>
+        </div>
+      </a>
+      <a href="#">
+        <div class="w-full bg-gray-900 rounded-lg shadow-lg overflow-hidden flex flex-col justify-center items-center">
+          <div>
+            <img class="object-center object-cover h-auto w-full"
+              src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZXZlbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+              alt="photo">
+          </div>
+          <div class="text-center py-8 sm:py-6">
+            <p class="text-xl text-white font-bold mb-2">Event Name</p>
+            <p class="text-base text-gray-400 font-normal">Date</p>
+          </div>
+        </div>
+      </a>
+      <a href="#">
+        <div class="w-full bg-gray-900 rounded-lg shadow-lg overflow-hidden flex flex-col justify-center items-center">
+          <div>
+            <img class="object-center object-cover h-auto w-full"
+              src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZXZlbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+              alt="photo">
+          </div>
+          <div class="text-center py-8 sm:py-6">
+            <p class="text-xl text-white font-bold mb-2">Event Name</p>
+            <p class="text-base text-gray-400 font-normal">Date</p>
+          </div>
+        </div>
+      </a>
+      <a href="#">
+        <div class="w-full bg-gray-900 rounded-lg shadow-lg overflow-hidden flex flex-col justify-center items-center">
+          <div>
+            <img class="object-center object-cover h-auto w-full"
+              src="https://images.unsplash.com/photo-1522158637959-30385a09e0da?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGV2ZW50fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+              alt="photo">
+          </div>
+          <div class="text-center py-8 sm:py-6">
+            <p class="text-xl text-white font-bold mb-2">Event Name</p>
+            <p class="text-base text-gray-400 font-normal">Date</p>
+          </div>
+        </div>
+      </a>
+      <a href="#">
+        <div class="w-full bg-gray-900 rounded-lg shadow-lg overflow-hidden flex flex-col justify-center items-center">
+          <div>
+            <img class="object-center object-cover h-auto w-full"
+              src="https://images.unsplash.com/photo-1560523160-754a9e25c68f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGV2ZW50fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+              alt="photo">
+          </div>
+          <div class="text-center py-8 sm:py-6">
+            <p class="text-xl text-white font-bold mb-2">Event Name</p>
+            <p class="text-base text-gray-400 font-normal">Date</p>
+          </div>
+        </div>
+      </a>
+      <a href="#">
+        <div class="w-full bg-gray-900 rounded-lg shadow-lg overflow-hidden flex flex-col justify-center items-center">
+          <div>
+            <img class="object-center object-cover h-auto w-full"
+              src="https://images.unsplash.com/photo-1496024840928-4c417adf211d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fGV2ZW50fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+              alt="photo">
+          </div>
+          <div class="text-center py-8 sm:py-6">
+            <p class="text-xl text-white font-bold mb-2">Event Name</p>
+            <p class="text-base text-gray-400 font-normal">Date</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
   <!-- End of Event Cards-->
 
   <!-- This example requires Tailwind CSS v2.0+ -->
