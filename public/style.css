@@ -74,3 +74,22 @@ background-position: top center;
 background-attachment: fixed;
 opacity: 0.8;
 }
+
+.cardTextSize {     
+font-size: 45px;
+color: blueviolet;
+}
+
+.card-actions-new {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-left: -.25rem;
+    margin-right: -.25rem;
+  }
+
+.card-Detail {
+
+
+
+}

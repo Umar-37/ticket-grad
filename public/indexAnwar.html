@@ -78,14 +78,14 @@
       <div class="flex items-center justify-between">
         <div class=" font-bold text-xl items-center space-x-16 text-center px-4 py-8">
           <a class=" " href="#">All</a>
-          <a class=" mt-10 mr-3" href="indexAnwar.html">Concert</a>
+          <a class=" mt-10 mr-3" href="#">Concert</a>
           <a class=" mt-10 mr-3" href="#">Sport</a>
           <a class=" mt-10 mr-3" href="#">Entertainment</a>
           <a class=" mt-10 mr-3" href="#">Theater</a>
         </div>
         <div>
           <a href="#">
-            
+
             <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -375,196 +375,87 @@
   <!-- End of Search Filter-->
 
   <!-- Start of Event Cards-->
-  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
-    <h1 class=" text-gray-800 text-xl font-bold">Featured Events</h1>
+  <section class="max-w-6xl text-9xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
+    <h1 class=" text-gray-800 text-5xl font-bold">Concert</h1>
     <div class="text-center pb-12">
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <a href="#">
-        <div class="w-full bg-white rounded-lg shadow-lg overflow-hidden flex flex-col justify-center colorHead ">
-          <div>
-            <img class="object-center object-cover h-auto w-full"
-              src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZXZlbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-              alt="photo">
-          </div>
-          <div class=" py-8 sm:py-6 ml-10 space-y-5">
-            <p class="text-xl text-white font-bold mb-2">Event Name</p>
-            <div class=" flex text-base text-gray-400 font-normal">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-              </svg>
-              <span id=" location-span-card">Location</span>
-            </div>
-            <div class=" flex text-base text-gray-400 font-normal">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-              </svg>
-              <span id=" location-span-card">Date</span>
-            </div>
+    <div class="flex-row space-y-5">
+      <!-- first card-start -->
+      <div class="card lg:card-side bordered max-h-40">
+        <figure>
+          <img class="object-center object-cover h-40 w-full" src="https://picsum.photos/id/1005/400/250">
+          <!-- picture -->
+        </figure>
+        <div class="card-body pl-5 pt-3 bg-gray-800 h-auto">
+          <h2 class="card-title">EVENT_NAME </h2> <!-- title text  -->
+          <p class="flex items-center" style="font-size: 18px"> <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg><span class="ml-2">DESCRIPTION DETAILS</span></p>
+           <!-- inside text  -->
+          <div class="card-actions">
+            <!--  div for buttons -->
+            <button class="btn btn-primary">Buy a ticket</button>
+            <button class="btn btn-ghost">More info</button>
           </div>
         </div>
-      </a>
-      <a href="#">
-        <div
-          class="w-full text-white rounded-lg shadow-lg overflow-hidden flex flex-col justify-center colorHead">
-          <div>
-            <img class="object-center object-cover h-auto w-full"
-              src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZXZlbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-              alt="photo">
-          </div>
-          <div class=" py-8 sm:py-6 ml-10 space-y-5">
-            <p class="text-xl text-white font-bold mb-2">Event Name</p>
-            <div class=" flex text-base text-gray-400 font-normal">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-              </svg>
-              <span id=" location-span-card">Location</span>
-            </div>
-            <div class=" flex text-base text-gray-400 font-normal">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-              </svg>
-              <span id=" location-span-card">Date</span>
-            </div>
+      </div>
+      <!-- first card-end-->
+
+      <!-- 2nd card-start -->
+      <div class="card lg:card-side bordered max-h-40">
+        <figure>
+          <img class="object-center object-cover h-40 w-full" src="https://picsum.photos/id/1005/400/250">
+          <!-- picture -->
+        </figure>
+        <div class="card-body pl-5 pt-3 bg-gray-800 h-auto">
+          <h2 class="card-title">Riyadh </h2> <!-- title text  -->
+          <p class="" style="font-size: 18px"> the best concert here *just description*</p> <!-- inside text  -->
+          <div class="card-actions">
+            <!--  div for buttons -->
+            <button class="btn btn-primary">Buy a ticket</button>
+            <button class="btn btn-ghost">More info</button>
           </div>
         </div>
-      </a>
-      <a href="#">
-        <div
-          class="w-ful rounded-lg shadow-lg overflow-hidden flex flex-col justify-center colorHead">
-          <div>
-            <img class="object-center object-cover h-auto w-full"
-              src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZXZlbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-              alt="photo">
-          </div>
-          <div class=" py-8 sm:py-6 ml-10 space-y-5">
-            <p class="text-xl text-white font-bold mb-2">Event Name</p>
-            <div class=" flex text-base text-gray-400 font-normal">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-              </svg>
-              <span id=" location-span-card">Location</span>
-            </div>
-            <div class=" flex text-base text-gray-400 font-normal">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-              </svg>
-              <span id=" location-span-card">Date</span>
-            </div>
+      </div>
+      <!-- 2nd card-end-->
+
+      <!-- 3rd card-start -->
+      <div class="card lg:card-side bordered max-h-40">
+        <figure>
+          <img class="object-center object-cover h-40 w-full" src="https://picsum.photos/id/1005/400/250">
+          <!-- picture -->
+        </figure>
+        <div class="card-body pl-5 pt-3 bg-gray-800 h-auto">
+          <h2 class="card-title">Riyadh </h2> <!-- title text  -->
+          <p class="" style="font-size: 18px"> the best concert here *just description*</p> <!-- inside text  -->
+          <div class="card-actions">
+            <!--  div for buttons -->
+            <button class="btn btn-primary">Buy a ticket</button>
+            <button class="btn btn-ghost">More info</button>
           </div>
         </div>
-      </a>
-      <a href="#">
-        <div
-          class="w-ful rounded-lg shadow-lg overflow-hidden flex flex-col justify-center colorHead">
-          <div>
-            <img class="object-center object-cover h-auto w-full"
-              src="https://images.unsplash.com/photo-1522158637959-30385a09e0da?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGV2ZW50fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-              alt="photo">
-          </div>
-          <div class=" py-8 sm:py-6 ml-10 space-y-5">
-            <p class="text-xl text-white font-bold mb-2">Event Name</p>
-            <div class=" flex text-base text-gray-400 font-normal">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-              </svg>
-              <span id=" location-span-card">Location</span>
-            </div>
-            <div class=" flex text-base text-gray-400 font-normal">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-              </svg>
-              <span id=" location-span-card">Date</span>
-            </div>
+      </div>
+      <!-- 3rd card-end-->
+
+      <!-- 4th card-start -->
+      <div class="card lg:card-side bordered max-h-40">
+        <figure>
+          <img class="object-center object-cover h-40 w-full" src="https://picsum.photos/id/1005/400/250">
+          <!-- picture -->
+        </figure>
+        <div class="card-body pl-5 pt-3 bg-gray-800 h-auto">
+          <h2 class="card-title">Riyadh </h2> <!-- title text  -->
+          <p class="" style="font-size: 18px"> the best concert here *just description*</p> <!-- inside text  -->
+          <div class="card-actions">
+            <!--  div for buttons -->
+            <button class="btn btn-primary">Buy a ticket</button>
+            <button class="btn btn-ghost">More info</button>
           </div>
         </div>
-      </a>
-      <a href="#">
-        <div
-          class="w-ful rounded-lg shadow-lg overflow-hidden flex flex-col justify-center colorHead">
-          <div>
-            <img class="object-center object-cover h-auto w-full"
-              src="https://images.unsplash.com/photo-1560523160-754a9e25c68f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGV2ZW50fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-              alt="photo">
-          </div>
-          <div class=" py-8 sm:py-6 ml-10 space-y-5">
-            <p class="text-xl text-white font-bold mb-2">Event Name</p>
-            <div class=" flex text-base text-gray-400 font-normal">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-              </svg>
-              <span id=" location-span-card">Location</span>
-            </div>
-            <div class=" flex text-base text-gray-400 font-normal">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-              </svg>
-              <span id=" location-span-card">Date</span>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="#">
-        <div
-          class="w-ful rounded-lg shadow-lg overflow-hidden flex flex-col justify-center colorHead">
-          <div>
-            <img class="object-center object-cover h-auto w-full"
-              src="https://images.unsplash.com/photo-1496024840928-4c417adf211d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fGV2ZW50fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-              alt="photo">
-          </div>
-          <div class=" py-8 sm:py-6 ml-10 space-y-5">
-            <p class="text-xl text-white font-bold mb-2">Event Name</p>
-            <div class=" flex text-base text-gray-400 font-normal">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-              </svg>
-              <span id=" location-span-card">Location</span>
-            </div>
-            <div class=" flex text-base text-gray-400 font-normal">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-              </svg>
-              <span id=" location-span-card">Date</span>
-            </div>
-          </div>
-        </div>
-      </a>
+      </div>
+      <!-- 4th card-end-->
+
     </div>
   </section>
   <!-- End of Event Cards-->
