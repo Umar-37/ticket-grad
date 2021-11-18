@@ -1765,7 +1765,7 @@ html {
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
-  padding: var(--padding-card,2rem);
+  /*padding: var(--padding-card,2rem);*/
 }
 
 .card figure,.card figure>* {
