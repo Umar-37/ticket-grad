@@ -1765,7 +1765,7 @@ html {
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
-  /*padding: var(--padding-card,2rem);*/
+  padding: var(--padding-card,2rem);
 }
 
 .card figure,.card figure>* {
@@ -37430,6 +37430,10 @@ html {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.card-actions button{
+  margin-top: 0px;
+}
+
 .cardSp{
   margin-left: auto;
   margin-right: auto;
@@ -37546,6 +37550,22 @@ html {
   background-position: top center;
   background-attachment: fixed;
   opacity: 0.8;
+}
+
+.cardTextSize {
+  font-size: 45px;
+  color: blueviolet;
+}
+
+.card-actions-new {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-left: -.25rem;
+  margin-right: -.25rem;
+}
+
+.card-Detail {
 }
 
 @media (min-width: 640px) {

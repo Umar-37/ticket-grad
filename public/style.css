@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.card-actions button{
+     margin-top: 0px;
+}
+
 .cardSp{
    @apply bg-black hightOmar w-80 lg:w-96 max-w-lg flex flex-none flex-col mx-auto ;
    @apply rounded-lg overflow-hidden  shadow-2xl hover:border-indigo-500 border ;
