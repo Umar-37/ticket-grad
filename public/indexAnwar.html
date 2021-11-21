@@ -381,7 +381,7 @@
     </div>
     <div class="flex-row space-y-5 text-white">
       <!-- first card-start -->
-      <div class="card lg:card-side bordered max-h-40">
+      <div class="card md:card-side bordered max-h-40 ">
         <a href="#">
           <figure>
             <img class="object-center object-cover h-40 w-full" src="https://picsum.photos/id/1005/400/250">
@@ -390,7 +390,15 @@
         </a>
         <div class="card-body pl-5 pt-3 bg-gray-800 h-auto">
           <h2 class="card-title">Riyadh </h2> <!-- title text  -->
-          <p class="" style="font-size: 18px"> the best concert here *just description*</p> <!-- inside text  -->
+          <div class=" flex justify-between items-center" style="font-size: 18px"> 
+            <div class=" flex text-lg space-x-1 items-center">
+              <span><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg></span>
+              <span>Location</span>
+            </div> 
+            <div class=" text-lg">
+              <span>Date</span>
+            </div> 
+          </div> <!-- inside text  -->
           <div class="card-actions">
             <!--  div for buttons -->
             <button class="btn btn-outline">More info</button>
