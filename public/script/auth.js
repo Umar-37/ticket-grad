@@ -56,6 +56,7 @@ function createUserInfo(data, isBuyer) {
             phoneNum: phone.value,
             bank: bank.value,
             streetAddress: street.value,
+            
             iban: iban.value,
             userType: 1
         }
