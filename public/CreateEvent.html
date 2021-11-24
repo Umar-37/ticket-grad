@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.1.1/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.1.1/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.1.1/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.1.1/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <meta http-equiv="Refresh" content="0; url=home.html" /> -->
+    <style>
+        body {
+            background: rgb(231, 231, 231);
+        }
+    </style>
+</head>
+
+<body class="">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const loadEl = document.querySelector('#load');
+            // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+            // // The Firebase SDK is initialized and available here!
+            //
+            // firebase.auth().onAuthStateChanged(user => { });
+            // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+            // firebase.firestore().doc('/foo/bar').get().then(() => { });
+            // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+            // firebase.messaging().requestPermission().then(() => { });
+            // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+            // firebase.analytics(); // call to activate
+            // firebase.analytics().logEvent('tutorial_completed');
+            // firebase.performance(); // call to activate
+            //
+            // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+            try {
+                let app = firebase.app();
+                let features = [
+                    'auth',
+                    'database',
+                    'firestore',
+                    'functions',
+                    'messaging',
+                    'storage',
+                    'analytics',
+                    'remoteConfig',
+                    'performance',
+                ].filter(feature => typeof app[feature] === 'function');
+            } catch (e) {
+                console.error(e);
+            }
+        });
+    </script>
+    <script type="module" src="script/index.js"></script>
+
+    <div class=" w-full flex overflow-hidden items-center justify-center">
+
+        <main class=" flex overflow-hidden items-center">
+            <div class=" mt-10">
+                <div class="py-12">
+                    <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg md:max-w-xl md:mx-2">
+                        <div class="md:flex ">
+                            <div class="w-full p-4 px-5 py-5 text-gray-900">
+                                <div class="flex flex-row">
+                                    <h2 class="text-3xl text-gray-400 font-semibold">Ticket</h2>
+                                    <h2 class="text-3xl text-gray-800 font-semibold">College</h2>
+                                </div>
+
+                                <div class="relative mt-4 pb-5"> </div> <h3 class=" font-bold text-2xl mb-5">Event Information</h3><span> Event Name</span>
+                                <div class="grid md:grid-cols-2 md:gap-2"> <input type="text" name="mail"
+                                        class="border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm"
+                                        placeholder="Event name*"> </div>
+                                <label class="block text-left my-4 " style="max-width: 400px">
+                                    <span class="text-gray-700">Description</span>
+                                    <textarea
+                                        class="border rounded w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm"
+                                        rows="3" placeholder="Description."></textarea>
+                                </label>
+
+                                <span>Ticket Types</span>
+                                <div class="grid md:grid-cols-2 md:gap-2 items-center">
+                                    <input type="text" name="mail"
+                                        class="border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm"
+                                        placeholder="Regular" disabled="disabled">
+                                    <input type="text" name="mail"
+                                        class="border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm"
+                                        placeholder="Price">
+                                </div>
+                                <div class=" mt-2 flex flex-col"><button
+                                        class=" flex btn-outline btn-circle items-center justify-center btn-sm "><svg
+                                            class="  items-center w-6 h-6" fill="black" stroke="black"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                        </svg></button></div>
+                                <div class="py-20 bg-white px-2">
+                                    <div class="max-w-md rounded-lg overflow-hidden md:max-w-xl">
+                                        <div class="md:flex">
+                                            <div class="w-full p-3">
+                                                <div
+                                                    class="relative border-dotted h-48 rounded-lg border-2 border-gray-900 bg-gray-100 flex justify-center items-center">
+                                                    <div class="absolute">
+                                                        <div class="flex items-center"> <i class=" text-blue-700"></i>
+                                                            <span class="block text-gray-400 font-normal">Attach Image
+                                                                Here</span> </div>
+                                                    </div> <input type="file" class="h-full w-full opacity-0"
+                                                        name="picture">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-center pt-2"> <button type="button"
+                                        class="h-12 w-24 text-blue-500 text-xs font-medium">Return</button> <button
+                                        type="button"
+                                        class="h-12 w-48 rounded font-medium text-xs bg-blue-500 text-white">Create
+                                        Event</button> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+
+
+    <!-- This example requires Tailwind CSS v2.0+ -->
+
+    <script>
+        let fathrDiv = document.querySelector('#fatherDiv')
+        let fathr = document.querySelector('#cartFather')
+        let fathr2 = document.querySelector('#cartFather2')
+        function cart() {
+            fathr.classList.toggle('opacity-0')
+            fathr2.classList.toggle('translate-x-full')
+            //fathrDiv.classList.toggle('z-10')
+            fathrDiv.classList.toggle('relative')
+
+        }
+    </script>
+
+    <script>
+        let isOpen = false
+        function openFun() {
+            if (isOpen == true) {
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>
