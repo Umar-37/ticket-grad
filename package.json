@@ -6,6 +6,7 @@
     "tailwindcss": "^2.2.19"
   },
   "scripts": {
+    "build-js":"browserify ./public/script/postEvent/postEvent.js -o ./public/script/postEvent/postEventBun.js",
     "build-css": "tailwindcss build public/style.css -o public/css/style.css --watch",
     "dev": "TAILWIND_MODE=watch postcss public/style.css -o public/css/style.css --watch",
     "test": "postcss public/style.css -o public/css/style.css --watch"
@@ -17,6 +18,7 @@
     "acorn": "^7.4.1",
     "acorn-node": "^1.8.2",
     "acorn-walk": "^7.2.0",
+    "air-datepicker": "^3.0.1",
     "ansi-regex": "^5.0.1",
     "ansi-styles": "^4.3.0",
     "anymatch": "^3.1.2",
@@ -27,6 +29,7 @@
     "bootstrap": "^5.1.3",
     "brace-expansion": "^1.1.11",
     "braces": "^3.0.2",
+    "browserify": "^17.0.0",
     "browserslist": "^4.17.4",
     "bytes": "^3.1.0",
     "callsites": "^3.1.0",
