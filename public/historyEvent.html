@@ -118,82 +118,35 @@
             </a>
         </nav>
         <main class="flex-1 flex flex-col overflow-hidden  mt-10 ml-10 mr-10">
-            <div class="container w-2/3 ">
-                <div
-                    class="rounded-lg bg-gray-500 text-white p-8 my-12 flex flex-col md:flex-row space-between items-center justify-between relative overflow-hidden">
-                    <!-- LEFT PART -->
-                    <div class="flex flex-col lg:ml-14 xl:ml-28 max-w-sm lg:max-w-xl z-10">
-                        <h4 class="text-4xl text-center md:text-left font-bold text-white md:pb-2">
-                            Create a NEW Event
-                        </h4>
+            <div class=" overflow-x-auto rounded-lg">
+                <table class="table w-full table-zebra ">
 
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Event</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                        </tr>
+                    </thead>
 
-                    </div>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td>Hola</td>
+                            <td>2021/02/12</td>
+                            <td>2021/02/20</td>
+                        </tr>
 
+                        <tr>
+                            <th>2</th>
+                            <td>Hola</td>
+                            <td>2021/02/12</td>
+                            <td>2021/02/20</td>
+                        </tr>
+                    </tbody>
 
-                    <!-- RIGHT PART -->
-                    <div class="pt-8 md:pt-0 justify-center lg:ml-auto z-10">
-                        <!-- Contribuer -->
-                        <a href="CreateEvent.html"
-                            class="flex items-center px-8 py-4 text-center text-sm text-black uppercase bg-white font-display rounded-full transition duration-200 hover:bg-black hover:text-white">
-
-                            <span class=" font-bold">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                                </svg>
-                            </span>
-                        </a>
-                    </div>
-
-                    <!-- ATTENTION -->
-
-
-                    <!-- DÉCORATION -->
-                    <div
-                        class="absolute bg-gray-700 opacity-60 w-96 h-96 -top-10 -right-16 md:w-[800px] md:h-[800px] md:left-[45%] md:top-[-150%] rounded-full shadow-2xl z-0">
-                    </div>
-                </div>
-            </div>
-
-            <div class="container w-2/3">
-                <div
-                    class="rounded-lg bg-gray-500 text-white p-8 my-12 flex flex-col md:flex-row space-between items-center justify-between relative overflow-hidden">
-                    <!-- LEFT PART -->
-                    <div class="flex flex-col lg:ml-14 xl:ml-28 max-w-sm lg:max-w-xl z-10">
-                        <h4 class="text-4xl text-center md:text-left font-bold text-white md:pb-2">
-                            Events history
-                        </h4>
-                    </div>
-
-
-                    <!-- RIGHT PART -->
-                    <div class=" pt-8 md:pt-0 justify-center lg:ml-auto z-10">
-                        <!-- Contribuer -->
-                        <a href="historyEvent.html">
-                            <div
-                                class="flex items-center px-8 py-4 text-center text-sm text-black uppercase bg-white font-display rounded-full transition duration-200 hover:bg-black hover:text-white">
-
-                                <span class=" font-bold">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- ATTENTION -->
-
-
-                    <!-- DÉCORATION -->
-                    <div
-                        class="absolute bg-gray-700 opacity-60 w-96 h-96 -top-10 -right-16 md:w-[800px] md:h-[800px] md:left-[45%] md:top-[-150%] rounded-full shadow-2xl z-0">
-                    </div>
-                </div>
+                </table>
             </div>
 
         </main>
@@ -212,8 +165,6 @@
         </div>
 
     </div>
-
-
 
 
     <footer class="items-center p-4 footer bg-neutral text-neutral-content">

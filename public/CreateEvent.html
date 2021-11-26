@@ -89,13 +89,19 @@
                                         class="border rounded w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm"
                                         rows="3" placeholder="Description."></textarea>
                                 </label>
-                                <div class="grid md:grid-cols-4 md:gap-2 my-5 "><!--date picker -->
+                                <div class="grid md:grid-cols-3 md:gap-2 my-5 items-center"><!--date picker -->
                                     <span class=""> Date:</span>
-                                    <input type="text" id="dp" class="border rounded" placeholder="Date here">
+                                    <input type="text" id="dp" class="border rounded h-10 px-2 mt-2 text-sm" placeholder="Date here">
                                 </div> 
-                                <div class="grid md:grid-cols-4 md:gap-2 my-5 "><!--time -->
+                                <div class="grid md:grid-cols-3 md:gap-2 my-5 items-center"><!--time -->
                                     <label for="appt">Time:</label>
-                                    <input class="border rounded" type="time" id="appt" name="appt">
+                                    <input class="border rounded h-10 px-2 mt-2 text-sm" type="time" id="appt" name="appt">
+                                </div>
+                                <span>Location</span>
+                                <div class="grid md:grid-cols-3 md:gap-2 my-5 items-center"><!--location -->
+                                    <input class=" w-full border rounded h-10 px-2 mt-2 text-sm" type="text" placeholder="Region">
+                                    <input class=" w-full border rounded h-10 px-2 mt-2 text-sm" type="text" placeholder="City">
+                                    <input class=" w-full border rounded h-10 px-2 mt-2 text-sm" type="text" placeholder="Address">
                                 </div>
                                 <span>Ticket Types</span>
                                 <div class="grid md:grid-cols-3 md:gap-2 items-center">
@@ -133,8 +139,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="flex justify-between items-center pt-2"> <button type="button"
-                                        class="h-12 w-24 text-blue-500 text-xs font-medium">Return</button> <button
+                                <div class="flex justify-between items-center pt-2"> <div class=" items-center"> <a class="h-12 w-24 text-blue-500 text-xs font-medium" href="indexOrg.html">Return</a></div>  <button
                                         type="button"
                                         class="h-12 w-48 rounded font-medium text-xs bg-blue-500 text-white">Create
                                         Event</button> </div>
