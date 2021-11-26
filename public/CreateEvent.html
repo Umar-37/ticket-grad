@@ -66,41 +66,47 @@
     </script>
     <script type="module" src="script/index.js"></script>
 
+    <nav>
+        <div class="flex h-20 colorHead">
+            <div class="flex flex-row m-4">
+                <h2 class="text-3xl text-gray-400 font-semibold">Ticket</h2>
+                <h2 class="text-3xl text-gray-800 font-semibold">College</h2>
+            </div>
+        </div>
+    </nav>
+
     <div class=" w-full flex overflow-hidden items-center justify-center">
 
         <main class=" flex overflow-hidden items-center">
             <div class=" mt-10">
                 <div class="py-12">
-                    <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg md:max-w-xl md:mx-2">
+                    <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg md:max-w-full md:mx-2">
                         <div class="md:flex ">
                             <div class="w-full p-4 px-5 py-5 text-gray-900">
-                                <div class="flex flex-row">
-                                    <h2 class="text-3xl text-gray-400 font-semibold">Ticket</h2>
-                                    <h2 class="text-3xl text-gray-800 font-semibold">College</h2>
-                                </div>
+                                
 
                                 <div class="relative mt-4 pb-5"> </div>
                                 <h3 class=" font-bold text-2xl mb-5">Event Information</h3><span> Event Name</span>
                                 <div class="grid md:grid-cols-2 md:gap-2"> <input type="text" name="mail"
                                         class="border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm"
-                                        placeholder="Event name*"> </div>
+                                        placeholder="Event Name"> </div>
                                 <label class="block text-left my-4 " style="max-width: 400px">
                                     <span class="text-gray-700">Description</span>
                                     <textarea
                                         class="border rounded w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm"
                                         rows="3" placeholder="Description."></textarea>
                                 </label>
-                                <div class="grid md:grid-cols-3 md:gap-2 my-5 items-center">
+                                <div class="grid md:grid-cols-5 md:gap-2 my-5 items-center">
                                     <!--date picker -->
-                                    <span class=""> Date:</span>
-                                    <input type="text" id="dp" class="border rounded h-10 px-2 mt-2 text-sm"
-                                        placeholder="Date here">
+                                    <span class=" col-span-1"> Date:</span>
+                                    <input type="text" id="dp" class="border rounded h-10 px-2 mt-2 text-sm col-span-3"
+                                        placeholder="mm/dd/yyyy">
                                 </div>
-                                <div class="grid md:grid-cols-3 md:gap-2 my-5 items-center">
+                                <div class="grid md:grid-cols-5 md:gap-2 my-5 items-center">
                                     <!--time -->
-                                    <label for="appt">Time:</label>
-                                    <input class="border rounded h-10 px-2 mt-2 text-sm" type="time" id="appt"
-                                        name="appt">
+                                    <label class=" col-span-1" for="appt">Time:</label>
+                                    <input class="border rounded h-10 px-2 mt-2 text-sm col-span-3" type="time"
+                                        id="appt" name="appt">
                                 </div>
                                 <span>Location</span>
                                 <div class="grid md:grid-cols-3 md:gap-2 my-5 items-center">
@@ -113,35 +119,69 @@
                                         placeholder="Address">
                                 </div>
                                 <span>Ticket Types</span>
-                                <div class="grid md:grid-cols-3 md:gap-2 items-center">
+                                <div class=" grid grid-flow-row md:grid-cols-7 md:gap-2 items-center my-4">
                                     <input type="text" name="mail"
-                                        class="border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm"
+                                        class="border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm col-span-2"
                                         placeholder="Regular" disabled="disabled">
                                     <input type="text" name="mail"
-                                        class="border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm"
-                                        placeholder="Price: SR">
+                                        class="border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm col-span-2"
+                                        placeholder="Price">
                                     <input type="text" name="mail"
-                                        class="border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm"
+                                        class="border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm col-span-2"
                                         placeholder="Number of Tickets">
+                                    <!--Start Dynamic Tickets Inputs-->
+                                    <input type="text" name="mail"
+                                        class="border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm col-span-2"
+                                        placeholder="Class">
+                                    <input type="text" name="mail"
+                                        class="border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm col-span-2"
+                                        placeholder="Price">
+                                    <input type="text" name="mail"
+                                        class="border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm col-span-2"
+                                        placeholder="Number of Tickets">
+                                    <button class=" btn btn-ghost btn-sm btn-circle">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </button>
+                                    <!--End Dynamic Tickets Inputs-->
                                 </div>
 
-                                <div class=" mt-2 flex flex-col"><button
+                                <!--button for adding more Tickets-->
+                                <div class=" mt-2 mb-4 flex flex-col">
+                                    <button
                                         class=" flex btn-outline btn-circle items-center justify-center btn-sm "><svg
                                             class="  items-center w-6 h-6" fill="black" stroke="black"
                                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                                        </svg></button></div>
-                                <image-input-field>
-                                    <img preview class="block max-w-full">
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <!--Insert Image-->
+                                <span>Image</span>
+                                <image-input-field class=" my-4 ">
+                                    <img preview class="block max-w-full max-h-48 my-2">
                                     <input type="file" name="logo">
-                                    <button class="btn" type="button" select>Select Image</button>
-                                    <button type="button" remove>Remove Image</button>
+                                    <div class=" items-center flex space-x-2">
+                                        <button class="btn btn-xs" type="button" select>Select Image</button>
+                                        <button class="btn btn-ghost btn-xs" type="button" remove><svg class="w-6 h-6"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z">
+                                                </path>
+                                            </svg></button>
+
+                                    </div>
                                 </image-input-field>
                                 <div class="flex justify-between items-center pt-2">
-                                    <div class=" items-center"> <a class="h-12 w-24 text-blue-500 text-xs font-medium"
+                                    <div class=" items-center"> <a class="h-10 w-16 btn btn-ghost text-xs font-medium"
                                             href="indexOrg.html">Return</a></div> <button type="button"
-                                        class="h-12 w-48 rounded font-medium text-xs bg-blue-500 text-white">Create
+                                        class="h-12 w-48 btn rounded font-medium text-xs text-white">Create
                                         Event</button>
                                 </div>
                             </div>
