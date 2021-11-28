@@ -83,7 +83,7 @@
                     <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg md:max-w-full md:mx-2">
                         <div class="md:flex ">
                             <div class="w-full p-4 px-5 py-5 text-gray-900">
-                                
+
 
                                 <div class="relative mt-4 pb-5"> </div>
                                 <h3 class=" font-bold text-2xl mb-5">Event Information</h3><span> Event Name</span>
@@ -117,6 +117,18 @@
                                         placeholder="City">
                                     <input class=" w-full border rounded h-10 px-2 mt-2 text-sm" type="text"
                                         placeholder="Address">
+                                    <input class=" w-full col-span-3 border rounded h-10 px-2 mt-2 text-sm" type="text"
+                                        placeholder="Google Maps location link">
+                                </div>
+                                <span class="">Event Category</span>
+                                <div class="grid md:grid-cols-1 md:gap-2 my-5 items-center">
+                                    <select class=" border rounded h-10 px-2" name="eventType" id="">
+                                        <option value="" disabled selected > Type</option>
+                                        <option value="1">Concert</option>
+                                        <option value="2">Sport</option>
+                                        <option value="3">Entertainment</option>
+                                        <option value="4">Theater</option>
+                                    </select>
                                 </div>
                                 <span>Ticket Types</span>
                                 <div class=" grid grid-flow-row md:grid-cols-7 md:gap-2 items-center my-4">

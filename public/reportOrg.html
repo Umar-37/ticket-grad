@@ -67,9 +67,8 @@
     <div class=" h-screen w-full flex overflow-hidden">
 
         <nav class="mt-10 pt-10 w-64 bg-gray-800 sm:mt-0">
-
             <span class=" flex mx-4 font-medium mb-5">Welcome, organization</span>
-            <a class="flex items-center py-2 px-8 bg-gray-700 text-gray-100 border-r-4 border-gray-100"
+            <a class="flex items-center py-2 px-8 text-gray-400 border-r-4 border-gray-800 hover:bg-gray-700 hover:text-gray-100 hover:border-gray-100"
                 href="indexOrg.html">
 
                 <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -81,8 +80,8 @@
                 <span class="mx-4 font-medium">Events</span>
             </a>
 
-            <a class="flex items-center mt-5 py-2 px-8 text-gray-400 border-r-4 border-gray-800 hover:bg-gray-700 hover:text-gray-100 hover:border-gray-100"
-                href="reportOrg.html">
+            <a class="flex items-center py-2 px-8 mt-5 bg-gray-700 text-gray-100 border-r-4 border-gray-100 "
+                href="#">
 
                 <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -120,36 +119,123 @@
             </a>
         </nav>
         <main class="flex-1 flex flex-col overflow-hidden  mt-10 ml-10 mr-10">
-            <div class=" overflow-x-auto rounded-lg">
-                <table class="table w-full table-zebra ">
-
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Event</th>
-                            <th>Start Date</th>
-                            <th>End Date</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <th>1</th>
-                            <td>Hola</td>
-                            <td>2021/02/12</td>
-                            <td>2021/02/20</td>
-                        </tr>
-
-                        <tr>
-                            <th>2</th>
-                            <td>Hola</td>
-                            <td>2021/02/12</td>
-                            <td>2021/02/20</td>
-                        </tr>
-                    </tbody>
-
-                </table>
+            <!--stats overall events-->
+            <div class="w-full shadow stats">
+                <div class="stat">
+                    <div class="stat-figure text-secondary">
+                        <svg class="inline-block w-8 h-8 stroke-current" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="stat-title">Views</div>
+                    <div class="stat-value">13,123</div>
+                    <div class="stat-desc">All events views</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-figure text-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            class="inline-block w-8 h-8 stroke-current">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="stat-title">Tickets Sold</div>
+                    <div class="stat-value">4,200</div>
+                    <div class="stat-desc">out of <span id=""> 5200</span></div>
+                </div>
+                <div class="stat">
+                    <div class="stat-figure text-secondary">
+                        <svg class="inline-block w-8 h-8 stroke-current" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="stat-title">Overall Profit</div>
+                    <div class="stat-value"><span>1000</span> SR</div>
+                    <div class="stat-desc text-error"></div>
+                </div>
+                <div class="stat">
+                    <div class="stat-figure text-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            class="inline-block w-8 h-8 stroke-current">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="stat-title">Events</div>
+                    <div class="stat-value">10</div>
+                    <div class="stat-desc"></div>
+                </div>
             </div>
+            <!--end of stats overall events-->
+            <div class=" w-full border border-gray-900 my-10"></div>
+            <!--stats for event-->
+            <div class=" my-5">
+                <div class="w-full shadow stats">
+                    <div class="stat">
+                        <div class="stat-figure text-secondary">
+                            <svg class="inline-block w-8 h-8 stroke-current" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="stat-title">Views</div>
+                        <div class="stat-value">13,123</div>
+                        <div class="stat-desc">All events views</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-figure text-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                class="inline-block w-8 h-8 stroke-current">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="stat-title">Tickets Sold</div>
+                        <div class="stat-value">4,200</div>
+                        <div class="stat-desc">out of <span id=""> 5200</span></div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-figure text-secondary">
+                            <svg class="inline-block w-8 h-8 stroke-current" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="stat-title">Profit</div>
+                        <div class="stat-value"><span>1000</span> SR</div>
+                        <div class="stat-desc text-error"></div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-figure text-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                class="inline-block w-8 h-8 stroke-current">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="stat-title">Event</div>
+                        <div class="stat-value">Event name</div>
+                        <div class="stat-desc"></div>
+                    </div>
+                </div>
+            </div>
+            <!--end of stats for event-->
 
         </main>
         <div class="absolute bottom-0 my-10">
@@ -167,6 +253,8 @@
         </div>
 
     </div>
+
+
 
 
     <footer class="items-center p-4 footer bg-neutral text-neutral-content">
