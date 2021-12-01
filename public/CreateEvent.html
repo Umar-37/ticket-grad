@@ -111,21 +111,24 @@
                                         id="time" name="time">
                                 </div>
                                 <span>Location</span>
-                                <div class="grid md:grid-cols-3 md:gap-2 my-5 items-center">
+                                <div class="grid md:grid-cols-2 md:gap-2 my-5 items-center">
                                     <!--location -->
-                                    <input name="region" class=" w-full border rounded h-10 px-2 mt-2 text-sm" type="text"
-                                        placeholder="Region">
-                                    <input name="city" class=" w-full border rounded h-10 px-2 mt-2 text-sm" type="text"
-                                        placeholder="City">
-                                    <input name="numberTickets" class=" w-full border rounded h-10 px-2 mt-2 text-sm" type="text"
-                                        placeholder="Address">
+                                        <select class=" w-full border rounded h-10 px-2 mt-2 text-sm" name="region" id="">
+                                            <option value="riyadh" >Riyadh</option>
+                                            <option value="dammam" >Dammam</option>
+                                            <option value="jubail" >Jubail</option>
+                                            <option value="qassim" >Qassim</option>
+                                            <option value="jeddah" >Jeddah</option>
+                                        </select>
+                                    <input name="place" class=" w-full border rounded h-10 px-2 mt-2 text-sm" type="text"
+                                        placeholder="Place">
                                     <input class=" w-full col-span-3 border rounded h-10 px-2 mt-2 text-sm" type="text"
                                         placeholder="Google Maps location link">
                                 </div>
                                 <span class="">Event Category</span>
                                 <div class="grid md:grid-cols-1 md:gap-2 my-5 items-center">
                                     <select class=" border rounded h-10 px-2" name="eventType" id="">
-                                        <option value="" disabled selected > Type</option>
+                                        <option value="" disabled selected >Type</option>
                                         <option value="1">Concert</option>
                                         <option value="2">Sport</option>
                                         <option value="3">Entertainment</option>
@@ -134,9 +137,12 @@
                                 </div>
                                 <span>Ticket Types</span>
                                 <div class=" grid grid-flow-row md:grid-cols-7 md:gap-2 items-center my-4">
-                                    <input type="text" name="ticketType"
-                                        class="border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm col-span-2"
-                                        placeholder="Regular" disabled="disabled">
+                                    
+                                    <select class=" border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm col-span-2" name="ticketType" id="">
+                                        <option value="Regular">Regular</option>
+                                        <option value="Silver">Silver</option>
+                                        <option value="VIP">VIP</option>
+                                    </select>
                                     <input type="text" name="ticketPrice"
                                         class="border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm col-span-2"
                                         placeholder="Price">
