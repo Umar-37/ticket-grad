@@ -1,4 +1,9 @@
 module.exports = {
+  daisyui: {
+      styled: true,
+      themes: "light",
+      rtl: false,
+    },
   mode:'',
   purge: [
   './public/**/*.html',
