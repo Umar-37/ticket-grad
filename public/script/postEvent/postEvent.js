@@ -1,30 +1,52 @@
 let log = console.log;
 let db = firebase.firestore();
 let auth = firebase.auth()
+let storageRef = firebase.storage().ref();
+let theImg = null;
+let path;
+const fileImg = document.getElementById("file");
+let container = document.getElementById('here')
+const temp = document.getElementById('mass-template');
+var count=0;
 //////////////////////////////
-const formData = new FormData(document.querySelector('form'))
- window.onload = function() {
-      initApp();
-    };
-//////////////////////////////
-function initApp(){
-  auth.onAuthStateChanged(function(user) {
-    if(user){
-document.querySelector('form').addEventListener('submit', e => {
-  e.preventDefault()
-  dataUser = {} //define it as globel object to access it in code below
-  looping(user)
-  createDoc()
-  // console.log(dp.selectedDates);
-  // console.log(formData);
-})
-    }else window.location='indexHisham.html'  //enable this
- })
+fileImg.addEventListener("change", handleFiles, false);
+function handleFiles() {
+  theImg = this.files[0]; /* now you can work with the file list */
+}
 
-  }
+//const formData = new FormData(document.querySelector('form'))
+window.onload = function () {
+  initApp();
+};
+//////////////////////////////
+function initApp() {
+  auth.onAuthStateChanged(function (user) {
+    if (user) {
+      document.querySelector('form').addEventListener('submit', e => {
+        pop=0 //globle varible
+        formData = new FormData(document.querySelector('form'))
+        e.preventDefault()
+        dataUser = {} //define it as globel object to access it in code below
+        looping(user)
+        if(pop>=1)
+        {return 0}
+        path = saveImg(theImg)
+        //createDoc(path)
+        //form.reset()
+      })
+    }//else window.location='indexHisham.html'  //enable this
+  })
+
+}
 //-------function area------------------
 function looping(user) {
   for (var pair of formData.entries()) {
+    log(pair[0] + ':', pair[1])
+    if (pair[1] == '' || pair[1].name=='') {
+        pop=1;
+        popUp('fill the blank')                 
+        break;
+    }
     if (pair[0] == 'date') {
       //idk take it from here https://stackoverflow.com/questions/12482961/change-values-in-array-when-doing-foreach
       dp.selectedDates.forEach(function (part, index) {
@@ -35,18 +57,67 @@ function looping(user) {
     }
     dataUser[pair[0]] = pair[1];
   }
-  dataUser.owner=user.uid
+  dataUser.owner = user.uid
 }
-function createDoc() {
+function createDoc(Path) {
   delete dataUser.file //becasue it contain the img data and firebase does not store this type of object
+  dataUser.path = Path
   db.collection("events").add(dataUser)
     .then(() => {
       console.log("Document successfully written!");
+      form.reset()
     })
     .catch((error) => {
+
       console.error("Error writing document: ", error.code);
+      popUp(error.code)
     });
 }
+function saveImg(file) {
+  console.log('this is the pic', file);
+  var metadata = {
+    'contentType': file.type
+  };
+
+  // Push to child path.
+  let pathToImg = 'default';
+  storageRef.child('images/' + file.name).put(file, metadata).then(function (snapshot) {
+    console.log('Uploaded', snapshot.totalBytes, 'bytes.');
+    console.log('File metadata:', snapshot.metadata);
+    pathToImg = snapshot.metadata.fullPath
+    createDoc(pathToImg)
+    // storageRef.child(pathToImg).getDownloadURL().then((url) => { document.getElementById('linkbox').innerHTML = '<img src="' +  url + '">Click For File</a>';
+    //  });
+    return pathToImg  // Let's get a download URL for the file.
+    // snapshot.ref.getDownloadURL().then(function(url) {
+    //   console.log('File available at', url);
+    //   document.getElementById('linkbox').innerHTML = '<img src="' +  url + '">Click For File</a>';
+    // });
+  }).catch(function (error) {
+    console.error('Upload failed:', error);
+    popUp(error.code)
+  });
+}
+function popUp(mass) {
+    const tempNode = document.importNode(temp.content, true)
+    const popUp=document.querySelectorAll('[data-new-toFade]')[count]
+
+    //passwrod ? pass.value='':false;
+
+    if(popUp){
+    popUp.classList.toggle('hidden')
+    log(popUp)
+    count++;
+    }
+    tempNode.querySelector('label').innerText = mass
+    container.appendChild(tempNode)
+}
+////////////////////--end of function related to saveing data-----------------------
+////////////////////////////////////////////////////////////////////////////////////////////
+//-----------------start of DOM manipulation 
+
+
+
 
 
 

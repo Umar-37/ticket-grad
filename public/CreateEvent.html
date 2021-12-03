@@ -8,6 +8,7 @@
     <script defer src="/__/firebase/9.1.1/firebase-auth-compat.js"></script>
     <script defer src="/__/firebase/9.1.1/firebase-database-compat.js"></script>
     <script defer src="/__/firebase/9.1.1/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.1.1/firebase-storage-compat.js"></script>
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
@@ -75,137 +76,158 @@
         </div>
     </nav>
 
-    <div class=" w-full flex overflow-hidden items-center justify-center">
+    <div id="here" class=" w-full flex overflow-hidden items-center justify-center">
 
         <main class=" flex overflow-hidden items-center">
             <div class=" mt-10">
                 <div class="py-12">
                     <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg md:max-w-full md:mx-2">
                         <div class="md:flex ">
-                            <div class="w-full p-4 px-5 py-5 text-gray-900">
-                                
-                                <form action="" id="form" >
+                            <div class="w-full p-4 px-5 py-5 text-gray-900" id="container1">
+
+                                <form action="" id="form">
 
 
-                                <div class="relative mt-4 pb-5"> </div>
-                                <h3 class=" font-bold text-2xl mb-5">Event Information</h3><span> Event Name</span>
-                                <div class="grid md:grid-cols-2 md:gap-2"> <input type="text" name="EventName"
-                                        class="border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm"
-                                        placeholder="Event Name"> </div>
-                                <label class="block text-left my-4 " style="max-width: 400px">
-                                    <span class="text-gray-700">Description</span>
-                                    <textarea name="description"
-                                        class="border rounded w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm"
-                                        rows="3" placeholder="Description."></textarea>
-                                </label>
-                                <div class="grid md:grid-cols-5 md:gap-2 my-5 items-center">
-                                    <!--date picker -->
-                                    <span class=" col-span-1"> Date:</span>
-                                    <input type="text" id="dp" name="date" class="border rounded h-10 px-2 mt-2 text-sm col-span-3"
-                                        placeholder="mm/dd/yyyy">
-                                </div>
-                                <div class="grid md:grid-cols-5 md:gap-2 my-5 items-center">
-                                    <!--time -->
-                                    <label class=" col-span-1" for="appt">Time:</label>
-                                    <input class="border rounded h-10 px-2 mt-2 text-sm col-span-3" type="time"
-                                        id="time" name="time">
-                                </div>
-                                <span>Location</span>
-                                <div class="grid md:grid-cols-2 md:gap-2 my-5 items-center">
-                                    <!--location -->
-                                        <select class=" w-full border rounded h-10 px-2 mt-2 text-sm" name="region" id="">
-                                            <option value="riyadh" >Riyadh</option>
-                                            <option value="dammam" >Dammam</option>
-                                            <option value="jubail" >Jubail</option>
-                                            <option value="qassim" >Qassim</option>
-                                            <option value="jeddah" >Jeddah</option>
-                                        </select>
-                                    <input name="place" class=" w-full border rounded h-10 px-2 mt-2 text-sm" type="text"
-                                        placeholder="Place">
-                                    <input class=" w-full col-span-3 border rounded h-10 px-2 mt-2 text-sm" type="text"
-                                        placeholder="Google Maps location link">
-                                </div>
-                                <span class="">Event Category</span>
-                                <div class="grid md:grid-cols-1 md:gap-2 my-5 items-center">
-                                    <select class=" border rounded h-10 px-2" name="eventType" id="">
-                                        <option value="" disabled selected >Type</option>
-                                        <option value="1">Concert</option>
-                                        <option value="2">Sport</option>
-                                        <option value="3">Entertainment</option>
-                                        <option value="4">Theater</option>
-                                    </select>
-                                </div>
-                                <span>Ticket Types</span>
-                                <div class=" grid grid-flow-row md:grid-cols-7 md:gap-2 items-center my-4">
-                                    
-                                    <select class=" border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm col-span-2" name="ticketType" id="">
-                                        <option value="Regular">Regular</option>
-                                        <option value="Silver">Silver</option>
-                                        <option value="VIP">VIP</option>
-                                    </select>
-                                    <input type="text" name="ticketPrice"
-                                        class="border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm col-span-2"
-                                        placeholder="Price">
-                                    <input type="text" name="numberTickets"
-                                        class="border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm col-span-2"
-                                        placeholder="Number of Tickets">
-                                    <!--Start Dynamic Tickets Inputs-->
-                                    <!-- <input type="text" name="mail"
-                                        class="border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm col-span-2"
-                                        placeholder="Class">
-                                    <input type="text" name="mail"
-                                        class="border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm col-span-2"
-                                        placeholder="Price">
-                                    <input type="text" name="mail"
-                                        class="border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm col-span-2"
-                                        placeholder="Number of Tickets"> -->
-                                    <button class=" btn btn-ghost btn-sm btn-circle">
-                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                        </svg>
-                                    </button>
-                                    <!--End Dynamic Tickets Inputs-->
-                                </div>
-
-                                <!--button for adding more Tickets-->
-                                <div class=" mt-2 mb-4 flex flex-col">
-                                    <button
-                                        class=" flex btn-outline btn-circle items-center justify-center btn-sm "><svg
-                                            class="  items-center w-6 h-6" fill="black" stroke="black"
-                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-
-                                <!--Insert Image-->
-                                <span>Image</span>
-                                <image-input-field class=" my-4 ">
-                                    <img preview class="block max-w-full max-h-48 my-2">
-                                    <input type="file" name="file">
-                                    <div class=" items-center flex space-x-2">
-                                        <button class="btn btn-xs" type="button" select>Select Image</button>
-                                        <button class="btn btn-ghost btn-xs" type="button" remove><svg class="w-6 h-6"
-                                                fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z">
-                                                </path>
-                                            </svg></button>
-
+                                    <div class="relative mt-4 pb-5"> </div>
+                                    <h3 class=" font-bold text-2xl mb-5">Event Information</h3><span> Event Name</span>
+                                    <div class="grid md:grid-cols-2 md:gap-2"> <input type="text" name="EventName"
+                                            class="border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm"
+                                            placeholder="Event Name"> </div>
+                                    <label class="block text-left my-4 " style="max-width: 400px">
+                                        <span class="text-gray-700">Description</span>
+                                        <textarea name="description"
+                                            class="border rounded w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm"
+                                            rows="3" placeholder="Description."></textarea>
+                                    </label>
+                                    <div class="grid md:grid-cols-5 md:gap-2 my-5 items-center">
+                                        <!--date picker -->
+                                        <span class=" col-span-1"> Date:</span>
+                                        <input type="text" id="dp" name="date"
+                                            class="border rounded h-10 px-2 mt-2 text-sm col-span-3"
+                                            placeholder="mm/dd/yyyy">
                                     </div>
-                                </image-input-field>
-                                <div class="flex justify-between items-center pt-2">
-                                    <div class=" items-center"> <a class="h-10 w-16 btn btn-ghost text-xs font-medium"
-                                            href="indexOrg.html">Return</a></div> <button type="submit"
-                                        class="h-12 w-48 btn rounded font-medium text-xs text-white">Create
-                                        Event</button>
-                                </div>
-                            </form>
-                        </div>
+                                    <div class="grid md:grid-cols-5 md:gap-2 my-5 items-center">
+                                        <!--time -->
+                                        <label class=" col-span-1" for="appt">Time:</label>
+                                        <input class="border rounded h-10 px-2 mt-2 text-sm col-span-3" type="time"
+                                            id="time" name="time">
+                                    </div>
+                                    <span>Location</span>
+                                    <div class="grid md:grid-cols-2 md:gap-2 my-5 items-center">
+                                        <!--location -->
+                                        <select class=" w-full border rounded h-10 px-2 mt-2 text-sm" name="region"
+                                            id="">
+                                            <option value="riyadh">Riyadh</option>
+                                            <option value="dammam">Dammam</option>
+                                            <option value="jubail">Jubail</option>
+                                            <option value="qassim">Qassim</option>
+                                            <option value="jeddah">Jeddah</option>
+                                        </select>
+                                        <input name="place" class=" w-full border rounded h-10 px-2 mt-2 text-sm"
+                                            type="text" placeholder="Place">
+                                        <input name="googleMaps"
+                                            class=" w-full col-span-3 border rounded h-10 px-2 mt-2 text-sm" type="text"
+                                            placeholder="Google Maps location link">
+                                    </div>
+                                    <span class="">Event Category</span>
+                                    <div class="grid md:grid-cols-1 md:gap-2 my-5 items-center">
+                                        <select class=" border rounded h-10 px-2" name="eventType" id="">
+                                            <option value="Concert">Concert</option>
+                                            <option value="Sport">Sport</option>
+                                            <option value="Entertainment">Entertainment</option>
+                                            <option value="Theater">Theater</option>
+                                        </select>
+                                    </div>
+                                    <span>Ticket Types</span>
+                                    <!-- herer -->
+                                    <div class=" grid grid-flow-row md:grid-cols-7 md:gap-2 items-center my-4"
+                                        id="ticketContainer0">
+
+                                        <select
+                                            class=" border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm col-span-2"
+                                            name="ticketType" id="selectMenu">
+                                            <option value="Regular">Regular</option>
+                                            <option value="Silver">Silver</option>
+                                            <option value="VIP">VIP</option>
+                                        </select>
+                                        <input type="text" name="ticketPrice"
+                                            class="border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm col-span-2"
+                                            placeholder="Price">
+                                        <input type="text" name="numberTickets"
+                                            class="border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm col-span-2"
+                                            placeholder="Number of Tickets">
+
+                                        <!--End Dynamic Tickets Inputs-->
+                                    </div>
+                                    <template id="ticketTemp">
+                                        <div data-template
+                                            class=" grid grid-flow-row md:grid-cols-7 md:gap-2 items-center my-4 "
+                                            id="ticketContainer1">
+
+                                            <select
+                                                class=" border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm col-span-2"
+                                                name="ticketType" id="selectMenu" data-select>
+                                                <option value="Silver">Silver</option>
+                                                <option value="VIP">VIP</option>
+                                            </select>
+                                            <input type="text" name="ticketPrice" data-price
+                                                class="border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm col-span-2"
+                                                placeholder="Price">
+                                            <input type="text" name="numberTickets" data-number
+                                                class="border rounded h-10 w-full focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm col-span-2"
+                                                placeholder="Number of Tickets">
+                                            <button type="button" data-button-delete
+                                                class=" w-2 btn btn-ghost btn-sm btn-circle">
+                                                <svg class="w-6 h-6 pointer-events-none" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                            <!--End Dynamic Tickets Inputs-->
+                                        </div>
+                                    </template>
+
+                                    <!--button for adding more Tickets-->
+                                    <div class=" mt-2 mb-4 flex flex-col">
+                                        <button data-more-ticket id="more" type="button" onclick="moreTicket()"
+                                            class=" flex btn-outline btn-circle items-center justify-center btn-sm "><svg
+                                                class="  items-center w-6 h-6" fill="black" stroke="black"
+                                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <!--Insert Image-->
+                                    <span>Image</span>
+                                    <image-input-field class=" my-4 ">
+                                        <img preview class="block max-w-full max-h-48 my-2">
+                                        <input type="file" name="file" id="file">
+                                        <div class=" items-center flex space-x-2">
+                                            <button class="btn btn-xs" type="button" select>Select Image</button>
+                                            <button class="btn btn-ghost btn-xs" type="button" remove><svg
+                                                    class="w-6 h-6" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z">
+                                                    </path>
+                                                </svg></button>
+                                        </div>
+                                    </image-input-field>
+                                    <div class="flex justify-between items-center pt-2">
+                                        <div class=" items-center"> <a
+                                                class="h-10 w-16 btn btn-ghost text-xs font-medium"
+                                                href="indexOrg.html">Return</a></div> <button type="submit"
+                                            class="h-12 w-48 btn rounded font-medium text-xs text-white">Create
+                                            Event</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -240,7 +262,72 @@
             }
         }
     </script>
+    <template id="mass-template">
+        <div id="fade" onclick="gone()" class="alert alert-warning fixed top-4" data-new-toFade>
+            <div class="flex-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    class="w-6 h-6 mx-2 stroke-current">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                    </path>
+                </svg>
+                <label id="label">something wrong happen</label>
+            </div>
+        </div>
+    </template>
+    <script>
+        function gone() {
+            let elements = document.querySelectorAll('#fade')
+            //element.classList.toggle('hidden')
+            for (element in elements) {
+                if (!elements[element].classList.contains('hidden')) {
+                    elements[element].classList.toggle('hidden')
+                }
+            }
+        }</script>
+    <script>
+        let ccount = 0;
+        function moreTicket() {
+            const moreTemp = document.getElementById('ticketTemp')
+            const theNode = document.importNode(moreTemp.content, true)
+            const container = document.getElementById('ticketContainer' + ccount)
+            if (ccount <= 1) {
+                container.after(theNode)
+                const type = document.querySelectorAll('[data-select]')[ccount]
+                const price = document.querySelectorAll('[data-price]')[ccount]
+                const number = document.querySelectorAll('[data-number]')[ccount]
+                type.setAttribute('name', 'ticketType-' + (ccount + 1))
+                price.setAttribute('name', 'ticketPrice-' + (ccount + 1))
+                number.setAttribute('name', 'numberTickets-' + (ccount + 1))
+                ccount++;
+            }
+            if (ccount >= 2) {
+                let button = document.querySelectorAll('[data-more-ticket]')
+                button.forEach(e => {
+                    e.classList.toggle('hidden')
+                })
 
+            }
+        }
+    </script>
+    <script>
+        let container1 = document.getElementById('container1')
+        let buttons = document.querySelectorAll('[data-button-delete]')
+        container1.addEventListener('click', e => {
+            if (e.target.tagName.toLowerCase() == 'button' && e.target.classList[0] == 'w-2') {
+                let omar = document.querySelectorAll('[data-template]')//[0].classList.toggle('hidden')
+                omar[0].classList.add('hidden')
+                console.log(omar.classList)
+                //  console.log(e)
+            }
+        })
+        // buttons.forEach(button=>{
+        //     button.addEventListener('click',e=>{
+        //         //e.classList.toggle('hidden')
+        //         console.log(e)
+        //     })
+        // })
+    </script>
 </body>
 
 </html>

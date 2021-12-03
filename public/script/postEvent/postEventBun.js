@@ -21,33 +21,242 @@ var _default = {
 };
 exports["default"] = _default;
 },{}],3:[function(require,module,exports){
+// shim for using process in browser
+var process = module.exports = {};
+
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+
+var cachedSetTimeout;
+var cachedClearTimeout;
+
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout () {
+    throw new Error('clearTimeout has not been defined');
+}
+(function () {
+    try {
+        if (typeof setTimeout === 'function') {
+            cachedSetTimeout = setTimeout;
+        } else {
+            cachedSetTimeout = defaultSetTimout;
+        }
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
+    }
+    try {
+        if (typeof clearTimeout === 'function') {
+            cachedClearTimeout = clearTimeout;
+        } else {
+            cachedClearTimeout = defaultClearTimeout;
+        }
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
+    }
+} ())
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) {
+        //normal enviroments in sane situations
+        return setTimeout(fun, 0);
+    }
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch(e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch(e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
+
+
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) {
+        //normal enviroments in sane situations
+        return clearTimeout(marker);
+    }
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
+
+
+
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
+}
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
+
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
+        }
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
+}
+
+process.nextTick = function (fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+        runTimeout(drainQueue);
+    }
+};
+
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
+},{}],4:[function(require,module,exports){
+(function (process){(function (){
 let log = console.log;
 let db = firebase.firestore();
 let auth = firebase.auth()
+let storageRef = firebase.storage().ref();
+let theImg = null;
+let path;
+const fileImg = document.getElementById("file");
+let container = document.getElementById('here')
+const temp = document.getElementById('mass-template');
+var count=0;
 //////////////////////////////
-const formData = new FormData(document.querySelector('form'))
- window.onload = function() {
-      initApp();
-    };
-//////////////////////////////
-function initApp(){
-  auth.onAuthStateChanged(function(user) {
-    if(user){
-document.querySelector('form').addEventListener('submit', e => {
-  e.preventDefault()
-  dataUser = {} //define it as globel object to access it in code below
-  looping(user)
-  createDoc()
-  // console.log(dp.selectedDates);
-  // console.log(formData);
-})
-    }else window.location='indexHisham.html'  //enable this
- })
+fileImg.addEventListener("change", handleFiles, false);
+function handleFiles() {
+  theImg = this.files[0]; /* now you can work with the file list */
+}
 
-  }
+//const formData = new FormData(document.querySelector('form'))
+window.onload = function () {
+  initApp();
+};
+//////////////////////////////
+function initApp() {
+  auth.onAuthStateChanged(function (user) {
+    if (user) {
+      document.querySelector('form').addEventListener('submit', e => {
+        pop=0 //globle varible
+        formData = new FormData(document.querySelector('form'))
+        e.preventDefault()
+        dataUser = {} //define it as globel object to access it in code below
+        looping(user)
+        if(pop>=1)
+        {return 0}
+        path = saveImg(theImg)
+        //createDoc(path)
+        //form.reset()
+      })
+    }//else window.location='indexHisham.html'  //enable this
+  })
+
+}
 //-------function area------------------
 function looping(user) {
   for (var pair of formData.entries()) {
+    log(pair[0] + ':', pair[1])
+    if (pair[1] == '' || pair[1].name=='') {
+        pop=1;
+        popUp('fill the blank')                 
+        break;
+    }
     if (pair[0] == 'date') {
       //idk take it from here https://stackoverflow.com/questions/12482961/change-values-in-array-when-doing-foreach
       dp.selectedDates.forEach(function (part, index) {
@@ -58,18 +267,68 @@ function looping(user) {
     }
     dataUser[pair[0]] = pair[1];
   }
-  dataUser.owner=user.uid
+  dataUser.owner = user.uid
 }
-function createDoc() {
+function createDoc(Path) {
   delete dataUser.file //becasue it contain the img data and firebase does not store this type of object
+  dataUser.path = Path
   db.collection("events").add(dataUser)
     .then(() => {
       console.log("Document successfully written!");
+      form.reset()
     })
     .catch((error) => {
+
       console.error("Error writing document: ", error.code);
+      popUp(error.code)
     });
 }
+function saveImg(file) {
+  console.log('this is the pic', file);
+  var metadata = {
+    'contentType': file.type
+  };
+
+  // Push to child path.
+  let pathToImg = 'default';
+  log("here",process.env.FUNCTIONS_EMULATOR)
+  storageRef.child('images/' + file.name).put(file, metadata).then(function (snapshot) {
+    console.log('Uploaded', snapshot.totalBytes, 'bytes.');
+    console.log('File metadata:', snapshot.metadata);
+    pathToImg = snapshot.metadata.fullPath
+    createDoc(pathToImg)
+    // storageRef.child(pathToImg).getDownloadURL().then((url) => { document.getElementById('linkbox').innerHTML = '<img src="' +  url + '">Click For File</a>';
+    //  });
+    return pathToImg  // Let's get a download URL for the file.
+    // snapshot.ref.getDownloadURL().then(function(url) {
+    //   console.log('File available at', url);
+    //   document.getElementById('linkbox').innerHTML = '<img src="' +  url + '">Click For File</a>';
+    // });
+  }).catch(function (error) {
+    console.error('Upload failed:', error);
+    popUp(error.code)
+  });
+}
+function popUp(mass) {
+    const tempNode = document.importNode(temp.content, true)
+    const popUp=document.querySelectorAll('[data-new-toFade]')[count]
+
+    //passwrod ? pass.value='':false;
+
+    if(popUp){
+    popUp.classList.toggle('hidden')
+    log(popUp)
+    count++;
+    }
+    tempNode.querySelector('label').innerText = mass
+    container.appendChild(tempNode)
+}
+////////////////////--end of function related to saveing data-----------------------
+////////////////////////////////////////////////////////////////////////////////////////////
+//-----------------start of DOM manipulation 
+
+
+
 
 
 
@@ -208,4 +467,5 @@ customElements.define('image-input-field', ImageInputField)
 /////////////////////////////////////////////////////////
 
 
-},{"air-datepicker":1,"air-datepicker/locale/en":2}]},{},[3]);
+}).call(this)}).call(this,require('_process'))
+},{"_process":3,"air-datepicker":1,"air-datepicker/locale/en":2}]},{},[4]);
