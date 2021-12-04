@@ -69,7 +69,7 @@
     <div class=" max-w-screen-2xl mx-auto text-white items-center">
       <div class="flex justify-between items-center py-8">
         <div class=" font-bold text-3xl items-center">
-          <a class=" py-10 px-3" href="indexHisham.html">TicketCollege</a>
+          <a class=" py-2 px-3 border-b-2 border-t-2" href="indexHisham.html"><span>Ticket</span><span class=" colorCardtext">College</span></a>
         </div>
         <div class=" font-bold text-xl items-center">
           <a class=" py-10" href="/sign.html">Login / Sign Up</a>
@@ -84,14 +84,11 @@
           <a class=" mt-10 mr-3" href="theater.html">Theater</a>
         </div>
         <div>
-          <a href="#">
-            
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
-              </path>
-            </svg>
+          <a class="font-bold text-xl" href="#"> 
+            My Tickets
+          </a>
+          <a hidden class="font-bold text-xl" href="#"> 
+            Dashboard
           </a>
         </div>
       </div>
@@ -102,7 +99,7 @@
 
 
   <!-- Start of Search Filter-->
-  <div tabindex="0" class="collapse max-w-screen-xl rounded-b-box border-0 border-t-0 mx-auto collapse-arrow colorHead">
+  <div tabindex="0" class="collapse max-w-screen-xl rounded-b-box border-0 border-t-0 mx-auto collapse-arrow colorCard">
     <input type="checkbox">
     <div class="collapse-title text-xl font-medium flex">
       <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -367,21 +364,21 @@
   <!-- End of Search Filter-->
 
   <!-- Start of Event Cards-->
-  <section class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
-    <h1 class=" text-gray-800 text-xl font-bold">Featured Events</h1>
+  <section class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-4 py-12 min-h-screen">
+    <h1 class=" text-gray-800 text-2xl font-bold">Featured Events</h1>
     <div class="text-center pb-12">
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6" id="eventContainer">
       <a href="#">
-        <div class="w-full bg-white rounded-lg shadow-lg overflow-hidden flex flex-col justify-center colorHead ">
+        <div class="w-full bg-white rounded-lg shadow-lg overflow-hidden flex flex-col justify-center colorCard ">
           <div>
-            <img class="object-center object-cover h-auto w-full"
+            <img class="object-center object-cover h-72 w-full"
               src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZXZlbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
               alt="photo">
           </div>
           <div class=" sm:py-3 ml-10 space-y-5">
             <p class="text-xl text-white font-bold mb-2">Event Name</p>
-            <div class=" flex text-base text-gray-400 font-normal">
+            <div class=" flex text-base text-gray-400 font-normal items-center space-x-2">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -391,7 +388,7 @@
               </svg>
               <span id="location-span-card">Location</span>
             </div>
-            <div class=" flex text-base text-gray-400 font-normal">
+            <div class=" flex text-base text-gray-400 font-normal  items-center space-x-2">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -405,15 +402,15 @@
       <template id="eventTemplate">
       <a href="#">
         <div
-          class="w-full text-white rounded-lg shadow-lg overflow-hidden flex flex-col justify-center colorHead">
+          class="w-full text-white rounded-lg shadow-lg overflow-hidden flex flex-col justify-center colorCard">
           <div>
-            <img class="object-center object-cover h-auto w-full"
+            <img class="object-center object-cover h-72 w-full"
               src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZXZlbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
               alt="photo">
           </div>
           <div class=" sm:py-3 ml-10 space-y-5">
             <p class="text-xl text-white font-bold mb-2">Event Name</p>
-            <div class=" flex text-base text-gray-400 font-normal">
+            <div class=" flex text-base text-gray-400 font-normal items-center space-x-2">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -421,15 +418,15 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
               </svg>
-              <span id="location-span-card">Location</span>
+              <span  id="location-span-card">Location</span>
             </div>
-            <div class=" flex text-base text-gray-400 font-normal">
+            <div class=" flex text-base text-gray-400 font-normal items-center space-x-2">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
               </svg>
-              <span id="date-span-card">Date</span>
+              <span class=" flex justify-between" id="date-span-card"> <span>Date</span>  <span> days</span></span>
             </div>
           </div>
         </div>
@@ -440,7 +437,7 @@
   </section>
   <!-- End of Event Cards-->
 
-  <footer class="items-center p-4 footer bg-neutral text-neutral-content">
+  <footer class="items-center p-4 footer bg-neutral text-black colorFoot">
     <div class="items-center grid-flow-col">
       <svg width="36" height="36" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
         clip-rule="evenodd" class="fill-current">

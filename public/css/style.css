@@ -37500,7 +37500,19 @@ html {
 }
 
 .colorHead{
+  background-color: #678983;
+}
+
+.colorFoot{
+  background-color: #E6DDC4;
+}
+
+.colorCard{
   background-color: #001828;
+}
+
+.colorCardtext{
+  color: #001828;
 }
 
 .hightOmar{
