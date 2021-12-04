@@ -7,7 +7,11 @@ let path;
 const fileImg = document.getElementById("file");
 let container = document.getElementById('here')
 const temp = document.getElementById('mass-template');
-var count=0;
+///////////
+const submitionButton = document.getElementById('submitionButton');
+const loader = document.getElementById('loader-1');
+///////
+var count = 0;
 //////////////////////////////
 fileImg.addEventListener("change", handleFiles, false);
 function handleFiles() {
@@ -23,18 +27,20 @@ function initApp() {
   auth.onAuthStateChanged(function (user) {
     if (user) {
       document.querySelector('form').addEventListener('submit', e => {
-        pop=0 //globle varible
+        submitionButton.disabled = 'true'
+        //submitionButton.classList.toggle('hidden')
+        loader.classList.toggle('hidden')
+        pop = 0 //globle varible
         formData = new FormData(document.querySelector('form'))
         e.preventDefault()
         dataUser = {} //define it as globel object to access it in code below
         looping(user)
-        if(pop>=1)
-        {return 0}
+        if (pop >= 1) { return 0 }
         path = saveImg(theImg)
         //createDoc(path)
         //form.reset()
       })
-    }//else window.location='indexHisham.html'  //enable this
+    } else window.location = 'indexHisham.html'  //enable this
   })
 
 }
@@ -42,10 +48,10 @@ function initApp() {
 function looping(user) {
   for (var pair of formData.entries()) {
     log(pair[0] + ':', pair[1])
-    if (pair[1] == '' || pair[1].name=='') {
-        pop=1;
-        popUp('fill the blank')                 
-        break;
+    if (pair[1] == '' || pair[1].name == '') {
+      pop = 1;
+      popUp('fill the blank')
+      break;
     }
     if (pair[0] == 'date') {
       //idk take it from here https://stackoverflow.com/questions/12482961/change-values-in-array-when-doing-foreach
@@ -66,6 +72,7 @@ function createDoc(Path) {
     .then(() => {
       console.log("Document successfully written!");
       form.reset()
+      window.location = 'indexHisham.html'
     })
     .catch((error) => {
 
@@ -85,9 +92,11 @@ function saveImg(file) {
     console.log('Uploaded', snapshot.totalBytes, 'bytes.');
     console.log('File metadata:', snapshot.metadata);
     pathToImg = snapshot.metadata.fullPath
-    createDoc(pathToImg)
-    // storageRef.child(pathToImg).getDownloadURL().then((url) => { document.getElementById('linkbox').innerHTML = '<img src="' +  url + '">Click For File</a>';
-    //  });
+    storageRef.child(pathToImg).getDownloadURL().then((url) => {
+      pathToImg = url;
+      createDoc(pathToImg)//document.getElementById('linkbox').innerHTML = '<img src="' +  url + '">Click For File</a>';
+    });
+    //createDoc(pathToImg)
     return pathToImg  // Let's get a download URL for the file.
     // snapshot.ref.getDownloadURL().then(function(url) {
     //   console.log('File available at', url);
@@ -99,18 +108,20 @@ function saveImg(file) {
   });
 }
 function popUp(mass) {
-    const tempNode = document.importNode(temp.content, true)
-    const popUp=document.querySelectorAll('[data-new-toFade]')[count]
+  submitionButton.disabled = false
+  loader.classList.toggle('hidden')
+  const tempNode = document.importNode(temp.content, true)
+  const popUp = document.querySelectorAll('[data-new-toFade]')[count]
 
-    //passwrod ? pass.value='':false;
+  //passwrod ? pass.value='':false;
 
-    if(popUp){
+  if (popUp) {
     popUp.classList.toggle('hidden')
     log(popUp)
     count++;
-    }
-    tempNode.querySelector('label').innerText = mass
-    container.appendChild(tempNode)
+  }
+  tempNode.querySelector('label').innerText = mass
+  container.appendChild(tempNode)
 }
 ////////////////////--end of function related to saveing data-----------------------
 ////////////////////////////////////////////////////////////////////////////////////////////
