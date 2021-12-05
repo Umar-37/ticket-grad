@@ -72,7 +72,7 @@
           <a class=" py-2 px-3 border-b-2 border-t-2" href="indexHisham.html"><span>Ticket</span><span class=" colorCardtext">College</span></a>
         </div>
         <div class=" font-bold text-xl items-center">
-          <a class=" py-10" href="/sign.html">Login / Sign Up</a>
+          <a id="sign/login" class="hidden py-10" href="/sign.html">Login / Sign Up</a>
         </div>
       </div>
       <div class="flex items-center justify-between">
@@ -84,7 +84,7 @@
           <a class=" mt-10 mr-3" href="theater.html">Theater</a>
         </div>
         <div>
-          <a class="font-bold text-xl" href="#"> 
+          <a class="font-bold text-xl" href="indexOrg.html"> 
             My Tickets
           </a>
           <a hidden class="font-bold text-xl" href="#"> 
@@ -369,39 +369,9 @@
     <div class="text-center pb-12">
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6" id="eventContainer">
-      <a href="#">
-        <div class="w-full bg-white rounded-lg shadow-lg overflow-hidden flex flex-col justify-center colorCard ">
-          <div>
-            <img class="object-center object-cover h-72 w-full"
-              src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZXZlbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-              alt="photo">
-          </div>
-          <div class=" sm:py-3 ml-10 space-y-5">
-            <p class="text-xl text-white font-bold mb-2">Event Name</p>
-            <div class=" flex text-base text-gray-400 font-normal items-center space-x-2">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-              </svg>
-              <span id="location-span-card">Location</span>
-            </div>
-            <div class=" flex text-base text-gray-400 font-normal  items-center space-x-2">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-              </svg>
-              <span id="date-span-card">Date</span>
-            </div>
-          </div>
-        </div>
-      </a>
       <template id="eventTemplate">
-      <a href="#">
-        <div
+      <a class="055" >
+        <div id="eventCard" 
           class="w-full text-white rounded-lg shadow-lg overflow-hidden flex flex-col justify-center colorCard">
           <div>
             <img class="object-center object-cover h-72 w-full"

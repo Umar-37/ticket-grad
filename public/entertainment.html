@@ -62,17 +62,18 @@
       }
     });
   </script>
-  <script type="module" src="script/index.js"></script>
+  <script type="module" src="script/concert.js"></script>
 
   <!-- homepage -->
   <nav class="colorHead w-full">
     <div class=" max-w-screen-2xl mx-auto text-white items-center">
       <div class="flex justify-between items-center py-8">
         <div class=" font-bold text-3xl items-center">
-            <a class=" py-2 px-3 border-b-2 border-t-2" href="indexHisham.html"><span>Ticket</span><span class=" colorCardtext">College</span></a>
-          </div>
+          <a class=" py-2 px-3 border-b-2 border-t-2" href="indexHisham.html"><span>Ticket</span><span
+              class=" colorCardtext">College</span></a>
+        </div>
         <div class=" font-bold text-xl items-center">
-          <a class=" py-10" href="/sign.html">Login / Sign Up</a>
+          <a id="sign/login" class=" py-10" href="/sign.html">Login / Sign Up</a>
         </div>
       </div>
       <div class="flex items-center justify-between">
@@ -84,13 +85,13 @@
           <a class=" mt-10 mr-3" href="theater.html">Theater</a>
         </div>
         <div>
-            <a class="font-bold text-xl" href="#"> 
-              My Tickets
-            </a>
-            <a hidden class="font-bold text-xl" href="#"> 
-              Dashboard
-            </a>
-          </div>
+          <a class="font-bold text-xl" href="indexOrg.html">
+            My Tickets
+          </a>
+          <a hidden class="font-bold text-xl" href="#">
+            Dashboard
+          </a>
+        </div>
       </div>
     </div>
     <div class=" sm"></div>
@@ -112,33 +113,6 @@
       <div class="">
 
       </div>
-      <!-- <div class=" hidden focus:flex justify-around space-x-60 text-lg items-center ml-48">
-      <div class=" relative">
-       <button onclick="isOpen = !isOpen" id="locationBtn"  class=" bg-gray-200 font-semibold rounded-md block focus:bg-gray-800 focus:text-white">Location</button>
-      <div  class=" hidden absolute text-white w-40 colorHead rounded-md overflow-hidden">
-        <a class=" block px-4 py-1 hover:bg-gray-700  " href="#">1</a>
-        <a class=" block px-4 py-1 hover:bg-gray-700" href="#">2</a>
-        <a class=" block px-4 py-1 hover:bg-gray-700" href="#">3</a>
-      </div>
-      </div>
-      <div class="">
-        <button id="categoryBtn" class=" bg-gray-200 font-semibold rounded-md block focus:bg-gray-800 focus:text-white">Category</button>
-        <div  class=" hidden absolute text-white w-40 colorHead rounded-md overflow-hidden">
-          <a class=" block px-4 py-1 hover:bg-gray-700  " href="#">1</a>
-          <a class=" block px-4 py-1 hover:bg-gray-700" href="#">2</a>
-          <a class=" block px-4 py-1 hover:bg-gray-700" href="#">3</a>
-        </div>
-      </div>
-      <div>
-        <button id="dateBtn" class=" bg-gray-200 font-semibold rounded-md block focus:bg-gray-800 focus:text-white">Date</button>
-        <div  class=" hidden absolute text-white w-40 colorHead rounded-md overflow-hidden">
-          <a class=" block px-4 py-1 hover:bg-gray-700  " href="#">1</a>
-          <a class=" block px-4 py-1 hover:bg-gray-700" href="#">2</a>
-          <a class=" block px-4 py-1 hover:bg-gray-700" href="#">3</a>
-        </div>
-      </div>
-      </div> -->
-
       <form class="items-center">
         <div class=" flex justify-around space-x-1 md:space-x-16 xl:space-x-56 ml-16">
           <div class=" px-4 py-6">
@@ -368,33 +342,42 @@
     <h1 class=" text-gray-800 text-5xl font-bold">Entertainment</h1>
     <div class="text-center pb-12">
     </div>
-    <div class="flex-row space-y-5 text-white">
+    <div class="flex-row space-y-5 text-white" id="container">
       <!-- first card-start -->
-      <div class="card md:card-side bordered max-h-40 colorCard">
+      <template id="template">
+      <div class="card md:card-side bordered max-h-40 colorCard ">
         <a href="#">
           <figure>
-            <img class="object-center object-cover h-40 w-full" src="https://picsum.photos/id/1005/400/250">
+            <img id='img' class="object-center object-cover h-40 w-full" src="https://picsum.photos/id/1005/400/250">
             <!-- picture -->
           </figure>
         </a>
         <div class="card-body pl-5 pt-3 h-auto">
-          <h2 class="card-title">Riyadh </h2> <!-- title text  -->
-          <div class=" flex justify-between items-center" style="font-size: 18px"> 
+          <h2 class="card-title" id="name">Riyadh </h2> <!-- title text  -->
+          <div class=" flex justify-between items-center" style="font-size: 18px">
             <div class=" flex text-lg space-x-1 items-center">
-              <span><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg></span>
-              <span>Location</span>
-            </div> 
+              <span><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg></span>
+              <span id="location"></span>
+            </div>
             <div class=" text-lg">
-              <span>Date</span>
-            </div> 
+              <span id="date"></span>
+            </div>
           </div> <!-- inside text  -->
           <div class="card-actions">
             <!--  div for buttons -->
-            <button class="btn btn-outline">More info</button>
+            <button data-button-redirect id="button" class="btn btn-outline text-white">More info</button>
           </div>
         </div>
       </div>
+      </template>
       <!-- first card-end-->
+      
 
     </div>
   </section>
