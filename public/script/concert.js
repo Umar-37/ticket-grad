@@ -74,7 +74,7 @@ function getData() {
         query=eventRef.where('eventType','==','Entertainment')
             break;
         case '/theater.html':
-        query=eventRef.where('eventType','==','Theather')
+        query=eventRef.where('eventType','==','Theater')
             break;
         default:
           console.log('some thing worng happen');

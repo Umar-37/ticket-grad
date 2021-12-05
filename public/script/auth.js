@@ -71,6 +71,7 @@ function createUserDoc(user) {
     db.collection("users").doc(user.id).set(user)
         .then(() => {
             console.log("Document successfully written!");
+            window.location='indexHisham.html'
         })
         .catch((error) => {
             console.error("Error writing document: ", error.code);
