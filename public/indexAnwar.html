@@ -342,13 +342,13 @@
     <h1 class=" text-gray-800 text-5xl font-bold">Concert</h1>
     <div class="text-center pb-12">
     </div>
-    <div class="flex-row space-y-5 text-white" id="container">
+    <div class="flex-row space-y-5 text-white " id="container">
       <!-- first card-start -->
       <template id="template">
-        <div class="card md:card-side bordered max-h-40 colorCard ">
+        <div class="card md:card-side bordered max-h-40 colorCard">
           <a href="#">
             <figure>
-              <img id='img' class="aspect-[4/3] object-center object-cover h-40 w-full" src="https://picsum.photos/id/1005/400/250">
+              <img id='img' class="aspect-[4/3] object-center object-cover h-40 w-60" src="https://picsum.photos/id/1005/400/250">
               <!-- picture -->
             </figure>
           </a>
@@ -365,7 +365,8 @@
                   </svg></span>
                 <span id="location"></span>
               </div>
-              <div class=" text-lg">
+              <div class=" flex text-lg space-x-1 items-center">
+                <span><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg></span>
                 <span id="date"></span>
               </div>
             </div> <!-- inside text  -->

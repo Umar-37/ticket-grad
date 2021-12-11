@@ -69,98 +69,73 @@
         <div class=" max-w-screen-2xl mx-auto text-white items-center">
             <div class="flex justify-between items-center py-8">
                 <div class=" font-bold text-3xl items-center">
-                    <a class=" py-2 px-3 border-b-2 border-t-2" href="indexHisham.html"><span>Ticket</span><span class=" colorCardtext">College</span></a>
-                  </div>
+                    <a class=" py-2 px-3 border-b-2 border-t-2" href="indexHisham.html"><span>Ticket</span><span
+                            class=" colorCardtext">College</span></a>
+                </div>
                 <div class=" font-bold text-xl items-center">
-                    <a class=" py-10" href="sign.html">Login / Sign Up</a>
                 </div>
             </div>
         </div>
         <div class=" sm"></div>
     </nav>
 
-    <main>
-        <div class=" items-center justify-center max-w-screen-2xl mx-auto my-8">
-            <!--
-            <div class=" grid-cols-3 grid">
-                <div class=" btn-group col-start-2">
-                    <input type="radio" name="options" id="option1" data-title="2012/12/12" class="btn btn-outline ">
-                    <input type="radio" name="options" id="option2" data-title="2012/12/12" class="btn btn-outline">
-                    <input type="radio" name="options" id="option3" data-title="2012/12/12" class="btn btn-outline">
-                    <input type="radio" name="options" id="option4" data-title="2012/12/12" class="btn btn-outline">
-                    <input type="radio" name="options" id="option5" data-title="2012/12/12" class="btn btn-outline">
-                </div>
-            </div>-->
-            <div class=" grid md:grid-cols-3 grid-flow-row gap-10 my-10">
+    <main class=" min-h-screen">
+        <div class=" max-w-screen-md items-center mx-auto my-16 h-full">
+            <div class=" my-10">
 
-                <div class="col-start-2 rounded grid-rows-2 h-screen">
+                <div class=" ">
 
-                    <div class=" items-center">
-                        <div class=" bg-white shadow-lg items-center grid grid-flow-row grid-cols-1 rounded border border-black p-2">
-                            <div class=" col-start-1 ">
-                                <h1 class=" items-center  text-center font-semibold text-lg"> Choose Ticket</h1>
-                                <div class=" w-full border-b-2 border-black my-2 px-1"></div>
-                                <p class=" text-center items-center justify-center flex space-x-4 font-semibold">
-                                    <label for="">Regular</label>
-                                                <input type="number" name=""
-                                                    class=" appearance-none border rounded w-1/4 h-6 focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm"
-                                                    min="0" value="0">
-                                </p>
-                                <p class=" text-center items-center justify-center flex space-x-4 font-semibold">
-                                    <label for="">VIP</label>
-                                                <input type="number" name=""
-                                                    class="border rounded w-1/4 h-6 focus:outline-none focus:border-gray-900 px-2 mt-2 text-sm"
-                                                    min="0" value="0">
-                                </p>
+                    <div class=" ">
+                        <div class=" shadow-lg items-center border border-gray-300  p-2 ">
+                            <div
+                                class=" my-4 px-4 grid grid-flow-col grid-flow-row justify-around content-center gap-8">
+                                <div class=" col-span-1">
+                                    <svg class="w-20 h-20 stroke-1" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <div class=" space-y-2 col-span-6">
+
+                                    <span class="my-2 text-xl font-semibold">
+                                        Tickets have been purchased succecfully.
+                                    </span>
+                                    <div class=" my-5">
+                                        <table class=" border-collapse border table-auto">
+                                            <thead>
+                                                <tr>
+                                                    <th>NO.</th>
+                                                    <th>Event</th>
+                                                    <th>Class</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Event name</td>
+                                                    <td>type of ticket</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="">
+                                        Order#
+                                        <span id="order"></span>
+
+                                    </div>
+                                    <div class="pt-6  font-semibold">
+                                        <a class="link-hover" href="indexHisham.html"> Return to Homepage</a>
+                                    </div>
+                                </div>
+                                <div class=" content-center col-span-1 my-auto">
+                                    <div class="  colorHeadtext text-lg font-semibold">
+                                        <a class=" btn btn-outline btn-ghost" href="#"> Show My Tickets</a>
+                                    </div>
+                                </div>
                             </div>
-                            <!--<table class="table w-full p-10">
-
-                                <thead>
-                                    <tr>
-                                        <th>
-                                            <h1 class=" text-2xl">Choose Tickets</h1>
-                                        </th>
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-                                    <tr>
-                                        <th>
-                                            <div class="flex items-center space-x-2 grid-cols-3 gap-5">
-                                                <label for="">ticket 1</label>
-                                                <input type="number" name=""
-                                                    class="border rounded w-1/4 focus:outline-none focus:border-gray-900 px-2 mt-2 text-xl"
-                                                    min="0">
-                                            </div>
-                                        </th>
-                                    </tr>
-
-                                    <tr>
-                                        <th>
-                                            <div class="flex items-center space-x-2 grid-cols-3 gap-5">
-                                                <label for="">ticket 2</label>
-                                                <input type="number" name=""
-                                                    class="border rounded w-1/4 focus:outline-none focus:border-gray-900 px-2 mt-2 text-xl"
-                                                    min="0">
-                                            </div>
-                                        </th>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            <div class="flex items-center space-x-2 grid-cols-3 gap-5" >
-                                                <label class="" for="">ticket 3</label>
-                                                <input type="number" name=""
-                                                    class="border rounded w-1/4 focus:outline-none focus:border-gray-900 px-2 mt-2 text-xl"
-                                                    min="0">
-                                            </div>
-                                        </th>
-                                    </tr>
-                                </tbody>
-
-                            </table>-->
                         </div>
                     </div>
-                    <a class=" btn btn-info w-full my-5 " href="#"> Buy</a>
                 </div>
 
 
