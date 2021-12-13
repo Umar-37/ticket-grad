@@ -1644,6 +1644,50 @@ html {
 .menu :where(li).disabled>a,.menu :where(li).disabled>span {
   cursor: auto;
 }
+.modal {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  z-index: 999;
+  --tw-bg-opacity: 0.4;
+  background-color: hsla(var(--nf)/var(--tw-bg-opacity,1));
+  transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
+  transition-duration: .2s;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+}
+@media (min-width:640px) {
+
+  .modal {
+    align-items: center;
+  }
+
+  .modal-box {
+    max-width: 32rem;
+    --tw-scale-x: .9;
+    --tw-scale-y: .9;
+    --tw-translate-y: 0px;
+    border-bottom-left-radius: var(--rounded-box,1rem);
+    border-bottom-right-radius: var(--rounded-box,1rem);
+  }
+}
+.modal-open,.modal-toggle:checked+.modal,.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+.modal-action {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
 .radio:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -1919,6 +1963,23 @@ html {
 }
 .btn:focus-visible {
   box-shadow: 0 0 0 2px hsl(var(--b1)),0 0 0 4px hsl(var(--nf));
+}
+.btn-primary {
+  --tw-bg-opacity: 1;
+  background-color: hsla(var(--p)/var(--tw-bg-opacity,1));
+  --tw-border-opacity: 1;
+  border-color: hsla(var(--p)/var(--tw-border-opacity,1));
+  --tw-text-opacity: 1;
+  color: hsla(var(--pc)/var(--tw-text-opacity,1));
+}
+.btn-primary.btn-active,.btn-primary:hover {
+  --tw-bg-opacity: 1;
+  background-color: hsla(var(--pf)/var(--tw-bg-opacity,1));
+  --tw-border-opacity: 1;
+  border-color: hsla(var(--pf)/var(--tw-border-opacity,1));
+}
+.btn-primary:focus-visible {
+  box-shadow: 0 0 0 2px hsl(var(--b1)),0 0 0 4px hsl(var(--p));
 }
 .btn-info {
   --tw-bg-opacity: 1;
@@ -2260,6 +2321,9 @@ html {
 .collapse-open.collapse-plus .collapse-title:after,.collapse-plus:focus:not(.collapse-close) .collapse-title:after,.collapse-plus:not(.collapse-close) input[type=checkbox]:checked~.collapse-title:after {
   content: "−";
 }
+.drawer-toggle:focus-visible~.drawer-content .drawer-button.btn-primary {
+  box-shadow: 0 0 0 2px hsl(var(--b1)),0 0 0 4px hsl(var(--p));
+}
 .drawer-toggle:focus-visible~.drawer-content .drawer-button.btn-info {
   box-shadow: 0 0 0 2px hsl(var(--b1)),0 0 0 4px hsl(var(--in));
 }
@@ -2330,6 +2394,36 @@ html {
   --tw-border-opacity: 1;
   border-color: hsla(var(--p)/var(--tw-border-opacity,1));
   border-left-width: 4px;
+}
+.modal-box {
+  --tw-bg-opacity: 1;
+  background-color: hsla(var(--b1)/var(--tw-bg-opacity,1));
+  padding: 1.5rem;
+  width: 100%;
+  --tw-translate-x: 0;
+  --tw-translate-y: 2.5rem;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
+  transition-duration: .2s;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  border-top-left-radius: var(--rounded-box,1rem);
+  border-top-right-radius: var(--rounded-box,1rem);
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,.25);
+}
+.modal-open .modal-box,.modal-toggle:checked+.modal .modal-box,.modal:target .modal-box {
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-translate-y: 0px;
+}
+.modal-action>:not([hidden])~:not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem*var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem*(1 - var(--tw-space-x-reverse)));
 }
 .radio {
   --chkbg: var(--bc);
@@ -2978,6 +3072,9 @@ html {
 .border-collapse {
   border-collapse: collapse;
 }
+.border-separate {
+  border-collapse: separate;
+}
 .translate-x-full {
   --tw-translate-x: 100%;
   transform: var(--tw-transform);
@@ -3207,6 +3304,14 @@ html {
 .border-transparent {
   border-color: transparent;
 }
+.border-gray-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(107 114 128 / var(--tw-border-opacity));
+}
+.border-gray-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(156 163 175 / var(--tw-border-opacity));
+}
 .bg-neutral {
   --tw-bg-opacity: 1;
   background-color: hsla(var(--n) / var(--tw-bg-opacity));
@@ -3283,6 +3388,9 @@ html {
 }
 .p-8 {
   padding: 2rem;
+}
+.p-1 {
+  padding: 0.25rem;
 }
 .py-8 {
   padding-top: 2rem;
