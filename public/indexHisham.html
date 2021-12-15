@@ -112,34 +112,7 @@
       <div class="">
 
       </div>
-      <!-- <div class=" hidden focus:flex justify-around space-x-60 text-lg items-center ml-48">
-      <div class=" relative">
-       <button onclick="isOpen = !isOpen" id="locationBtn"  class=" bg-gray-200 font-semibold rounded-md block focus:bg-gray-800 focus:text-white">Location</button>
-      <div  class=" hidden absolute text-white w-40 colorHead rounded-md overflow-hidden">
-        <a class=" block px-4 py-1 hover:bg-gray-700  " href="#">1</a>
-        <a class=" block px-4 py-1 hover:bg-gray-700" href="#">2</a>
-        <a class=" block px-4 py-1 hover:bg-gray-700" href="#">3</a>
-      </div>
-      </div>
-      <div class="">
-        <button id="categoryBtn" class=" bg-gray-200 font-semibold rounded-md block focus:bg-gray-800 focus:text-white">Category</button>
-        <div  class=" hidden absolute text-white w-40 colorHead rounded-md overflow-hidden">
-          <a class=" block px-4 py-1 hover:bg-gray-700  " href="#">1</a>
-          <a class=" block px-4 py-1 hover:bg-gray-700" href="#">2</a>
-          <a class=" block px-4 py-1 hover:bg-gray-700" href="#">3</a>
-        </div>
-      </div>
-      <div>
-        <button id="dateBtn" class=" bg-gray-200 font-semibold rounded-md block focus:bg-gray-800 focus:text-white">Date</button>
-        <div  class=" hidden absolute text-white w-40 colorHead rounded-md overflow-hidden">
-          <a class=" block px-4 py-1 hover:bg-gray-700  " href="#">1</a>
-          <a class=" block px-4 py-1 hover:bg-gray-700" href="#">2</a>
-          <a class=" block px-4 py-1 hover:bg-gray-700" href="#">3</a>
-        </div>
-      </div>
-      </div> -->
-
-      <form class="items-center">
+      <form id="searchForm" class="items-center">
         <div class=" flex justify-around space-x-1 sm:space-x-10 md:space-x-24 xl:space-x-56 ml-16">
           <div class=" px-4 py-6">
             <h3 class="-mx-2 -my-3 flow-root">
@@ -169,7 +142,7 @@
             <div class="pt-6" id="filter-section-mobile-0">
               <div class="space-y-6">
                 <div class="flex items-center">
-                  <input id="filter-mobile-location-0" name="location[]" value="Riyadh" type="checkbox"
+                  <input id="filter-mobile-location-0" name="location" value="Riyadh" type="checkbox"
                     class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
                   <label for="filter-mobile-location-0" class="ml-3 min-w-0 flex-1 text-white">
                     Riyadh
@@ -177,7 +150,7 @@
                 </div>
 
                 <div class="flex items-center">
-                  <input id="filter-mobile-location-1" name="location[]" value="Dammam" type="checkbox"
+                  <input id="filter-mobile-location-1" name="location" value="Dammam" type="checkbox"
                     class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
                   <label for="filter-mobile-location-1" class="ml-3 min-w-0 flex-1 text-white">
                     Dammam
@@ -185,7 +158,7 @@
                 </div>
 
                 <div class="flex items-center">
-                  <input id="filter-mobile-location-2" name="location[]" value="Jubail" type="checkbox"
+                  <input id="filter-mobile-location-2" name="location" value="Jubail" type="checkbox"
                     class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
                   <label for="filter-mobile-location-2" class="ml-3 min-w-0 flex-1 text-white">
                     Jubail
@@ -193,7 +166,7 @@
                 </div>
 
                 <div class="flex items-center">
-                  <input id="filter-mobile-location-3" name="location[]" value="Jeddah" type="checkbox"
+                  <input id="filter-mobile-location-3" name="location" value="Jeddah" type="checkbox"
                     class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
                   <label for="filter-mobile-location-3" class="ml-3 min-w-0 flex-1 text-white">
                     Jeddah
@@ -201,7 +174,7 @@
                 </div>
 
                 <div class="flex items-center">
-                  <input id="filter-mobile-location-4" name="location[]" value="green" type="checkbox"
+                  <input id="filter-mobile-location-4" name="location" value="green" type="checkbox"
                     class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
                   <label for="filter-mobile-location-4" class="ml-3 min-w-0 flex-1 text-white">
                     Qassim
@@ -239,7 +212,7 @@
             <div class="pt-6" id="filter-section-mobile-1">
               <div class="space-y-6">
                 <div class="flex items-center">
-                  <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox"
+                  <input id="filter-mobile-category-0" name="category" value="Entertainment" type="checkbox"
                     class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
                   <label for="filter-mobile-category-0" class="ml-3 min-w-0 flex-1 text-white">
                     Entertainment
@@ -247,7 +220,7 @@
                 </div>
 
                 <div class="flex items-center">
-                  <input id="filter-mobile-category-1" name="category[]" value="sale" type="checkbox"
+                  <input id="filter-mobile-category-1" name="category" value="Concert" type="checkbox"
                     class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
                   <label for="filter-mobile-category-1" class="ml-3 min-w-0 flex-1 text-white">
                     Concert
@@ -255,7 +228,7 @@
                 </div>
 
                 <div class="flex items-center">
-                  <input id="filter-mobile-category-2" name="category[]" value="travel" type="checkbox"
+                  <input id="filter-mobile-category-2" name="category" value="Sport" type="checkbox"
                     class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
                   <label for="filter-mobile-category-2" class="ml-3 min-w-0 flex-1 text-white">
                     Sport
@@ -263,7 +236,7 @@
                 </div>
 
                 <div class="flex items-center">
-                  <input id="filter-mobile-category-3" name="category[]" value="organization" type="checkbox"
+                  <input id="filter-mobile-category-3" name="category" value="Theater" type="checkbox"
                     class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
                   <label for="filter-mobile-category-3" class="ml-3 min-w-0 flex-1 text-white">
                     Theater
@@ -272,7 +245,6 @@
               </div>
             </div>
           </div>
-
           <div class=" px-4 py-6">
             <h3 class="-mx-2 -my-3 flow-root">
               <!-- Expand/collapse section button -->
@@ -301,7 +273,7 @@
             <div class="pt-6 w-full" id="filter-section-mobile-2">
               <div class="space-y-6">
                 <div class="flex items-center">
-                  <input id="filter-mobile-date-0" name="size[]" value="2l" type="radio"
+                  <input id="filter-mobile-date-0" name="date" value="today" type="radio"
                     class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
                   <label for="filter-mobile-date-0" class="ml-3 min-w-0 flex-1 text-white">
                     Today
@@ -309,7 +281,7 @@
                 </div>
 
                 <div class="flex items-center">
-                  <input id="filter-mobile-date-1" name="size[]" value="6l" type="radio"
+                  <input id="filter-mobile-date-1" name="date" value="week" type="radio"
                     class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
                   <label for="filter-mobile-date-1" class="ml-3 min-w-0 flex-1 text-white">
                     This Week
@@ -317,7 +289,7 @@
                 </div>
 
                 <div class="flex items-center">
-                  <input id="filter-mobile-date-2" name="size[]" value="12l" type="radio"
+                  <input id="filter-mobile-date-2" name="date" value="month" type="radio"
                     class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
                   <label for="filter-mobile-date-2" class="ml-3 min-w-0 flex-1 text-white">
                     This Month
@@ -325,7 +297,7 @@
                 </div>
 
                 <div class=" flex items-center">
-                  <input id="filter-mobile-date-3" name="size[]" value="18l" type="radio"
+                  <input id="filter-mobile-date-3" name="date" value="threeMonth" type="radio"
                     class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
                   <label for="filter-mobile-date-3" class="ml-3 min-w-0 flex-1 text-white">
                     This 3 Months
@@ -333,7 +305,7 @@
                 </div>
 
                 <div class="flex items-center">
-                  <input id="filter-mobile-date-4" name="size[]" value="20l" type="radio"
+                  <input id="filter-mobile-date-4" name="date" value="sixMoth" type="radio"
                     class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
                   <label for="filter-mobile-date-4" class="ml-3 min-w-0 flex-1 text-white">
                     This 6 Months
@@ -341,7 +313,7 @@
                 </div>
 
                 <div class="flex items-center">
-                  <input id="filter-mobile-date-5" name="size[]" value="40l" type="radio"
+                  <input id="filter-mobile-date-5" name="date" value="year" type="radio"
                     class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
                   <label for="filter-mobile-date-5" class="ml-3 min-w-0 flex-1 text-white">
                     This Year
@@ -351,7 +323,7 @@
             </div>
           </div>
           <div class=" w-full mx-auto self-end my-3">
-            <button id=" search-btn" class=" btn">
+            <button id="search-btn" class="btn">
               Search
             </button>
           </div>
