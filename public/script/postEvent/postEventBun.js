@@ -69,7 +69,15 @@ function initApp() {
 }
 //-------function area------------------
 function looping(user) {
-  for (var pair of formData.entries()) {
+  let cccount=0
+  let array=[]
+  let array1=[]
+  let array2=[]
+  // let ticketData=pair[0]=='ticketPrice'||pair[0]=='ticketPrice1'||pair[0]=='ticketPrice2'||
+  //     pair[0]=='ticketType'||pair[0]=='ticketType1'||pair[0]=='ticketType2'||
+  //     pair[0]=='numberTickets'||pair[0]=='numberTickets1'||pair[0]=='numberTickets2';
+
+   for (var pair of formData.entries()) {
     log(pair[0] + ':', pair[1])
     if (pair[1] == '' || pair[1].name == '') {
       pop = 1;
@@ -83,10 +91,26 @@ function looping(user) {
         this[index] = part.toString().replace('00:00:00 GMT+0300 (Arabian Standard Time)', '');
       }, dp.selectedDates); // use arr as this
       pair[1] = dp.selectedDates
-    }
-    dataUser[pair[0]] = pair[1];
+    }if(pair[0]=='ticketPrice'||pair[0]=='ticketPrice1'||pair[0]=='ticketPrice2'||
+      pair[0]=='ticketType'||pair[0]=='ticketType1'||pair[0]=='ticketType2'||
+      pair[0]=='numberTickets'||pair[0]=='numberTickets1'||pair[0]=='numberTickets2'){
+        
+      //dataUser.types=pair[1]
+      if(pair[0]=='ticketType'||pair[0]=='ticketPrice'||pair[0]=='numberTickets')
+      array.push(pair[1])
+      else if(pair[0]=='ticketType1'||pair[0]=='ticketPrice1'||pair[0]=='numberTickets1')
+      array1.push(pair[1])
+      else array2.push(pair[1])
+      
+      cccount++
+      log(dataUser)
+    }else dataUser[pair[0]] = pair[1];
   }
+
   dataUser.owner = user.uid
+  dataUser.regTicket =array 
+  dataUser.silTicket =array1
+  dataUser.vipTicket =array2 
 }
 function createDoc(Path) {
   delete dataUser.file //becasue it contain the img data and firebase does not store this type of object

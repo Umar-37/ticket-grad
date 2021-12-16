@@ -310,9 +310,9 @@
                 const type = document.querySelectorAll('[data-select]')[ccount]
                 const price = document.querySelectorAll('[data-price]')[ccount]
                 const number = document.querySelectorAll('[data-number]')[ccount]
-                type.setAttribute('name', 'ticketType-' + (ccount + 1))
-                price.setAttribute('name', 'ticketPrice-' + (ccount + 1))
-                number.setAttribute('name', 'numberTickets-' + (ccount + 1))
+                type.setAttribute('name', 'ticketType' + (ccount + 1))
+                price.setAttribute('name', 'ticketPrice' + (ccount + 1))
+                number.setAttribute('name', 'numberTickets' + (ccount + 1))
                 ccount++;
             }
             if (ccount >= 2) {
