@@ -62,33 +62,6 @@
             }
         });
     </script>
-    <script>
-        var qrcode = new QRCode("qrcode");
-
-        function makeCode() {
-            var elText = document.getElementById("text");
-
-            if (!elText.value) {
-                alert("Input a text");
-                elText.focus();
-                return;
-            }
-
-            qrcode.makeCode(elText.value);
-        }
-
-        makeCode();
-
-        $("#text").
-            on("blur", function () {
-                makeCode();
-            }).
-            on("keydown", function (e) {
-                if (e.keyCode == 13) {
-                    makeCode();
-                }
-            });
-    </script>
     <script type="module" src="script/index.js"></script>
 
     <!-- homepage -->
@@ -116,21 +89,14 @@
                         <div class=" shadow-lg items-center border border-gray-300 p-5 ">
                             <h2 class=" text-2xl font-semibold border-b-2 border-gray-700 pb-2">Purchased Tickets</h2>
                             <div class=" grid grid-flow-row space-y-4 my-2">
-                                <div
-                                    class=" border border-gray-300 rounded-l-md p-2 items-center space-x-5 text-lg font-semibold grid grid-cols-7 gap-3">
-                                    <figure class=" col-span-1"><img class=" rounded-box aspect-square h-28 "
-                                            src="https://picsum.photos/id/1005/300/200" alt=""></figure>
-                                    <div class=" flex col-start-2 col-span-4 mx-auto justify-between">
-                                        <div>Event Name</div>
-                                        <div>Ticket Class</div>
-                                        <div>Location</div>
-                                    </div>
-                                    <div class=" col-span-2 col-start-6 mx-auto">
-                                        <input id="text" type="text" value="https://hogangnono.com" style="width:80%" /><br />
-                                        <div class=" w-32 h-32 " id="qrcode"></div>
-                                    </div>
+                                <div class=" border border-gray-300 rounded-l-md p-2 items-center space-x-5 text-lg font-semibold grid grid-cols-5">
+                                    <figure class=" "><img class=" rounded-box aspect-square h-20 " src="https://picsum.photos/id/1005/300/200" alt=""></figure>
+                                    <div>Event Name</div>
+                                    <div>Ticket Class</div>
+                                    <div>Date</div>
+                                    <div class=" btn">QR Code</div>
                                 </div>
-
+                                
                             </div>
                         </div>
                     </div>
