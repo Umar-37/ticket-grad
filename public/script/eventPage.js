@@ -9,7 +9,8 @@ const eventTemplate = document.getElementById('template')
 ///
 const LOCAL_STORAGE_EVENT_ID = 'eventId'
 var eventId = JSON.parse(localStorage.getItem(LOCAL_STORAGE_EVENT_ID))
-    || [];
+    || null;
+
 /////////
 
 auth.onAuthStateChanged(user => {

@@ -62,7 +62,7 @@
             }
         });
     </script>
-    <script type="module" src="script/index.js"></script>
+    <script type="module" src="script/cart.js"></script>
 
     <!-- homepage -->
     <nav class="colorHead w-full">
@@ -73,7 +73,7 @@
                             class=" colorCardtext">College</span></a>
                 </div>
                 <div class=" font-bold text-xl items-center">
-                    <a class=" py-10" href="sign.html">Login / Sign Up</a>
+                    <a id="sign/login" class="hidden py-10" href="sign.html">Login / Sign Up</a>
                 </div>
             </div>
         </div>
@@ -91,8 +91,8 @@
                             </path>
                         </svg>
                         <div>
-                            <p class=" font-semibold text-lg">Event Name: Event Name</p>
-                            <p> Location</p>
+                            <p id="eventName" class=" font-semibold text-lg">Event Name: </p>
+                            <p id="location">Location: </p>
                         </div>
                     </div>
                     <div class=" items-center">
@@ -110,26 +110,41 @@
                                             <th class=" p-2"> Price</th>
                                             <th class=" p-2"></th>
                                         </thead>
-                                        <tbody>
-                                            <tr class=" border-t border-b">
-                                                <td class=" p-2"> Regular</td>
-                                                <td class=" p-2"> 100</td>
-                                                <td class=" p-2"> <input type="radio" name="radio_1"></td>
-                                            </tr>
+                                        <tbody id="container">
+                                            <template>
+                                                <tr class=" border-t border-b">
+                                                    <td class=" p-2" id="type"> Regular</td>
+                                                    <td class=" p-2" id="price"> 100</td>
+                                                    <td class=" p-2"> <input id="name" type="radio" name="test"
+                                                            value=""></td>
+                                                </tr>
+                                            </template>
                                         </tbody>
                                     </table>
-                                </form>
                             </div>
 
                         </div>
                         <div class=" flex my-4 justify-between ">
                             <div>
-                            <a href="#" class=" btn btn-link"> cancel</a>
+                                <a href="#" class=" btn btn-link"> cancel</a>
+                            </div>
+                            <div>
+                                <button type="submit" disabled href="#" class=" btn"> <svg
+                                        class="animate-spin absolute hidden" version="1.1" id="loader-1"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40"
+                                        enable-background="new 0 0 40 40" xml:space="preserve">
+                                        <path opacity="0.2" fill="#000"
+                                            d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+                                             s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+                                             c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z" />
+                                        <path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+                                             C22.32,8.481,24.301,9.057,26.013,10.047z">
+                                        </path>
+                                    </svg>checkout</button>
+                            </div>
                         </div>
-                        <div>
-                            <a href="#" class=" btn"> checkout</a>
-                        </div>
-                        </div>
+                        </form>
                     </div>
 
                 </div>
@@ -171,31 +186,18 @@
             </a>
         </div>
     </footer>
-
-    <!-- This example requires Tailwind CSS v2.0+ -->
-
     <script>
-        let fathrDiv = document.querySelector('#fatherDiv')
-        let fathr = document.querySelector('#cartFather')
-        let fathr2 = document.querySelector('#cartFather2')
-        function cart() {
-            fathr.classList.toggle('opacity-0')
-            fathr2.classList.toggle('translate-x-full')
-            //fathrDiv.classList.toggle('z-10')
-            fathrDiv.classList.toggle('relative')
+        let button = document.querySelector('button')
+        const btns = document.querySelectorAll('div')
+        btns.forEach(btn => {
+            btn.addEventListener('click', event => {
+                if (event.target.id == 'name') {
+                    button.disabled = false
+                }
+            });
 
-        }
+        });
     </script>
-
-    <script>
-        let isOpen = false
-        function openFun() {
-            if (isOpen == true) {
-
-            }
-        }
-    </script>
-
 </body>
 
 </html>
