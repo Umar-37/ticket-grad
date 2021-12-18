@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 
 <head>
     <!-- update the version number as needed -->
@@ -79,80 +79,42 @@
         <div class=" sm"></div>
     </nav>
     <!-- CART MODEL -->
-    <main>
-        <div class="items-center p-20">
-            <div class=" items-center justify-center max-w-screen-2xl mx-auto h-screen">
-                <div class="col-start-2 rounded grid-rows-2 h-screen">
-
-                    <div class="items-center">
-                        <div
-                            class=" bg-white shadow-lg items-center grid grid-flow-row grid-cols-1 rounded border border-black p-2">
-                            <div class=" col-start-1 ">
-                                <h1 class="items-center text-center font-semibold text-3xl "> Check Out</h1>
-                                <div class=" w-full border-b-2 border-black my-4 px-4">
-                                    <div class="flex-row items-center space-x-4 card-body">
-                                        <!-- CARD -->
-                                        <div>
-                                            <div class="avatar">
-                                                <div class="rounded-full w-24 h-24 shadow"><img
-                                                        src="http://127.0.0.1:5500/public/images/blue.jpeg"></div>
-                                            </div>
-                                        </div>
-                                        <div name="EVENT">
-                                            <h2 class="card-title text-2xl">Jubail concert</h2>
-                                            <p class="text-base-content text-opacity-40 text-lg">$25.00</p>
-                                        </div>
-                                    </div>
-                                    <!-- CARD -->
-                                    <!-- Other cards-->
-                                    <div class="flex-row items-center space-x-4 card-body">
-                                        <!-- CARD start-->
-                                        <div>
-                                            <div class="avatar">
-                                                <div class="rounded-full w-24 h-24 shadow"><img
-                                                        src="https://www.arabnews.com/sites/default/files/styles/n_670_395/public/2020/07/17/2191191-564197909.jpg?itok=HSBOawnf">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <!-- event -->
-                                            <h1 class="card-title text-2xl">Dammam Concert</h1>
-                                            <div class="flex justify-between items-center" style="font-size: 18px"> 
-                                                <div class=" flex text-lg space-x-1 items-center justify-between">
-                                                  <span><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                                </span>
-                                                  <span>Location</span>
-                                                </div> 
-                                                <div class="text-lg">
-                                                  <span>Date</span>
-                                                </div> 
-                                                <div>
-                                                    <p class="text-base-content text-opacity-40 text-lg">$45.00</p>
-                                                </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <!-- CARD end -->
-                                </div>
-                            </div>
-                            <!-- text -->
-                            <p class=" text-left items-center ml-5 flex space-x-4 font-semibold">
-                                <label class="text-xl">Regular</label>
-                                <input type="number" name="he"
-                                    class="border rounded w-14 h-6 focus:outline-none focus:border-gray-900 px-2 text-sm"
-                                    min="0" value="0">
-                            </p>
-                        </div>
+    <main class=" max-w-2xl items-center flex mx-auto min-h-screen">
+        
+        <a class="055" >
+            
+            <div id="eventCard" 
+              class="w-full text-white rounded-lg shadow-lg overflow-hidden flex flex-col justify-center colorCard">
+                <div class=" w-full bg-red-500 h-52 grid content-end" >
+                    <div class=" drop-shadow shadow-black mx-auto colorCard p-2">
+                        Event
                     </div>
+                </div>   
+              
+              <div class=" sm:py-3 ml-10 space-y-5 max-h-36">
+                <p class="text-xl text-white font-bold mb-2">Event Name</p>
+                <div class=" flex text-base text-gray-400 font-normal items-center space-x-2">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                  <span  id="location-span-card">Location</span>
                 </div>
+                <div class=" flex text-base text-gray-400 font-normal items-center space-x-2">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                  </svg>
+                  <span class=" flex justify-between" id="date-span-card"> <span>Date</span>  <span> days</span></span>
+                </div>
+              </div>
             </div>
-        </div>
-        </div>
-        <!-- Buy SECTION -->
-        </div>
-        <a class=" btn btn-info w-full my-5 " href="#"> Buy </a>
-        </div>
-        <!-- END BUY -->
+          </a>
+
     </main>
 
 

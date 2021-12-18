@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <!-- update the version number as needed -->
@@ -12,6 +12,9 @@
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
   <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,19 +68,18 @@
   <script type="module" src="script/concert.js"></script>
 
   <!-- homepage -->
-  <nav class="colorHead w-full">
+  <nav class=" colorHead w-full navText">
     <div class=" max-w-screen-2xl mx-auto text-white items-center">
       <div class="flex justify-between items-center py-8">
         <div class=" font-bold text-3xl items-center">
-          <a class=" py-2 px-3 border-b-2 border-t-2" href="indexHisham.html"><span>Ticket</span><span
-              class=" colorCardtext">College</span></a>
+          <a class=" py-2 px-3 border-b-2 border-t-2 logoText font-bold logoText" href="indexHisham.html"><span>Ticket</span><span class=" colorCardtext">College</span></a>
         </div>
-        <div class=" font-bold text-xl items-center">
-          <a id="sign/login" class=" py-10" href="/sign.html">Login / Sign Up</a>
+        <div class=" font-bold  items-center">
+          <a id="sign/login" class="hidden py-10" href="/sign.html">Login / Sign Up</a>
         </div>
       </div>
       <div class="flex items-center justify-between">
-        <div class=" font-bold text-xl items-center space-x-16 text-center px-4 py-8">
+        <div class=" font-bold  items-center space-x-16 text-center px-4 py-8">
           <a class=" " href="indexHisham.html">All</a>
           <a class=" mt-10 mr-3" href="indexAnwar.html">Concert</a>
           <a class=" mt-10 mr-3" href="sport.html">Sport</a>
@@ -85,10 +87,10 @@
           <a class=" mt-10 mr-3" href="theater.html">Theater</a>
         </div>
         <div>
-          <a class="font-bold text-xl" href="indexOrg.html">
+          <a class="font-bold  hidden" href="indexOrg.html"> 
             My Tickets
           </a>
-          <a hidden class="font-bold text-xl" href="#">
+          <a class="font-bold " href="#"> 
             Dashboard
           </a>
         </div>
@@ -96,246 +98,6 @@
     </div>
     <div class=" sm"></div>
   </nav>
-
-
-
-  <!-- Start of Search Filter-->
-  <div tabindex="0" class="collapse max-w-screen-xl rounded-b-box border-0 border-t-0 mx-auto collapse-arrow colorCard">
-    <input type="checkbox">
-    <div class="collapse-title text-xl font-medium flex">
-      <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-      </svg>
-      <span class=" ml-10 self-center">Search Filter</span>
-    </div>
-    <div class=" flex max-w-screen-xl text-white collapse-content">
-      <div class="">
-
-      </div>
-      <form class="items-center">
-        <div class=" flex justify-around space-x-1 md:space-x-16 xl:space-x-56 ml-16">
-          <div class=" px-4 py-6">
-            <h3 class="-mx-2 -my-3 flow-root">
-              <!-- Expand/collapse section button -->
-              <button type="button" class=" px-2 py-3  w-full flex items-center justify-between text-white border-b-2"
-                aria-controls="filter-section-mobile-0" aria-expanded="false">
-                <span class="font-medium text-white">
-                  Location
-                </span>
-                <span class="ml-6 flex items-center">
-                  <!--
-                Expand icon, show/hide based on section open state.
-
-                Heroicon name: solid/plus-sm
-              -->
-
-                  <!--
-                Collapse icon, show/hide based on section open state.
-
-                Heroicon name: solid/minus-sm
-              -->
-
-                </span>
-              </button>
-            </h3>
-            <!-- Filter section, show/hide based on section state. -->
-            <div class="pt-6" id="filter-section-mobile-0">
-              <div class="space-y-6">
-                <div class="flex items-center">
-                  <input id="filter-mobile-location-0" name="location[]" value="Riyadh" type="checkbox"
-                    class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
-                  <label for="filter-mobile-location-0" class="ml-3 min-w-0 flex-1 text-white">
-                    Riyadh
-                  </label>
-                </div>
-
-                <div class="flex items-center">
-                  <input id="filter-mobile-location-1" name="location[]" value="Dammam" type="checkbox"
-                    class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
-                  <label for="filter-mobile-location-1" class="ml-3 min-w-0 flex-1 text-white">
-                    Dammam
-                  </label>
-                </div>
-
-                <div class="flex items-center">
-                  <input id="filter-mobile-location-2" name="location[]" value="Jubail" type="checkbox"
-                    class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
-                  <label for="filter-mobile-location-2" class="ml-3 min-w-0 flex-1 text-white">
-                    Jubail
-                  </label>
-                </div>
-
-                <div class="flex items-center">
-                  <input id="filter-mobile-location-3" name="location[]" value="Jeddah" type="checkbox"
-                    class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
-                  <label for="filter-mobile-location-3" class="ml-3 min-w-0 flex-1 text-white">
-                    Jeddah
-                  </label>
-                </div>
-
-                <div class="flex items-center">
-                  <input id="filter-mobile-location-4" name="location[]" value="green" type="checkbox"
-                    class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
-                  <label for="filter-mobile-location-4" class="ml-3 min-w-0 flex-1 text-white">
-                    Qassim
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class=" px-4 py-6">
-            <h3 class="-mx-2 -my-3 flow-root">
-              <!-- Expand/collapse section button -->
-              <button type="button" class="px-2 py-3  w-full flex items-center justify-between text-white border-b-2"
-                aria-controls="filter-section-mobile-1" aria-expanded="false">
-                <span class="font-medium text-white">
-                  Category
-                </span>
-                <span class="ml-6 flex items-center">
-                  <!--
-                Expand icon, show/hide based on section open state.
-
-                Heroicon name: solid/plus-sm
-              -->
-
-                  <!--
-                Collapse icon, show/hide based on section open state.
-
-                Heroicon name: solid/minus-sm
-              -->
-
-                </span>
-              </button>
-            </h3>
-            <!-- Filter section, show/hide based on section state. -->
-            <div class="pt-6" id="filter-section-mobile-1">
-              <div class="space-y-6">
-                <div class="flex items-center">
-                  <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox"
-                    class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
-                  <label for="filter-mobile-category-0" class="ml-3 min-w-0 flex-1 text-white">
-                    Entertainment
-                  </label>
-                </div>
-
-                <div class="flex items-center">
-                  <input id="filter-mobile-category-1" name="category[]" value="sale" type="checkbox"
-                    class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
-                  <label for="filter-mobile-category-1" class="ml-3 min-w-0 flex-1 text-white">
-                    Concert
-                  </label>
-                </div>
-
-                <div class="flex items-center">
-                  <input id="filter-mobile-category-2" name="category[]" value="travel" type="checkbox"
-                    class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
-                  <label for="filter-mobile-category-2" class="ml-3 min-w-0 flex-1 text-white">
-                    Sport
-                  </label>
-                </div>
-
-                <div class="flex items-center">
-                  <input id="filter-mobile-category-3" name="category[]" value="organization" type="checkbox"
-                    class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
-                  <label for="filter-mobile-category-3" class="ml-3 min-w-0 flex-1 text-white">
-                    Theater
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class=" px-4 py-6">
-            <h3 class="-mx-2 -my-3 flow-root">
-              <!-- Expand/collapse section button -->
-              <button type="button" class="px-2 py-3  w-full flex items-center justify-between text-white border-b-2"
-                aria-controls="filter-section-mobile-2" aria-expanded="false">
-                <span class="font-medium text-white">
-                  Date
-                </span>
-                <span class="ml-6 flex items-center">
-                  <!--
-                Expand icon, show/hide based on section open state.
-
-                Heroicon name: solid/plus-sm
-              -->
-
-                  <!--
-                Collapse icon, show/hide based on section open state.
-
-                Heroicon name: solid/minus-sm
-              -->
-
-                </span>
-              </button>
-            </h3>
-            <!-- Filter section, show/hide based on section state. -->
-            <div class="pt-6 w-full" id="filter-section-mobile-2">
-              <div class="space-y-6">
-                <div class="flex items-center">
-                  <input id="filter-mobile-date-0" name="size[]" value="2l" type="radio"
-                    class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
-                  <label for="filter-mobile-date-0" class="ml-3 min-w-0 flex-1 text-white">
-                    Today
-                  </label>
-                </div>
-
-                <div class="flex items-center">
-                  <input id="filter-mobile-date-1" name="size[]" value="6l" type="radio"
-                    class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
-                  <label for="filter-mobile-date-1" class="ml-3 min-w-0 flex-1 text-white">
-                    This Week
-                  </label>
-                </div>
-
-                <div class="flex items-center">
-                  <input id="filter-mobile-date-2" name="size[]" value="12l" type="radio"
-                    class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
-                  <label for="filter-mobile-date-2" class="ml-3 min-w-0 flex-1 text-white">
-                    This Month
-                  </label>
-                </div>
-
-                <div class=" flex items-center">
-                  <input id="filter-mobile-date-3" name="size[]" value="18l" type="radio"
-                    class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
-                  <label for="filter-mobile-date-3" class="ml-3 min-w-0 flex-1 text-white">
-                    This 3 Months
-                  </label>
-                </div>
-
-                <div class="flex items-center">
-                  <input id="filter-mobile-date-4" name="size[]" value="20l" type="radio"
-                    class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
-                  <label for="filter-mobile-date-4" class="ml-3 min-w-0 flex-1 text-white">
-                    This 6 Months
-                  </label>
-                </div>
-
-                <div class="flex items-center">
-                  <input id="filter-mobile-date-5" name="size[]" value="40l" type="radio"
-                    class="h-4 w-4 border-gray-300 rounded text-white focus:ring-indigo-500">
-                  <label for="filter-mobile-date-5" class="ml-3 min-w-0 flex-1 text-white">
-                    This Year
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class=" w-full mx-auto self-end my-3">
-            <button id=" search-btn" class=" btn">
-              Search
-            </button>
-          </div>
-        </div>
-
-      </form>
-
-    </div>
-  </div>
-  <!-- End of Search Filter-->
 
   <!-- Start of Event Cards-->
   <section class="max-w-6xl text-9xl mx-auto px-4 sm:px-6 lg:px-4 py-12 min-h-screen">
@@ -345,36 +107,37 @@
     <div class="flex-row space-y-5 text-white" id="container">
       <!-- first card-start -->
       <template id="template">
-      <div class="card md:card-side bordered max-h-40 colorCard ">
-        <a href="#">
-          <figure>
-            <img id='img' class=" aspect-[4/3] object-center object-cover h-40 w-full" src="https://picsum.photos/id/1005/400/250">
-            <!-- picture -->
-          </figure>
-        </a>
-        <div class="card-body pl-5 pt-3 h-auto">
-          <h2 class="card-title" id="name">Riyadh </h2> <!-- title text  -->
-          <div class=" flex justify-between items-center" style="font-size: 18px">
-            <div class=" flex text-lg space-x-1 items-center">
-              <span><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                </svg></span>
-              <span id="location"></span>
+        <div class="card md:card-side max-h-44 colorCard p-2 drop-shadow-lg ">
+          <a href="#">
+            <figure>
+              <img id='img' class="aspect-[4/3] object-center object-cover h-40 w-60 rounded-l-xl" src="https://picsum.photos/id/1005/400/250">
+              <!-- picture -->
+            </figure>
+          </a>
+          <div class="card-body pl-5 pt-3 h-auto">
+            <h2 class="card-title capitalize" id="name">Riyadh </h2> <!-- title text  -->
+            <div class=" flex justify-between items-center text-sm">
+              <div class=" flex text-lg space-x-1 items-center">
+                <span><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg></span>
+                <span class=" capitalize text-base" id="location"></span>
+              </div>
+              <div class=" flex text-lg space-x-1 items-center">
+                <span><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg></span>
+                <span class=" text-base" id="date"></span>
+              </div>
+            </div> <!-- inside text  -->
+            <div class="card-actions">
+              <!--  div for buttons -->
+              <button data-button-redirect id="button" class="btn btn-outline text-white">More info</button>
             </div>
-            <div class=" text-lg">
-              <span id="date"></span>
-            </div>
-          </div> <!-- inside text  -->
-          <div class="card-actions">
-            <!--  div for buttons -->
-            <button data-button-redirect id="button" class="btn btn-outline text-white">More info</button>
           </div>
         </div>
-      </div>
       </template>
       <!-- first card-end-->
       

@@ -2,8 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+    font-family: foundry,"Helvetica Neue",Calibri,Segoe,'Segoe UI',Optima,Arial,sans-serif;
+}
+
 .card-actions button{
      margin: 0px;
+}
+
+.logoText{
+    font-family: 'Bebas Neue', cursive;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.navText{
+    font-size: 24px;
 }
 
 .cardSp{
@@ -35,7 +49,7 @@
     background-color: #f1f1f1;
 }
 .colorHead{
-    background-color: #678983;
+    background-color: rgb(6 182 212);
 }
 .colorHeadtext{
     background-color: #678983;
@@ -44,10 +58,13 @@
     background-color: #E6DDC4;
 }
 .colorCard{
-    background-color: #012443;
+    background-color: #818cf8;
 }
 .colorCardtext{
     color: #012443;
+}
+.colorSearch{
+    background-color: #a3d165;
 }
 .hightOmar{
     height:450px;
