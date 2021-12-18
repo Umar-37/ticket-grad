@@ -65,7 +65,7 @@
             }
         });
     </script>
-    <script>
+    <!-- <script>
         var qrcode = new QRCode("qrcode");
 
         function makeCode() {
@@ -91,8 +91,8 @@
                     makeCode();
                 }
             });
-    </script>
-    <script type="module" src="script/index.js"></script>
+    </script> -->
+    <script type="module" src="script/ticket.js"></script>
 
     <!-- homepage -->
     <nav class="colorHead w-full">
@@ -115,18 +115,18 @@
 
                 <div class=" ">
 
-                    <div class=" ">
+                    <div class=" " id="container">
+                        <template>
                         <div class=" shadow-lg items-center border border-gray-300 p-5 ">
-                            <h2 class=" text-2xl font-semibold border-b-2 border-gray-700 pb-2">Purchased Tickets</h2>
                             <div class=" grid grid-flow-row space-y-4 my-2">
                                 <div
                                     class=" border border-gray-300 rounded-l-md p-2 items-center space-x-5 text-lg font-semibold grid grid-cols-7 gap-3">
                                     <figure class=" col-span-1"><img class=" rounded-box aspect-square h-28 "
-                                            src="https://picsum.photos/id/1005/300/200" alt=""></figure>
+                                             alt=""></figure>
                                     <div class=" flex col-start-2 col-span-4 mx-auto justify-between">
-                                        <div>Event Name</div>
-                                        <div>Ticket Class</div>
-                                        <div>Location</div>
+                                        <div id="name">Event Name</div>
+                                        <div id="type">Ticket Class</div>
+                                        <div id="location">Location</div>
                                     </div>
                                     <div class=" col-span-2 col-start-6 mx-auto">
                                         <input id="text" type="text" value="https://hogangnono.com" style="width:80%" /><br />
@@ -136,6 +136,7 @@
 
                             </div>
                         </div>
+                        </template>
                     </div>
                 </div>
 
@@ -180,28 +181,6 @@
     </footer>
 
     <!-- This example requires Tailwind CSS v2.0+ -->
-
-    <script>
-        let fathrDiv = document.querySelector('#fatherDiv')
-        let fathr = document.querySelector('#cartFather')
-        let fathr2 = document.querySelector('#cartFather2')
-        function cart() {
-            fathr.classList.toggle('opacity-0')
-            fathr2.classList.toggle('translate-x-full')
-            //fathrDiv.classList.toggle('z-10')
-            fathrDiv.classList.toggle('relative')
-
-        }
-    </script>
-
-    <script>
-        let isOpen = false
-        function openFun() {
-            if (isOpen == true) {
-
-            }
-        }
-    </script>
 
 </body>
 
