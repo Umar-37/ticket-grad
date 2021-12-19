@@ -15,14 +15,17 @@ let array3
 var theDate = new Date()
 auth.onAuthStateChanged(user => {
   if (user) {
-    log('sign in very good im in the index page')
-    getData()
+    log('sign in very good im in the index page',user.uid)
+     getData()
     ///
-    search()
+    search()  
 
     //  window.location='index.html'
   }
   else {
+ getData()
+    ///
+    search()
     document.getElementById('sign/login').classList.toggle('hidden')
     log('sign out i am in the index page')
   }
@@ -135,15 +138,22 @@ function redirect() {
     element.addEventListener('click', event => {
       event.stopPropagation()
       if (event.target.ndoeName = "IMG") {
+   //     AudioB()
         eventId = []
         eventId.push(event.target.dataset.eventId)
         localStorage.setItem(LOCAL_STORAGE_EVENT_ID, JSON.stringify(eventId))
-        window.location = 'eventPage.html' //
+        //window.location = 'eventPage.html' //
       }
     }, false)
   })
-
 }
+// function AudioB(){
+//  var audio = new Audio('https://cdn.discordapp.com/attachments/863205908376322068/921852653238108200/video0.mov');
+//              audio.play();
+//              for(let x=0;x<9999;x++){
+
+//              }
+// }
 function getData() {
   db.collection('events').get().then(snapshot => {
     snapshot.docs.forEach(doc => {
