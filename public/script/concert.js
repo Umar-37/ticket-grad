@@ -18,7 +18,7 @@ auth.onAuthStateChanged(user => {
     document.getElementById('sign/login').classList.toggle('hidden')
     log('sign out i am in the event page')
 
-    //  window.location='index.html'
+      window.location='sign.html'
   }
 })
 //////////

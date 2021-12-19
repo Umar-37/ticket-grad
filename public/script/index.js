@@ -15,18 +15,33 @@ let array3
 var theDate = new Date()
 auth.onAuthStateChanged(user => {
   if (user) {
-    log('sign in very good im in the index page',user.uid)
-     getData()
+    db.collection('users').doc(user.uid).get().then(snapshot => {
+      if (snapshot.data().userType == 1) {
+        document.getElementById('dashboard').classList.toggle('hidden')
+
+        getData()
+        search()
+      } else {
+        document.getElementById('myTicket').classList.toggle('hidden')
+        getData()
+        search()
+      }
+
+    })
+
+    log('sign in very good im in the index page', user.uid)
+    getData()
     ///
-    search()  
+    search()
 
     //  window.location='index.html'
   }
   else {
- getData()
+    getData()
     ///
     search()
     document.getElementById('sign/login').classList.toggle('hidden')
+    //document.getElementById('dashboard').classList.toggle('hidden')
     log('sign out i am in the index page')
   }
 })
@@ -138,11 +153,11 @@ function redirect() {
     element.addEventListener('click', event => {
       event.stopPropagation()
       if (event.target.ndoeName = "IMG") {
-   //     AudioB()
+        //     AudioB()
         eventId = []
         eventId.push(event.target.dataset.eventId)
         localStorage.setItem(LOCAL_STORAGE_EVENT_ID, JSON.stringify(eventId))
-        //window.location = 'eventPage.html' //
+        window.location = 'eventPage.html' //
       }
     }, false)
   })

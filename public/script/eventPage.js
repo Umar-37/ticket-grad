@@ -9,8 +9,7 @@ const eventTemplate = document.getElementById('template')
 ///
 const LOCAL_STORAGE_EVENT_ID = 'eventId'
 var eventId = JSON.parse(localStorage.getItem(LOCAL_STORAGE_EVENT_ID))
-    || null;
-
+    || [];
 /////////
 
 auth.onAuthStateChanged(user => {
@@ -22,7 +21,7 @@ auth.onAuthStateChanged(user => {
         document.getElementById('sign/login').classList.toggle('hidden')
         log('sign out i am in the event page')
 
-        //  window.location='index.html'
+          window.location='sign.html'
     }
 })
 //////////
