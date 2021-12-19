@@ -11,11 +11,11 @@ var eventId = JSON.parse(localStorage.getItem(LOCAL_STORAGE_EVENT_ID))
 
 auth.onAuthStateChanged(user => {
   if (user) {
-    document.getElementById('sign/login').classList.toggle('hidden')
     log('sign in very good im in the event page')
     getData()
   }
   else {
+    document.getElementById('sign/login').classList.toggle('hidden')
     log('sign out i am in the event page')
 
     //  window.location='index.html'
