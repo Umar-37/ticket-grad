@@ -95,11 +95,11 @@
     <script type="module" src="script/ticket.js"></script>
 
     <!-- homepage -->
-    <nav class="colorHead w-full">
+    <nav class="colorHead w-full navText">
         <div class=" max-w-screen-2xl mx-auto text-white items-center">
             <div class="flex justify-between items-center py-8">
                 <div class=" font-bold text-3xl items-center">
-                    <a class=" py-2 px-3 border-b-2 border-t-2" href="indexHisham.html"><span>Ticket</span><span
+                    <a class=" py-2 px-3 border-b-2 border-t-2 logoText" href="indexHisham.html"><span>Ticket</span><span
                             class=" colorCardtext">College</span></a>
                 </div>
                 <div class=" font-bold text-xl items-center">
@@ -116,12 +116,13 @@
                 <div class=" ">
 
                     <div class=" " id="container">
-                        <template>
-                        <div class=" shadow-lg items-center border border-gray-300 p-5 ">
-                            <div class=" grid grid-flow-row space-y-4 my-2">
+                        
+                        <div class="  items-center border  p-5 ">
+                            <template>
+                            <div class=" grid grid-flow-row space-y-4 my-2 gap-y-10">
                                 <div
-                                    class=" border border-gray-300 rounded-l-md p-2 items-center space-x-5 text-lg font-semibold grid grid-cols-7 gap-3">
-                                    <figure class=" col-span-1"><img class=" rounded-box aspect-square h-28 "
+                                    class=" border border-gray-300 rounded-l-md p-2 items-center space-x-5 text-lg font-semibold grid grid-cols-7 gap-3 drop-shadow-xl">
+                                    <figure class=" col-span-1"><img class=" rounded-box aspect-square h-24 "
                                              alt=""></figure>
                                     <div class=" flex col-start-2 col-span-4 mx-auto justify-between">
                                         <div id="name">Event Name</div>
@@ -129,14 +130,15 @@
                                         <div id="location">Location</div>
                                     </div>
                                     <div class=" col-span-2 col-start-6 mx-auto">
-                                        <input id="text" type="text" value="https://hogangnono.com" style="width:80%" /><br />
+                                        
                                         <div class=" w-32 h-32 " id="qrcode"></div>
                                     </div>
                                 </div>
 
                             </div>
-                        </div>
                         </template>
+                        </div>
+                        
                     </div>
                 </div>
 
