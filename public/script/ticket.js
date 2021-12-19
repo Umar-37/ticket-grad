@@ -38,6 +38,15 @@ function render(doc) {
     let type = temp.querySelector('#type')
     let name = temp.querySelector('#name')
     ////
+    var qrcode = new QRCode(temp.getElementById("qrcode-2"), {
+	text: doc.data().ticketId,
+	width: 128,
+	height: 128,
+	colorDark : "#5868bf",
+	colorLight : "#ffffff",
+	correctLevel : QRCode.CorrectLevel.H
+});
+///
     img.src = doc.data().path
     //h2.textContent = doc.data().eventName
     //location=textContent=doc.data().location
@@ -50,7 +59,7 @@ function render(doc) {
     else type.textContent ='VIP'||'default'
    // type.textContent = doc.data().ticketType ||'default'
     name.textContent = doc.data().eventName || 'default'
-    location.textContent = doc.data().ticketId || 'default'
+    location.textContent = ''//doc.data().ticketId || 'default'
 
     container.appendChild(temp)
 }
