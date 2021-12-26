@@ -18,6 +18,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <script defer src="./script/postEvent/postEventBun.js"></script>
+ <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBP_2reNeTsv02ov3XCRJKURkahFKpD0QA&callback=initMap&v=weekly"
+      async
+    ></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -122,7 +126,7 @@
                                             id="time" name="time">
                                     </div>
                                     <span>Location</span>
-                                    <div class="grid md:grid-cols-2 md:gap-2 my-5 items-center">
+                                    <div class="w-full grid md:grid-cols-2 md:gap-2 my-5 items-center">
                                         <!--location -->
                                         <select class=" w-full border rounded h-10 px-2 mt-2 text-sm" name="region"
                                             id="">
@@ -134,10 +138,38 @@
                                         </select>
                                         <input name="place" class=" w-full border rounded h-10 px-2 mt-2 text-sm"
                                             type="text" placeholder="Place">
-                                        <input name="googleMaps"
-                                            class=" w-full col-span-3 border rounded h-10 px-2 mt-2 text-sm" type="text"
-                                            placeholder="Google Maps location link">
                                     </div>
+                                       <div id="map" class=" h-96 w-full"></div> 
+                                    <script>
+                                        //google maps ------------------------------------
+ window.position={};
+function initMap() {
+    const myLatlng = { lat: 26.2361, lng:50.0393 };
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 13,
+        center: myLatlng,
+    });
+     google.maps.event.addListener(map,'click',
+     function(event){
+         theMarker(map,event.latLng)
+     }) 
+}
+function theMarker(map,myLatlng) {
+    window.position.lat=myLatlng.lat()
+    window.position.lng=myLatlng.lng()
+    const marker = new google.maps.Marker({
+        position: myLatlng,
+        map,
+        title: "Click to zoom",
+    });
+google.maps.event.clearListeners(map, 'click');
+}
+
+
+
+
+
+                                    </script>
                                     <span class="">Event Category</span>
                                     <div class="grid md:grid-cols-1 md:gap-2 my-5 items-center">
                                         <select class=" border rounded h-10 px-2" name="eventType" id="">

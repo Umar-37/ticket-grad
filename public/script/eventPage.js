@@ -21,7 +21,7 @@ auth.onAuthStateChanged(user => {
         document.getElementById('sign/login').classList.toggle('hidden')
         log('sign out i am in the event page')
 
-          window.location='sign.html'
+        window.location = 'sign.html'
     }
 })
 //////////
@@ -62,22 +62,31 @@ function renderTicket(doc) {
     //ticket types
     let types = doc.data()
     if (types.vipTicket[0]) {
-        crateTicket(types.vipTicket[0],types.vipTicket[1])
-        crateTicket(types.silTicket[0],types.silTicket[1])
-        crateTicket(types.regTicket[0],types.regTicket[1])
+        crateTicket(types.vipTicket[0], types.vipTicket[1])
+        crateTicket(types.silTicket[0], types.silTicket[1])
+        crateTicket(types.regTicket[0], types.regTicket[1])
     } else if (types.silTicket[0]) {
-                crateTicket(types.silTicket[0],types.silTicket[1])
-                crateTicket(types.regTicket[0],types.regTicket[1])
+        crateTicket(types.silTicket[0], types.silTicket[1])
+        crateTicket(types.regTicket[0], types.regTicket[1])
     } else {
-                crateTicket(types.regTicket[0],types.regTicket[1])
+        crateTicket(types.regTicket[0], types.regTicket[1])
         //just one ticket
     }
 }//end loop
 function getData() {
     db.collection('events').doc(eventId[0]).get().then(doc => {
+
         render(doc)
         renderTicket(doc)
         //redirect()
+        window.position = doc.data().position
+        var smap = new google.maps.Map(document.getElementById("map"), {
+            zoom: 13,
+            //center: { lat: 26.2361, lng: 50.0393 },
+            center:window.position || { lat: 26.2361, lng: 50.0393 }
+        });
+        window.map = smap
+        theMarker(window.map, window.position)
     })
 }
 function crateTicket(type, price) {

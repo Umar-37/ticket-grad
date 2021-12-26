@@ -77,6 +77,10 @@ function looping(user) {
   //     pair[0]=='ticketType'||pair[0]=='ticketType1'||pair[0]=='ticketType2'||
   //     pair[0]=='numberTickets'||pair[0]=='numberTickets1'||pair[0]=='numberTickets2';
 var regExp = /[a-zA-Z]/g;
+if(!window.position.lat){
+  pop=1;
+  popUp('Please choose point on map')
+}
   for (var pair of formData.entries()) {
     log(pair[0] + ':', pair[1])
     if (pair[1] == '' || pair[1].name == '') {
@@ -84,6 +88,7 @@ var regExp = /[a-zA-Z]/g;
       popUp('fill the blank')
       break;
     }
+
     if (pair[0] == 'ticketType2' && pair[1] == 'Silver') {
       pop = 1;
       popUp('Two tickets have the same type')
@@ -121,12 +126,13 @@ var regExp = /[a-zA-Z]/g;
       cccount++
       log(dataUser)
     } else dataUser[pair[0]] = pair[1];
-  }
+}
 
   dataUser.owner = user.uid
   dataUser.regTicket = array
   dataUser.silTicket = array1
   dataUser.vipTicket = array2
+  dataUser.position=window.position || 'default'
 }
 function createDoc(Path) {
   delete dataUser.file //becasue it contain the img data and firebase does not store this type of object
@@ -189,7 +195,6 @@ function popUp(mass) {
 ////////////////////--end of function related to saveing data-----------------------
 ////////////////////////////////////////////////////////////////////////////////////////////
 //-----------------start of DOM manipulation 
-
 
 
 
