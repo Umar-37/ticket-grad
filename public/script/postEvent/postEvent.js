@@ -53,12 +53,17 @@ function looping(user) {
   // let ticketData=pair[0]=='ticketPrice'||pair[0]=='ticketPrice1'||pair[0]=='ticketPrice2'||
   //     pair[0]=='ticketType'||pair[0]=='ticketType1'||pair[0]=='ticketType2'||
   //     pair[0]=='numberTickets'||pair[0]=='numberTickets1'||pair[0]=='numberTickets2';
-
+var regExp = /[a-zA-Z]/g;
   for (var pair of formData.entries()) {
     log(pair[0] + ':', pair[1])
     if (pair[1] == '' || pair[1].name == '') {
       pop = 1;
       popUp('fill the blank')
+      break;
+    }
+    if (pair[0] == 'ticketType2' && pair[1] == 'Silver') {
+      pop = 1;
+      popUp('Two tickets have the same type')
       break;
     }
     if (pair[0] == 'date') {
@@ -68,7 +73,18 @@ function looping(user) {
         this[index] = part.toString().replace('00:00:00 GMT+0300 (Arabian Standard Time)', '');
       }, dp.selectedDates); // use arr as this
       pair[1] = dp.selectedDates
-    } if (pair[0] == 'ticketPrice' || pair[0] == 'ticketPrice1' || pair[0] == 'ticketPrice2' ||
+    }
+    
+   if (pair[0] == 'ticketPrice1' || pair[0] == 'ticketPrice' || pair[0] == 'ticketPrice2'
+        || pair[0] == 'numberTickets' || pair[0] == 'numberTickets1' || pair[0] == 'numberTickets2'){
+        if(regExp.test(pair[1])){
+      pop = 1;
+        popUp('Ticket number and price should only contain digits')
+        break;
+        }
+    } 
+    
+    if (pair[0] == 'ticketPrice' || pair[0] == 'ticketPrice1' || pair[0] == 'ticketPrice2' ||
       pair[0] == 'ticketType' || pair[0] == 'ticketType1' || pair[0] == 'ticketType2' ||
       pair[0] == 'numberTickets' || pair[0] == 'numberTickets1' || pair[0] == 'numberTickets2') {
 

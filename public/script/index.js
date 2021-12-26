@@ -26,13 +26,9 @@ auth.onAuthStateChanged(user => {
         getData()
         search()
       }
-
     })
 
     log('sign in very good im in the index page', user.uid)
-    getData()
-    ///
-    search()
 
     //  window.location='index.html'
   }
@@ -85,11 +81,13 @@ function dataFilter() {
       if (array2.length > 0) {
         if (array2.includes(element.data().eventType)) {
           if (array.length > 0) {
-
+            log('inside the third if')
             dateChecker(element, array3, dateObj)
+            redirect()
           } else {
             log('iam in the first else')
             render(element)
+            redirect()
           }
 
         }
@@ -97,6 +95,7 @@ function dataFilter() {
       else {
         log('iam in the second else')
         dateChecker(element, array3, dateObj, array3)
+        redirect()
         //render(element)
       }
     });
@@ -110,7 +109,7 @@ function dateChecker(element, array3, dateObj, ifArray3) {
   let month = dateObj.month
   let year = dateObj.year
   switch (array3[0]) {
-    case "today": if (theDate.getDate() == day) {
+    case "today": if (theDate.getDate() == day && theDate.getFullYear()==year) {
       render(element)
     }
       break;
@@ -149,9 +148,15 @@ function clearElement(element) {
   }
 }
 function redirect() {
+  log('inside redireect ')
+  // for(let i=0;i<2000;i++){
+  //   log(i)
+  // }
   document.querySelectorAll('[data-event-id]').forEach(element => {
+    log(element)
     element.addEventListener('click', event => {
       event.stopPropagation()
+      log('the event:',event)
       if (event.target.ndoeName = "IMG") {
         //     AudioB()
         eventId = []
@@ -173,8 +178,8 @@ function getData() {
   db.collection('events').get().then(snapshot => {
     snapshot.docs.forEach(doc => {
       render(doc)
-      redirect()
     })
+      redirect()
   })
 }
 function getMonthFromString(mon) {

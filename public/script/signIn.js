@@ -9,9 +9,11 @@ const temp = document.getElementById('mass-template');
 
 let container = document.getElementById('here')
 var count=0;
+const loader = document.getElementById('loader-1');
 //-------------------------
 form.addEventListener('submit', e => {
     e.preventDefault()
+        loader.classList.toggle('hidden')
     auth.signInWithEmailAndPassword(email.value, pass.value).then(cred => {
         window.location = 'indexHisham.html'
         //form.reset()
@@ -28,6 +30,7 @@ form.addEventListener('submit', e => {
         } else {
             popUp('something wrong happen')
         }
+loader.classList.toggle('hidden') 
     })
 
 })

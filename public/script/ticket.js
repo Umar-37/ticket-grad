@@ -34,7 +34,7 @@ function render(doc) {
     const temp = document.importNode(template.content, true)
     let img = temp.querySelector('img')
     //let h2 = temp.querySelector('#h2')
-    let location = temp.querySelector('#location')
+    //let location = temp.querySelector('#location')
     let type = temp.querySelector('#type')
     let name = temp.querySelector('#name')
     ////
@@ -59,7 +59,7 @@ function render(doc) {
     else type.textContent ='VIP'||'default'
    // type.textContent = doc.data().ticketType ||'default'
     name.textContent = doc.data().eventName || 'default'
-    location.textContent = ''//doc.data().ticketId || 'default'
+    //location.textContent = ''//doc.data().ticketId || 'default'
 
     container.appendChild(temp)
 }
