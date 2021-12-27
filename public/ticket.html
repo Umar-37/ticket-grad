@@ -19,6 +19,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
 
     <!-- <meta http-equiv="Refresh" content="0; url=home.html" /> -->
     <style>
@@ -119,19 +120,19 @@
                         
                         <div class="  items-center border  p-5 ">
                             <template>
-                            <div class=" grid grid-flow-row space-y-4 my-2 gap-y-10">
+                            <div class="card  max-h-44 colorCard p-2 drop-shadow-lg mb-4">
                                 <div
                                     class=" border border-gray-300 rounded-l-md p-2 items-center space-x-5 text-lg font-semibold grid grid-cols-7 gap-3 drop-shadow-xl">
                                     <figure class=" col-span-1"><img class=" rounded-box aspect-square h-24 "
                                              alt=""></figure>
                                     <div class=" flex col-start-2 col-span-4 mx-auto justify-between">
                                         <div id="name">Event Name</div>
-                                        <div id="type">Ticket Class</div>
-                                        <div id="location">Location</div>
+                                        <div id="type" class="text-center ">Ticket Class</div>
+                                        <div id="location"></div>
                                     </div>
                                     <div class=" col-span-2 col-start-6 mx-auto">
                                         
-                                        <div class=" w-32 h-32 " id="qrcode"></div>
+                                        <div class=" w-32 h-32 " id="qrcode-2"></div>
                                     </div>
                                 </div>
 

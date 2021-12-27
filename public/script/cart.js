@@ -107,8 +107,15 @@ function renderTicket(doc) {
         createTicket(types.silTicket[0], types.silTicket[1], 'silTicket')
         createTicket(types.regTicket[0], types.regTicket[1], 'regTicket')
     } else if (types.silTicket[0]) {
+        if(types.silTicket[0]!='VIP'){
         createTicket(types.silTicket[0], types.silTicket[1], 'silTicket')
         createTicket(types.regTicket[0], types.regTicket[1], 'regTicket')
+        }
+        // else{
+        // createTicket(types.silTicket[0], types.silTicket[1], 'vipTicket')
+        // createTicket(types.regTicket[0], types.regTicket[1], 'regTicket')
+ 
+        // }
     } else {
         createTicket(types.regTicket[0], types.regTicket[1], 'regTicket')
         //just one ticket

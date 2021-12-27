@@ -18,7 +18,7 @@
 <body>
 
 	<!-- sign up-->
-	<div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+	<div id="container" class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
 		<div class=" space-y-8">
 			<div>
 				
@@ -43,14 +43,14 @@
 							<div class=" col-span-6 sm:col-span-4">
 								<label for="business-add" class="block text-sm font-medium text-gray-700">Business
 									Address</label>
-								<input required type="text" name="email-address-org" id="business-add"
+								<input type="text" name="email-address-org" id="business-add"
 									autocomplete="email-address-org"
 									class=" appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10  sm:text-sm">
 							</div>
 
 							<div class=" col-span-6 sm:col-span-3">
 								<label for="bank" class="block text-sm font-medium text-gray-700">Bank</label>
-								<select id="bank" name="bank" autocomplete="bank" required
+								<select id="bank" name="bank" autocomplete="bank" 
 									class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
 									<option>Alinma Bank</option>
 									<option>Riyad Bank</option>
@@ -69,7 +69,7 @@
 							</div>
 							<div class=" col-span-6">
 								<label for="iban" class="block text-sm font-medium text-gray-700">IBAN</label>
-								<input required type="text" name="iban" id="iban" autocomplete="iban"
+								<input type="text" name="iban" id="iban" autocomplete="iban"
 									class=" appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10  sm:text-sm">
 							</div>
 							<div class=" col-span-6 sm:col-span-6 lg:col-span-2">
@@ -113,35 +113,35 @@
 					<div>
 						<label for="email-address" class="sr-only">Email address</label>
 						<input autofocus data-email id="email-address" name="email" type="email" autocomplete="email"
-							required
+							
 							class=" appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10  sm:text-sm"
-							placeholder="Email address" required>
+							placeholder="Email address" >
 					</div>
 					<!-- div for passowrds  -->
 					<div class="flex self-center">
 						<div class="">
 							<label for="password" class="sr-only">Password</label>
-							<input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+							<input 
 								title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-								maxlength="20" data-password id="password" name="password" type="password"
-								autocomplete="current-password" required
-								class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+								 data-password id="password" name="ThePassword" type="password"
+								autocomplete="current-password" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300
+							 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
 								placeholder="Password">
 						</div>
 						<div>
 							<label for="confirm-password" class="sr-only"> confirm Password</label>
-							<input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+							<input 
 								title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-								data-password id="confirm-password" maxlength="20" name="password" type="password"
-								autocomplete="confirm-password" required
+								data-password id="confirm-password" maxlength="20" name="conform-password" type="password"
+								autocomplete="confirm-password" 
 								class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
 								placeholder="confirm password">
 						</div>
 					</div> <!-- end of div passords -->
 					<div class="place-self-center">
 						<label for="phone" class="sr-only">Phone number</label>
-						<input autofocus data-phone id="phone" name="phone" type="tel" autocomplete="phone" required
-							maxlength='10' pattern="0[0-9]{9}" title="Ten digits number start with 0"
+						<input autofocus data-phone id="phone" name="phone" type="tel" autocomplete="phone" 
+							maxlength='10' title="Ten digits number start with 0"
 							class=" appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10  sm:text-sm"
 							placeholder="Phone number">
 					</div>
@@ -150,7 +150,7 @@
 				<div class="flex items-center justify-between">
 					<div class="flex items-center">
 						<input id="agree" name="agree" type="checkbox"
-							class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded" required>
+							class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded" >
 						<label for="agree" class="ml-2 block text-sm text-gray-900">
 							I agree on <span class="text-blue-500 cursor-pointer">terms and conditions</span>
 						</label>
@@ -176,6 +176,16 @@
 									clip-rule="evenodd" />
 							</svg>
 						</span>
+<svg id='loader-1' class="animate-spin absolute -bottom-1 left-0 hidden" version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                                           <path opacity="0.2" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+                                             s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+                                             c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"/>
+                                           <path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+                                             C22.32,8.481,24.301,9.057,26.013,10.047z">
+                                             </path>
+                                           </svg>
+
 						Sign up as buyer
 					</button>
 					<button id="orgButton" type="button"
@@ -198,9 +208,12 @@
 				let bank = document.getElementById('bank')
 				let street = document.getElementById('street-address')
 				let iban = document.getElementById('iban')
+				let city = document.getElementById('city')
+				let region = document.getElementById('region')
+				let postal_code= document.getElementById('postal-code')
 
 				let elements = []
-				elements.push(orgName, busAdd, bank, street, iban)
+				elements.push(orgName, busAdd, bank, street, iban,city,region,postal_code)
 				for (let e in elements) {
 					// all these elements should be disable by defualt
 					elements[e].disabled = true;
@@ -226,8 +239,31 @@
 			</script>
 		</div>
 	</div>
+<template id="mass-template">
+        <div id="fade" onclick="gone()" class="alert alert-warning fixed top-4" data-new-toFade>
+            <div class="flex-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    class="w-6 h-6 mx-2 stroke-current">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                    </path>
+                </svg>
+                <label id="label">something wrong happen</label>
+            </div>
+        </div>
+    </template>
 
 	<script type="module" src="script/auth.js"></script>
+   <script>
+        function gone() {
+            let elements = document.querySelectorAll('#fade')
+            //element.classList.toggle('hidden')
+            for (element in elements) {
+                if (elements[element].classList.contains('hidden')==false) {
+                    elements[element].classList.toggle('hidden')
+                }
+            }
+        }</script>
 </body>
 
 </html>

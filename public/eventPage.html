@@ -18,7 +18,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBP_2reNeTsv02ov3XCRJKURkahFKpD0QA&callback=initMap&v=weekly"
+      async
+    ></script> <title>Document</title>
 
   <!-- <meta http-equiv="Refresh" content="0; url=home.html" /> -->
 
@@ -100,7 +103,7 @@
     <div class=" items-center justify-center max-w-screen-2xl mx-auto my-8" id="container">
       <div class=" h-80 bg-cover bg-center rounded-md mx-auto" id="img"></div>
       </div>
-
+<div id="maps"></div>
       <template id="template">
       <div class=" grid md:grid-cols-3 grid-flow-row gap-10 my-10">
 
@@ -153,19 +156,47 @@
               </table>
             </div>
           </div>
-          <div class=" mt-4 rounded-lg overflow-hidden">
-            <iframe class=" w-full"
+            <!-- <iframe class=" w-full"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1276.6500725229944!2d50.20401627094934!3d26.280400861794465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49e83d4b7958ab%3A0xb9d18bb972c7ce02!2sDossary%20Computer%20Mall!5e0!3m2!1sen!2ssa!4v1637941658121!5m2!1sen!2ssa"
-              width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-          </div>
+              width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+
+              <div id="map" class="relative w-full h-full"></div>
         </div>
 
       </div>
       </template>
+      <script>
+function initMap() {
+    const myLatlng = { lat: 26.2361, lng:50.0393 };
+    var map = new google.maps.Map(document.getElementById("maps"), {
+        zoom: 13,
+        center: { lat: 26.2361, lng:50.0393 },
+    });
+    //window.map=map
+    //  google.maps.event.addListener(map,'click',
+    //  function(event){
+    //      theMarker(map,event.latLng)
+    //  }) 
+}
+function theMarker(map,myLatlng) {
+    //window.position.lat=myLatlng.lat()
+    //window.position.lng=myLatlng.lng()
+    const marker = new google.maps.Marker({
+        position: myLatlng,
+        map,
+        title: "Click to zoom",
+    });
+google.maps.event.clearListeners(map, 'click');
+}
+
+
+
+
+      </script>
     </div>
   </main>
 
-  <footer class="items-center p-4 footer bg-neutral colorFoot text-black">
+  <footer class="mt-60 items-center p-4 footer bg-neutral colorFoot text-black">
     <div class="items-center grid-flow-col">
       <svg width="36" height="36" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
         clip-rule="evenodd" class="fill-current">
