@@ -16,6 +16,8 @@ let iban = document.getElementById('iban')
 const submitBuyer = document.getElementById('buyerButton')
 
 const loader = document.getElementById('loader-1');
+const loader2 = document.getElementById('loader-2');
+const orgButton=document.getElementById('finalSubmit')
 window.pop = 0 //globle varible
 const temp = document.getElementById('mass-template');
 var count = 0;
@@ -23,6 +25,8 @@ var count = 0;
 form.addEventListener('submit', e => {
     window.formData = new FormData(document.querySelector('form'))
     loader.classList.toggle('hidden')
+    loader2.classList.toggle('hidden')
+    orgButton.classList.toggle('text-white')
     checker()
     e.preventDefault();
     log(email.value,
@@ -39,30 +43,31 @@ function checker() {
     let passwordChecker;
     for (var pair of formData.entries()) {
         if (!pair[1] == '') {
+            log('first if')
             pop = 0
         }
         log(pair[0] + ':', pair[1])
-        if (pair[0] == '' || pair[1] == '') {
+        if (pair[1] == '') {
             pop = 1;
             popUp('fill the blank')
             //loader.classList.toggle('hidden')
             break;
         }
-        if (pair[0] == 'ThePassword' || pair[0] == 'conform-password') {
-            if (pair[0] == 'ThePassword') {
-                passwordChecker = pair[1]
-            }
-            if (pair[0] == 'conform-password') {
-                if (!pair[1] == '' && !pair[1].includes(passwordChecker)) {
-                    popUp('write your and password and conform it again')
-                    pop = 1;
-                    break;
-                }
-            }
-            popUp('fill the blank')
-            //loader.classList.toggle('hidden')
-            break;
-        }
+        // if (pair[0] == 'ThePassword' || pair[0] == 'conform-password') {
+        //     if (pair[0] == 'ThePassword') {
+        //         passwordChecker = pair[1]
+        //     }
+        //     if (pair[0] == 'conform-password') {
+        //         if (!pair[1] == '' && !pair[1].includes(passwordChecker)) {
+        //             popUp('write your and password and conform it again')
+        //             pop = 1;
+        //             break;
+        //         }
+        //     }
+        //     popUp('fill the blank')
+        //     //loader.classList.toggle('hidden')
+        //     break;
+        // }
         if(pair[0]=='postal-code'){
             let isnum = /^\d+$/.test(pair[1]);
             if(!isnum){
@@ -71,6 +76,7 @@ function checker() {
                 break;
             }
         }
+        
 
     }
     if (pop == 0) {
@@ -94,8 +100,15 @@ function checker() {
                 } else {
                     popUp('something wrong happen')
                 }
-                // loader.classList.toggle('hidden') 
+                 loader.classList.toggle('hidden') 
+                 loader2.classList.toggle('hidden') 
+                orgButton.classList.toggle('text-white')
             })
+    }else {
+        loader.classList.toggle('hidden')
+        loader2.classList.toggle('hidden')
+        orgButton.classList.toggle('text-white')
+
     }
     pop=0
 }
@@ -107,6 +120,9 @@ function popUp(mass){
 function popUpMassege(mass) {
     //submitionButton.disabled = false
     loader.classList.toggle('hidden')
+    loader2.classList.toggle('hidden')
+    orgButton.classList.toggle('text-white')
+
     const tempNode = document.importNode(temp.content, true)
     const popUp = document.querySelectorAll('[data-new-toFade]')[count]
 
