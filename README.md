@@ -9,9 +9,7 @@
 ## powered by firebase, vanilla javascript and tailwindcss
 - --
 
-## Features
 
-- coming...🔥🔥🔥🔥🔥🔥🔥
 
 
 
@@ -51,4 +49,3 @@ npm run dev
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
-**Free Software!**
