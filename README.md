@@ -35,13 +35,19 @@ cd <folder name>
 4- Install the dependencies from npm by this command.
 
 ```sh
-npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+npm i 
 ```
 5- genrate css file by this command and you ready to go .(note that this command must be constantly running in the background) .
 
 ```sh
 npm run dev
 ```
+6- connect to firebase (you will be ask to login to firebase) 
+```
+firebase serve
+```
+
+
 
 
 
