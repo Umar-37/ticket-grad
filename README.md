@@ -28,9 +28,9 @@ sudo apt  update && sudo apt upgrade
 ```sh
 git clone https://github.com/Umar-37/ticket-grad.git
 ```
-3- cd to your folder
+3- cd to the project directory 
 ```sh
-cd <folder name>
+cd ticket-grad
 ```
 4- Install the dependencies from npm by this command.
 
