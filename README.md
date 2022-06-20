@@ -37,7 +37,7 @@ cd ticket-grad
 ```sh
 npm i 
 ```
-5- genrate css file by this command and you ready to go .(note that this command must be constantly running in the background) .
+5- genrate css file by this command and you are ready to go .(note that this command must be constantly running in the background) .
 
 ```sh
 npm run dev
