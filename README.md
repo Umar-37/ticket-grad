@@ -1,12 +1,12 @@
 # 
 ## _a website for event posting and purchasing of tickets._
 
+- __[Demo](https://omaralhussan.xyz/)__ -
 
 
 
 
-
-## powered by firebase, vanilla javascript and tailwindcss
+## Powered by firebase, vanilla javascript and tailwindcss
 - --
 
 
