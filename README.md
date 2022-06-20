@@ -6,7 +6,7 @@
 
 
 
-## Powered by firebase, google maps, vanilla javascript and tailwindcss
+## Powered by Firebase, Google maps
 - --
 
 
